@@ -1,0 +1,76 @@
+.TH "Retarget.c" 3 "Sun Jun 19 2011" "Object Oriented Library for ARM 7" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Retarget.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio.h>\fP
+.br
+\fC#include <rt_misc.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBsendchar\fP (int ch)"
+.br
+.ti -1c
+.RI "int \fBfputc\fP (int ch, FILE *f)"
+.br
+.ti -1c
+.RI "int \fBfgetc\fP (FILE *fp)"
+.br
+.ti -1c
+.RI "int \fBfclose\fP (FILE *f)"
+.br
+.ti -1c
+.RI "int \fBferror\fP (FILE *f)"
+.br
+.ti -1c
+.RI "int \fBfseek\fP (FILE *fp, long nPos, int nMode)"
+.br
+.ti -1c
+.RI "int \fBfflush\fP (FILE *pStream)"
+.br
+.ti -1c
+.RI "void \fB_ttywrch\fP (int ch)"
+.br
+.ti -1c
+.RI "void \fB_sys_exit\fP (int return_code)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "FILE \fB__stdout\fP"
+.br
+.ti -1c
+.RI "FILE \fB__stdin\fP"
+.br
+.ti -1c
+.RI "FILE \fB__stderr\fP"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void _sys_exit (intreturn_code)"
+.SS "void _ttywrch (intch)"
+.SS "int fclose (FILE *f)"
+.SS "int ferror (FILE *f)"
+.SS "int fflush (FILE *pStream)"
+.SS "int fgetc (FILE *fp)"
+.SS "int fputc (intch, FILE *f)"
+.SS "int fseek (FILE *fp, longnPos, intnMode)"
+.SS "int sendchar (intch)"
+.SH "Variable Documentation"
+.PP 
+.SS "FILE \fB__stderr\fP"
+.SS "FILE \fB__stdin\fP"
+.SS "FILE \fB__stdout\fP"
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Object Oriented Library for ARM 7 from the source code.

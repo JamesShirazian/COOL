@@ -1,0 +1,187 @@
+\hypertarget{group__group10}{
+\section{Interrupt}
+\label{group__group10}\index{Interrupt@{Interrupt}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_interrupt}{Interrupt}
+\begin{DoxyCompactList}\small\item\em class \hyperlink{class_interrupt}{Interrupt}: is a class in charge of \hyperlink{class_interrupt}{Interrupt} in ARM 7 processor, this class provide interrupt for EXTINT0, EXTINT1, EXTINT2, EXTINT3 , Real Time Clock. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__group10_ga4fd8be38d92c8b0086b15b3c30ea1868}{Interrupt::Interrupt} (\hyperlink{class_port_pin}{PortPin} pin, int priority, void($\ast$function)(void))
+\item 
+\hyperlink{group__group10_gaa75f0f80c17bbc01b8fba32ab942dfbd}{Interrupt::Interrupt} (\hyperlink{class_real_time_clock}{RealTimeClock} rtc, void($\ast$function)(void))
+\item 
+\hypertarget{group__group10_ga97db0b3a65b1bf59a97d8a0b7867c69c}{
+{\bfseries Interrupt::Interrupt} (\hyperlink{class_a_d_c}{ADC} adcClass, int interruptPriority, void($\ast$function)(void))}
+\label{group__group10_ga97db0b3a65b1bf59a97d8a0b7867c69c}
+
+\item 
+\hypertarget{group__group10_ga60f69c94b5cf138e70712d17e9d5ebe4}{
+void {\bfseries Interrupt::kill} (void)}
+\label{group__group10_ga60f69c94b5cf138e70712d17e9d5ebe4}
+
+\item 
+void \hyperlink{group__group10_gac34af4078409af8f5b612477caa107df}{Interrupt::setInterruptFunctionTo} (void($\ast$newFunction)(void))
+\item 
+void \hyperlink{group__group10_ga4cd6bc79c3fa54378a156117de5f12a9}{Interrupt::setInterruptPriorityTo} (int newPriority)
+\item 
+int \hyperlink{group__group10_ga8d3124b3721e2426dc24fc8416f12e38}{Interrupt::getInterruptPriority} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_interrupt}{Interrupt} 
+
+\subsection{Function Documentation}
+\hypertarget{group__group10_ga8d3124b3721e2426dc24fc8416f12e38}{
+\index{Interrupt@{Interrupt}!getInterruptPriority@{getInterruptPriority}}
+\index{getInterruptPriority@{getInterruptPriority}!Interrupt@{Interrupt}}
+\subsubsection[{getInterruptPriority}]{\setlength{\rightskip}{0pt plus 5cm}int Interrupt::getInterruptPriority (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{group__group10_ga8d3124b3721e2426dc24fc8416f12e38}
+Set new priority to intrrupt which has already defined..\par
+ \begin{DoxyReturn}{Returns}
+int Priority: return the priority of interrupt.\par
+ \par
+
+\end{DoxyReturn}
+{\bfseries Example:}\par
+ \hyperlink{class_port_pin}{PortPin} myPin(2,10,\char`\"{}INPUT\char`\"{});\par
+ \hyperlink{class_interrupt}{Interrupt} myInterrupt(myPin,12,do1); \par
+ myInterrupt.setFunctionToInterrupt(do2);\par
+ if(myInterrupt.getInterruptPriority()==12) \par
+ \{ \par
+ myInterrupt.setInterruptPriorityTo(16);\par
+ \} \par
+ \hypertarget{group__group10_gaa75f0f80c17bbc01b8fba32ab942dfbd}{
+\index{Interrupt@{Interrupt}!Interrupt@{Interrupt}}
+\index{Interrupt@{Interrupt}!Interrupt@{Interrupt}}
+\subsubsection[{Interrupt}]{\setlength{\rightskip}{0pt plus 5cm}Interrupt::Interrupt (
+\begin{DoxyParamCaption}
+\item[{{\bf RealTimeClock}}]{rtcClass, }
+\item[{void($\ast$)(void)}]{function}
+\end{DoxyParamCaption}
+)}}
+\label{group__group10_gaa75f0f80c17bbc01b8fba32ab942dfbd}
+Third constructor: \par
+ 
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{class_real_time_clock}{RealTimeClock}} & rtc: \hyperlink{class_real_time_clock}{RealTimeClock} object interrupt apply to. \\
+\hline
+{\em void($\ast$function)(void),:} & function which has to execute once the interrupt has occure. \par
+ \par
+\\
+\hline
+\end{DoxyParams}
+{\bfseries Example:}\par
+
+
+\hyperlink{class_real_time_clock}{RealTimeClock} myRTC(2011,1,12,23,12,34,true);\par
+ \hyperlink{class_interrupt}{Interrupt} myInterrupt(myRTC,do1); \par
+ \hypertarget{group__group10_ga4fd8be38d92c8b0086b15b3c30ea1868}{
+\index{Interrupt@{Interrupt}!Interrupt@{Interrupt}}
+\index{Interrupt@{Interrupt}!Interrupt@{Interrupt}}
+\subsubsection[{Interrupt}]{\setlength{\rightskip}{0pt plus 5cm}Interrupt::Interrupt (
+\begin{DoxyParamCaption}
+\item[{{\bf PortPin}}]{pinClass, }
+\item[{int}]{priority, }
+\item[{void($\ast$)(void)}]{function}
+\end{DoxyParamCaption}
+)}}
+\label{group__group10_ga4fd8be38d92c8b0086b15b3c30ea1868}
+Second constructor: \par
+ 
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{class_port_pin}{PortPin}} & pin: this pin have to set as an \char`\"{}INPUT\char`\"{} and it must be one of below pins, since ARM7 handel interrupt for below pins: \par
+
+\begin{DoxyItemize}
+\item Port2 -\/$>$ Pin10
+\item Port2 -\/$>$ Pin11
+\item Port2 -\/$>$ Pin12
+\item Port2 -\/$>$ Pin13 
+\end{DoxyItemize}\\
+\hline
+{\em int} & priority: this value represent the priority of interrupt for that specific pin from 0 to 31.\par
+ \\
+\hline
+{\em void($\ast$function)(void),:} & function which has to execute once the interrupt has occure. \par
+ \par
+\\
+\hline
+\end{DoxyParams}
+{\bfseries Example:}\par
+ \hyperlink{class_port_pin}{PortPin} myPin(2,10,\char`\"{}INPUT\char`\"{});\par
+ \hyperlink{class_interrupt}{Interrupt} myInterrupt(myPin,12,do1); \par
+ \hypertarget{group__group10_gac34af4078409af8f5b612477caa107df}{
+\index{Interrupt@{Interrupt}!setInterruptFunctionTo@{setInterruptFunctionTo}}
+\index{setInterruptFunctionTo@{setInterruptFunctionTo}!Interrupt@{Interrupt}}
+\subsubsection[{setInterruptFunctionTo}]{\setlength{\rightskip}{0pt plus 5cm}void Interrupt::setInterruptFunctionTo (
+\begin{DoxyParamCaption}
+\item[{void($\ast$)(void)}]{newFunction}
+\end{DoxyParamCaption}
+)}}
+\label{group__group10_gac34af4078409af8f5b612477caa107df}
+Set new function to interrupt case\par
+ 
+\begin{DoxyParams}{Parameters}
+{\em void($\ast$newFunction)(void),:} & function which execute once interrupt occure for:\par
+
+\begin{DoxyItemize}
+\item EXTINT0(Port 2 -\/$>$ Pin -\/$>$10)
+\item EXTINT0(Port 2 -\/$>$ Pin -\/$>$11)
+\item EXTINT0(Port 2 -\/$>$ Pin -\/$>$12)
+\item EXTINT0(Port 2 -\/$>$ Pin -\/$>$13)
+\item \hyperlink{class_real_time_clock}{RealTimeClock}
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\par
+
+
+{\bfseries Example 1:}\par
+\par
+
+
+\hyperlink{class_port_pin}{PortPin} pin10(2,10,\char`\"{}INPUT\char`\"{}); \par
+ \hyperlink{class_interrupt}{Interrupt} myInt(pin10,4,do1); \par
+ myRTC.setInterruptFunctionTo(do2);\par
+
+
+\par
+
+
+{\bfseries Example 2:}\par
+\par
+
+
+\hyperlink{class_real_time_clock}{RealTimeClock} myRTC(true,do1)\par
+ myRTC.setInterruptFunctionTo(do1);\par
+ \hypertarget{group__group10_ga4cd6bc79c3fa54378a156117de5f12a9}{
+\index{Interrupt@{Interrupt}!setInterruptPriorityTo@{setInterruptPriorityTo}}
+\index{setInterruptPriorityTo@{setInterruptPriorityTo}!Interrupt@{Interrupt}}
+\subsubsection[{setInterruptPriorityTo}]{\setlength{\rightskip}{0pt plus 5cm}void Interrupt::setInterruptPriorityTo (
+\begin{DoxyParamCaption}
+\item[{int}]{newPriority}
+\end{DoxyParamCaption}
+)}}
+\label{group__group10_ga4cd6bc79c3fa54378a156117de5f12a9}
+Set new priority to intrrupt which has already defined..\par
+ 
+\begin{DoxyParams}{Parameters}
+{\em int} & newPriority: this value represent the priority of interrupt for that specific pin from 0 to 31.\par
+ \par
+\\
+\hline
+\end{DoxyParams}
+{\bfseries Example:}\par
+ \hyperlink{class_port_pin}{PortPin} myPin(2,10,\char`\"{}INPUT\char`\"{});\par
+ \hyperlink{class_interrupt}{Interrupt} myInterrupt(myPin,12,do1); \par
+ myInterrupt.setFunctionToInterrupt(do2);\par
+ myInterrupt.setInterruptPriorityTo(16);\par
+ 

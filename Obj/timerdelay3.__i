@@ -1,0 +1,1 @@
+--cpp  --thumb -c --cpu ARM7TDMI -D__RTX -g -O2 --apcs=interwork -I..\Library -I "C:\Keil\ARM\INC" -I "C:\Keil\ARM\INC\Philips" -o ".\Obj\timerdelay3.o" --omf_browse ".\Obj\timerdelay3.crf" --depend ".\Obj\timerdelay3.d" "TimerDelay3.cpp"

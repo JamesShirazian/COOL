@@ -1,0 +1,82 @@
+\hypertarget{class_real_time_clock}{
+\section{RealTimeClock Class Reference}
+\label{class_real_time_clock}\index{RealTimeClock@{RealTimeClock}}
+}
+
+
+class \hyperlink{class_real_time_clock}{RealTimeClock}: is a class in charge of Real Time clock which is connected to ARM 7 processor.
+
+/sa \hyperlink{class_interrupt}{Interrupt}  
+
+
+
+
+{\ttfamily \#include $<$RealTimeClock.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_real_time_clock_ad4fb1eea4450089f13ae70650e5d2d1c}{RealTimeClock} ()
+\item 
+\hyperlink{group__group9_ga02c3e799d7541e2917ef46e71146ed90}{RealTimeClock} (bool autoStart)
+\item 
+\hyperlink{group__group9_gaad2bfb64a40a2a2729b569c08e7dcc49}{RealTimeClock} (int year, int month, int day, int hour, int minute, int second, bool autoStart)
+\item 
+void \hyperlink{group__group9_ga14ecce7648b24c7a85359af3f5b20af6}{setTime} (int hour, int min, int sec)
+\item 
+void \hyperlink{group__group9_ga4a5781efbfce128e0d3c461627ce371b}{setDate} (int year, int month, int day)
+\item 
+void \hyperlink{group__group9_gab62814ef94d0fe081e1f8a2756317a3c}{start} (void)
+\item 
+void \hyperlink{group__group9_ga116ebd0f42df71ef71d217527194d867}{stop} (void)
+\item 
+void \hyperlink{group__group9_ga81b09971229ddc88a7581bf5dcab7d1e}{reset} (void)
+\item 
+int \hyperlink{group__group9_ga58d426541706593b83016e0462e41625}{getYear} ()
+\item 
+int \hyperlink{group__group9_gaa8901871334c623b9473216de08c1432}{getMonth} ()
+\item 
+int \hyperlink{group__group9_ga29dbb224e31f5dca34c29e5e48ebeb2c}{getDay} ()
+\item 
+int \hyperlink{group__group9_ga86c10ef9f4da8dbee7fbd6236443fd53}{getHour} ()
+\item 
+int \hyperlink{group__group9_ga9784205a5ea194cca976af6cfee1308b}{getMinute} ()
+\item 
+int \hyperlink{group__group9_gaaddd01287cb8a6d2711b0650f7cbcc72}{getSecond} ()
+\item 
+char $\ast$ \hyperlink{group__group9_gaad4ca0e261b2a594e536303dee1116f4}{getTime} (char delimiter)
+\item 
+char $\ast$ \hyperlink{group__group9_gaa11261523ee392adf9081def9e3b1fcd}{getDate} (char delimiter)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class \hyperlink{class_real_time_clock}{RealTimeClock}: is a class in charge of Real Time clock which is connected to ARM 7 processor.
+
+/sa \hyperlink{class_interrupt}{Interrupt} 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_real_time_clock_ad4fb1eea4450089f13ae70650e5d2d1c}{
+\index{RealTimeClock@{RealTimeClock}!RealTimeClock@{RealTimeClock}}
+\index{RealTimeClock@{RealTimeClock}!RealTimeClock@{RealTimeClock}}
+\subsubsection[{RealTimeClock}]{\setlength{\rightskip}{0pt plus 5cm}RealTimeClock::RealTimeClock (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_real_time_clock_ad4fb1eea4450089f13ae70650e5d2d1c}
+Default constructor\par
+ Real time clock set to:\par
+\par
+ -\/Year = 0 \par
+ -\/Month = 0\par
+ -\/Day = 0 \par
+ -\/Hour = 0 \par
+ -\/Minute = 0\par
+ -\/Sec = 0 \par
+ and its clock is on stop state. 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+RealTimeClock.h\item 
+RealTimeClock.cpp\end{DoxyCompactItemize}

@@ -1,0 +1,217 @@
+\hypertarget{_retarget1_8c}{
+\section{Retarget1.c File Reference}
+\label{d4/da0/_retarget1_8c}\index{Retarget1.c@{Retarget1.c}}
+}
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$string.h$>$}\par
+{\ttfamily \#include $<$rt\_\-misc.h$>$}\par
+{\ttfamily \#include $<$rt\_\-sys.h$>$}\par
+{\ttfamily \#include $<$File\_\-Config.h$>$}\par
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_____f_i_l_e}{\_\-\_\-FILE}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_retarget1_8c_ac00bfb46347d26fdc58568fe1ab5fa5b}{STDIN}~0x8001
+\item 
+\#define \hyperlink{_retarget1_8c_a8875037d0772a4fc34516f1e03d7e238}{STDOUT}~0x8002
+\item 
+\#define \hyperlink{_retarget1_8c_a3a540e3eef339eec06aff31c4ba1eb25}{STDERR}~0x8003
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_retarget1_8c_a1647e9479b4be5731d79c81af76826c5}{\_\-ttywrch} (int ch)
+\item 
+FILEHANDLE \hyperlink{_retarget1_8c_af0ce7035c7512c42a62da0cb0028d230}{\_\-sys\_\-open} (const char $\ast$name, int openmode)
+\item 
+int \hyperlink{_retarget1_8c_a348549fc916e4d2666c7d9e7580c4f1c}{\_\-sys\_\-close} (FILEHANDLE fh)
+\item 
+int \hyperlink{_retarget1_8c_a286312eabac04958ac50c6c4a44205fa}{\_\-sys\_\-write} (FILEHANDLE fh, const U8 $\ast$buf, U32 len, int mode)
+\item 
+int \hyperlink{_retarget1_8c_a04fd089d82b3be342b82ba5e819a156e}{\_\-sys\_\-read} (FILEHANDLE fh, U8 $\ast$buf, U32 len, int mode)
+\item 
+int \hyperlink{_retarget1_8c_aa920eba5f1470d4495ebe4ff5155515e}{\_\-sys\_\-istty} (FILEHANDLE fh)
+\item 
+int \hyperlink{_retarget1_8c_a12ffecb538b9f6ffb8843c02ee7dddfd}{\_\-sys\_\-seek} (FILEHANDLE fh, long pos)
+\item 
+int \hyperlink{_retarget1_8c_a9be066088540344c0fe1ba0b46957902}{\_\-sys\_\-ensure} (FILEHANDLE fh)
+\item 
+long \hyperlink{_retarget1_8c_ae6926bca4a343745cf05da8e303974bc}{\_\-sys\_\-flen} (FILEHANDLE fh)
+\item 
+int \hyperlink{_retarget1_8c_a95f0bd82c946f5378f506312bb495c1d}{\_\-sys\_\-tmpnam} (char $\ast$name, int sig, unsigned maxlen)
+\item 
+char $\ast$ \hyperlink{_retarget1_8c_a85da5d1dffb506bb863ffa0ff41acc1c}{\_\-sys\_\-command\_\-string} (char $\ast$cmd, int len)
+\item 
+void \hyperlink{_retarget1_8c_a7b9ac395975163ef0a591db5c48ad7ae}{\_\-sys\_\-exit} (int return\_\-code)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char \hyperlink{_retarget1_8c_af22c7441fa06a96dfdf200451b1e2b54}{\_\-\_\-stdin\_\-name} \mbox{[}$\,$\mbox{]} = \char`\"{}STDIN\char`\"{}
+\item 
+const char \hyperlink{_retarget1_8c_ae5bf6f2e974d15a9aff12176856f0469}{\_\-\_\-stdout\_\-name} \mbox{[}$\,$\mbox{]} = \char`\"{}STDOUT\char`\"{}
+\item 
+const char \hyperlink{_retarget1_8c_ac6078c57807dde61d6f7cc95d2c71ab9}{\_\-\_\-stderr\_\-name} \mbox{[}$\,$\mbox{]} = \char`\"{}STDERR\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_retarget1_8c_a3a540e3eef339eec06aff31c4ba1eb25}{
+\index{Retarget1.c@{Retarget1.c}!STDERR@{STDERR}}
+\index{STDERR@{STDERR}!Retarget1.c@{Retarget1.c}}
+\subsubsection[{STDERR}]{\setlength{\rightskip}{0pt plus 5cm}\#define STDERR~0x8003}}
+\label{d4/da0/_retarget1_8c_a3a540e3eef339eec06aff31c4ba1eb25}
+\hypertarget{_retarget1_8c_ac00bfb46347d26fdc58568fe1ab5fa5b}{
+\index{Retarget1.c@{Retarget1.c}!STDIN@{STDIN}}
+\index{STDIN@{STDIN}!Retarget1.c@{Retarget1.c}}
+\subsubsection[{STDIN}]{\setlength{\rightskip}{0pt plus 5cm}\#define STDIN~0x8001}}
+\label{d4/da0/_retarget1_8c_ac00bfb46347d26fdc58568fe1ab5fa5b}
+\hypertarget{_retarget1_8c_a8875037d0772a4fc34516f1e03d7e238}{
+\index{Retarget1.c@{Retarget1.c}!STDOUT@{STDOUT}}
+\index{STDOUT@{STDOUT}!Retarget1.c@{Retarget1.c}}
+\subsubsection[{STDOUT}]{\setlength{\rightskip}{0pt plus 5cm}\#define STDOUT~0x8002}}
+\label{d4/da0/_retarget1_8c_a8875037d0772a4fc34516f1e03d7e238}
+
+
+\subsection{Function Documentation}
+\hypertarget{_retarget1_8c_a348549fc916e4d2666c7d9e7580c4f1c}{
+\index{Retarget1.c@{Retarget1.c}!\_\-sys\_\-close@{\_\-sys\_\-close}}
+\index{\_\-sys\_\-close@{\_\-sys\_\-close}!Retarget1.c@{Retarget1.c}}
+\subsubsection[{\_\-sys\_\-close}]{\setlength{\rightskip}{0pt plus 5cm}int \_\-sys\_\-close (
+\begin{DoxyParamCaption}
+\item[{FILEHANDLE}]{fh}
+\end{DoxyParamCaption}
+)}}
+\label{d4/da0/_retarget1_8c_a348549fc916e4d2666c7d9e7580c4f1c}
+\hypertarget{_retarget1_8c_a85da5d1dffb506bb863ffa0ff41acc1c}{
+\index{Retarget1.c@{Retarget1.c}!\_\-sys\_\-command\_\-string@{\_\-sys\_\-command\_\-string}}
+\index{\_\-sys\_\-command\_\-string@{\_\-sys\_\-command\_\-string}!Retarget1.c@{Retarget1.c}}
+\subsubsection[{\_\-sys\_\-command\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ \_\-sys\_\-command\_\-string (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{cmd, }
+\item[{int}]{len}
+\end{DoxyParamCaption}
+)}}
+\label{d4/da0/_retarget1_8c_a85da5d1dffb506bb863ffa0ff41acc1c}
+\hypertarget{_retarget1_8c_a9be066088540344c0fe1ba0b46957902}{
+\index{Retarget1.c@{Retarget1.c}!\_\-sys\_\-ensure@{\_\-sys\_\-ensure}}
+\index{\_\-sys\_\-ensure@{\_\-sys\_\-ensure}!Retarget1.c@{Retarget1.c}}
+\subsubsection[{\_\-sys\_\-ensure}]{\setlength{\rightskip}{0pt plus 5cm}int \_\-sys\_\-ensure (
+\begin{DoxyParamCaption}
+\item[{FILEHANDLE}]{fh}
+\end{DoxyParamCaption}
+)}}
+\label{d4/da0/_retarget1_8c_a9be066088540344c0fe1ba0b46957902}
+\hypertarget{_retarget1_8c_a7b9ac395975163ef0a591db5c48ad7ae}{
+\index{Retarget1.c@{Retarget1.c}!\_\-sys\_\-exit@{\_\-sys\_\-exit}}
+\index{\_\-sys\_\-exit@{\_\-sys\_\-exit}!Retarget1.c@{Retarget1.c}}
+\subsubsection[{\_\-sys\_\-exit}]{\setlength{\rightskip}{0pt plus 5cm}void \_\-sys\_\-exit (
+\begin{DoxyParamCaption}
+\item[{int}]{return\_\-code}
+\end{DoxyParamCaption}
+)}}
+\label{d4/da0/_retarget1_8c_a7b9ac395975163ef0a591db5c48ad7ae}
+\hypertarget{_retarget1_8c_ae6926bca4a343745cf05da8e303974bc}{
+\index{Retarget1.c@{Retarget1.c}!\_\-sys\_\-flen@{\_\-sys\_\-flen}}
+\index{\_\-sys\_\-flen@{\_\-sys\_\-flen}!Retarget1.c@{Retarget1.c}}
+\subsubsection[{\_\-sys\_\-flen}]{\setlength{\rightskip}{0pt plus 5cm}long \_\-sys\_\-flen (
+\begin{DoxyParamCaption}
+\item[{FILEHANDLE}]{fh}
+\end{DoxyParamCaption}
+)}}
+\label{d4/da0/_retarget1_8c_ae6926bca4a343745cf05da8e303974bc}
+\hypertarget{_retarget1_8c_aa920eba5f1470d4495ebe4ff5155515e}{
+\index{Retarget1.c@{Retarget1.c}!\_\-sys\_\-istty@{\_\-sys\_\-istty}}
+\index{\_\-sys\_\-istty@{\_\-sys\_\-istty}!Retarget1.c@{Retarget1.c}}
+\subsubsection[{\_\-sys\_\-istty}]{\setlength{\rightskip}{0pt plus 5cm}int \_\-sys\_\-istty (
+\begin{DoxyParamCaption}
+\item[{FILEHANDLE}]{fh}
+\end{DoxyParamCaption}
+)}}
+\label{d4/da0/_retarget1_8c_aa920eba5f1470d4495ebe4ff5155515e}
+\hypertarget{_retarget1_8c_af0ce7035c7512c42a62da0cb0028d230}{
+\index{Retarget1.c@{Retarget1.c}!\_\-sys\_\-open@{\_\-sys\_\-open}}
+\index{\_\-sys\_\-open@{\_\-sys\_\-open}!Retarget1.c@{Retarget1.c}}
+\subsubsection[{\_\-sys\_\-open}]{\setlength{\rightskip}{0pt plus 5cm}FILEHANDLE \_\-sys\_\-open (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{int}]{openmode}
+\end{DoxyParamCaption}
+)}}
+\label{d4/da0/_retarget1_8c_af0ce7035c7512c42a62da0cb0028d230}
+\hypertarget{_retarget1_8c_a04fd089d82b3be342b82ba5e819a156e}{
+\index{Retarget1.c@{Retarget1.c}!\_\-sys\_\-read@{\_\-sys\_\-read}}
+\index{\_\-sys\_\-read@{\_\-sys\_\-read}!Retarget1.c@{Retarget1.c}}
+\subsubsection[{\_\-sys\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}int \_\-sys\_\-read (
+\begin{DoxyParamCaption}
+\item[{FILEHANDLE}]{fh, }
+\item[{U8 $\ast$}]{buf, }
+\item[{U32}]{len, }
+\item[{int}]{mode}
+\end{DoxyParamCaption}
+)}}
+\label{d4/da0/_retarget1_8c_a04fd089d82b3be342b82ba5e819a156e}
+\hypertarget{_retarget1_8c_a12ffecb538b9f6ffb8843c02ee7dddfd}{
+\index{Retarget1.c@{Retarget1.c}!\_\-sys\_\-seek@{\_\-sys\_\-seek}}
+\index{\_\-sys\_\-seek@{\_\-sys\_\-seek}!Retarget1.c@{Retarget1.c}}
+\subsubsection[{\_\-sys\_\-seek}]{\setlength{\rightskip}{0pt plus 5cm}int \_\-sys\_\-seek (
+\begin{DoxyParamCaption}
+\item[{FILEHANDLE}]{fh, }
+\item[{long}]{pos}
+\end{DoxyParamCaption}
+)}}
+\label{d4/da0/_retarget1_8c_a12ffecb538b9f6ffb8843c02ee7dddfd}
+\hypertarget{_retarget1_8c_a95f0bd82c946f5378f506312bb495c1d}{
+\index{Retarget1.c@{Retarget1.c}!\_\-sys\_\-tmpnam@{\_\-sys\_\-tmpnam}}
+\index{\_\-sys\_\-tmpnam@{\_\-sys\_\-tmpnam}!Retarget1.c@{Retarget1.c}}
+\subsubsection[{\_\-sys\_\-tmpnam}]{\setlength{\rightskip}{0pt plus 5cm}int \_\-sys\_\-tmpnam (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{name, }
+\item[{int}]{sig, }
+\item[{unsigned}]{maxlen}
+\end{DoxyParamCaption}
+)}}
+\label{d4/da0/_retarget1_8c_a95f0bd82c946f5378f506312bb495c1d}
+\hypertarget{_retarget1_8c_a286312eabac04958ac50c6c4a44205fa}{
+\index{Retarget1.c@{Retarget1.c}!\_\-sys\_\-write@{\_\-sys\_\-write}}
+\index{\_\-sys\_\-write@{\_\-sys\_\-write}!Retarget1.c@{Retarget1.c}}
+\subsubsection[{\_\-sys\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}int \_\-sys\_\-write (
+\begin{DoxyParamCaption}
+\item[{FILEHANDLE}]{fh, }
+\item[{const U8 $\ast$}]{buf, }
+\item[{U32}]{len, }
+\item[{int}]{mode}
+\end{DoxyParamCaption}
+)}}
+\label{d4/da0/_retarget1_8c_a286312eabac04958ac50c6c4a44205fa}
+\hypertarget{_retarget1_8c_a1647e9479b4be5731d79c81af76826c5}{
+\index{Retarget1.c@{Retarget1.c}!\_\-ttywrch@{\_\-ttywrch}}
+\index{\_\-ttywrch@{\_\-ttywrch}!Retarget1.c@{Retarget1.c}}
+\subsubsection[{\_\-ttywrch}]{\setlength{\rightskip}{0pt plus 5cm}void \_\-ttywrch (
+\begin{DoxyParamCaption}
+\item[{int}]{ch}
+\end{DoxyParamCaption}
+)}}
+\label{d4/da0/_retarget1_8c_a1647e9479b4be5731d79c81af76826c5}
+
+
+\subsection{Variable Documentation}
+\hypertarget{_retarget1_8c_ac6078c57807dde61d6f7cc95d2c71ab9}{
+\index{Retarget1.c@{Retarget1.c}!\_\-\_\-stderr\_\-name@{\_\-\_\-stderr\_\-name}}
+\index{\_\-\_\-stderr\_\-name@{\_\-\_\-stderr\_\-name}!Retarget1.c@{Retarget1.c}}
+\subsubsection[{\_\-\_\-stderr\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}const char {\bf \_\-\_\-stderr\_\-name}\mbox{[}$\,$\mbox{]} = \char`\"{}STDERR\char`\"{}}}
+\label{d4/da0/_retarget1_8c_ac6078c57807dde61d6f7cc95d2c71ab9}
+\hypertarget{_retarget1_8c_af22c7441fa06a96dfdf200451b1e2b54}{
+\index{Retarget1.c@{Retarget1.c}!\_\-\_\-stdin\_\-name@{\_\-\_\-stdin\_\-name}}
+\index{\_\-\_\-stdin\_\-name@{\_\-\_\-stdin\_\-name}!Retarget1.c@{Retarget1.c}}
+\subsubsection[{\_\-\_\-stdin\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}const char {\bf \_\-\_\-stdin\_\-name}\mbox{[}$\,$\mbox{]} = \char`\"{}STDIN\char`\"{}}}
+\label{d4/da0/_retarget1_8c_af22c7441fa06a96dfdf200451b1e2b54}
+\hypertarget{_retarget1_8c_ae5bf6f2e974d15a9aff12176856f0469}{
+\index{Retarget1.c@{Retarget1.c}!\_\-\_\-stdout\_\-name@{\_\-\_\-stdout\_\-name}}
+\index{\_\-\_\-stdout\_\-name@{\_\-\_\-stdout\_\-name}!Retarget1.c@{Retarget1.c}}
+\subsubsection[{\_\-\_\-stdout\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}const char {\bf \_\-\_\-stdout\_\-name}\mbox{[}$\,$\mbox{]} = \char`\"{}STDOUT\char`\"{}}}
+\label{d4/da0/_retarget1_8c_ae5bf6f2e974d15a9aff12176856f0469}

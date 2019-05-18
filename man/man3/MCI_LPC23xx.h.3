@@ -1,0 +1,273 @@
+.TH "MCI_LPC23xx.h" 3 "Sun Jun 19 2011" "Object Oriented Library for ARM 7" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MCI_LPC23xx.h \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBmci_init\fP   mmc_init"
+.br
+.ti -1c
+.RI "#define \fBmci_read_sect\fP   mmc_read_sect"
+.br
+.ti -1c
+.RI "#define \fBmci_write_sect\fP   mmc_write_sect"
+.br
+.ti -1c
+.RI "#define \fBmci_read_config\fP   mmc_read_config"
+.br
+.ti -1c
+.RI "#define \fBSD_CLK\fP   24000000"
+.br
+.ti -1c
+.RI "#define \fBRESP_NONE\fP   0"
+.br
+.ti -1c
+.RI "#define \fBRESP_SHORT\fP   1"
+.br
+.ti -1c
+.RI "#define \fBRESP_LONG\fP   2"
+.br
+.ti -1c
+.RI "#define \fBGO_IDLE_STATE\fP   0"
+.br
+.ti -1c
+.RI "#define \fBSEND_OP_COND\fP   1"
+.br
+.ti -1c
+.RI "#define \fBALL_SEND_CID\fP   2"
+.br
+.ti -1c
+.RI "#define \fBSET_RELATIVE_ADDR\fP   3"
+.br
+.ti -1c
+.RI "#define \fBSET_ACMD_BUS_WIDTH\fP   6"
+.br
+.ti -1c
+.RI "#define \fBSELECT_CARD\fP   7"
+.br
+.ti -1c
+.RI "#define \fBSEND_CSD\fP   9"
+.br
+.ti -1c
+.RI "#define \fBSEND_CID\fP   10"
+.br
+.ti -1c
+.RI "#define \fBSTOP_TRANSMISSION\fP   12"
+.br
+.ti -1c
+.RI "#define \fBSEND_STATUS\fP   13"
+.br
+.ti -1c
+.RI "#define \fBSET_BLOCK_LEN\fP   16"
+.br
+.ti -1c
+.RI "#define \fBREAD_BLOCK\fP   17"
+.br
+.ti -1c
+.RI "#define \fBREAD_MULT_BLOCK\fP   18"
+.br
+.ti -1c
+.RI "#define \fBWRITE_BLOCK\fP   24"
+.br
+.ti -1c
+.RI "#define \fBWRITE_MULT_BLOCK\fP   25"
+.br
+.ti -1c
+.RI "#define \fBSEND_APP_OP_COND\fP   41"
+.br
+.ti -1c
+.RI "#define \fBAPP_CMD\fP   55"
+.br
+.ti -1c
+.RI "#define \fBSTAT_ACMD_ENABLE\fP   0x00000020"
+.br
+.ti -1c
+.RI "#define \fBSTAT_RDY_DATA\fP   0x00000100"
+.br
+.ti -1c
+.RI "#define \fBSTAT_CURRENT_STATE\fP   0x00001E00"
+.br
+.ti -1c
+.RI "#define \fBSTAT_ERASE_RESET\fP   0x00002000"
+.br
+.ti -1c
+.RI "#define \fBBUS_WIDTH_1BIT\fP   0"
+.br
+.ti -1c
+.RI "#define \fBBUS_WIDTH_4BITS\fP   10"
+.br
+.ti -1c
+.RI "#define \fBOCR_INDEX\fP   0x00FF8000"
+.br
+.ti -1c
+.RI "#define \fBMCI_CMD_CRC_FAIL\fP   0x00000001"
+.br
+.ti -1c
+.RI "#define \fBMCI_DATA_CRC_FAIL\fP   0x00000002"
+.br
+.ti -1c
+.RI "#define \fBMCI_CMD_TIMEOUT\fP   0x00000004"
+.br
+.ti -1c
+.RI "#define \fBMCI_DATA_TIMEOUT\fP   0x00000008"
+.br
+.ti -1c
+.RI "#define \fBMCI_TX_UNDERRUN\fP   0x00000010"
+.br
+.ti -1c
+.RI "#define \fBMCI_RX_OVERRUN\fP   0x00000020"
+.br
+.ti -1c
+.RI "#define \fBMCI_CMD_RESP_END\fP   0x00000040"
+.br
+.ti -1c
+.RI "#define \fBMCI_CMD_SENT\fP   0x00000080"
+.br
+.ti -1c
+.RI "#define \fBMCI_DATA_END\fP   0x00000100"
+.br
+.ti -1c
+.RI "#define \fBMCI_START_BIT_ERR\fP   0x00000200"
+.br
+.ti -1c
+.RI "#define \fBMCI_DATA_BLK_END\fP   0x00000400"
+.br
+.ti -1c
+.RI "#define \fBMCI_CMD_ACTIVE\fP   0x00000800"
+.br
+.ti -1c
+.RI "#define \fBMCI_TX_ACTIVE\fP   0x00001000"
+.br
+.ti -1c
+.RI "#define \fBMCI_RX_ACTIVE\fP   0x00002000"
+.br
+.ti -1c
+.RI "#define \fBMCI_TX_HALF_EMPTY\fP   0x00004000"
+.br
+.ti -1c
+.RI "#define \fBMCI_RX_HALF_FULL\fP   0x00008000"
+.br
+.ti -1c
+.RI "#define \fBMCI_TX_FIFO_FULL\fP   0x00010000"
+.br
+.ti -1c
+.RI "#define \fBMCI_RX_FIFO_FULL\fP   0x00020000"
+.br
+.ti -1c
+.RI "#define \fBMCI_TX_FIFO_EMPTY\fP   0x00040000"
+.br
+.ti -1c
+.RI "#define \fBMCI_RX_FIFO_EMPTY\fP   0x00080000"
+.br
+.ti -1c
+.RI "#define \fBMCI_TX_DATA_AVAIL\fP   0x00100000"
+.br
+.ti -1c
+.RI "#define \fBMCI_RX_DATA_AVAIL\fP   0x00200000"
+.br
+.ti -1c
+.RI "#define \fBMCI_RESP_INVALID\fP   0xFFFFFFFF"
+.br
+.ti -1c
+.RI "#define \fBMCI_CLEAR_MASK\fP   0x000007FF"
+.br
+.ti -1c
+.RI "#define \fBLOW_SPEED\fP   0"
+.br
+.ti -1c
+.RI "#define \fBHIGH_SPEED\fP   1"
+.br
+.ti -1c
+.RI "#define \fBOPEN_DRAIN_MODE\fP   0"
+.br
+.ti -1c
+.RI "#define \fBPUSH_PULL_MODE\fP   1"
+.br
+.ti -1c
+.RI "#define \fBDMA_READ\fP   0"
+.br
+.ti -1c
+.RI "#define \fBDMA_WRITE\fP   1"
+.br
+.ti -1c
+.RI "#define \fBDATA_RD_TOUT_VALUE\fP   (10*(SD_CLK/1000))"
+.br
+.ti -1c
+.RI "#define \fBDATA_WR_TOUT_VALUE\fP   (200*(SD_CLK/1000))"
+.br
+.in -1c
+.SH "Define Documentation"
+.PP 
+.SS "#define ALL_SEND_CID   2"
+.SS "#define APP_CMD   55"
+.SS "#define BUS_WIDTH_1BIT   0"
+.SS "#define BUS_WIDTH_4BITS   10"
+.SS "#define DATA_RD_TOUT_VALUE   (10*(SD_CLK/1000))"
+.SS "#define DATA_WR_TOUT_VALUE   (200*(SD_CLK/1000))"
+.SS "#define DMA_READ   0"
+.SS "#define DMA_WRITE   1"
+.SS "#define GO_IDLE_STATE   0"
+.SS "#define HIGH_SPEED   1"
+.SS "#define LOW_SPEED   0"
+.SS "#define MCI_CLEAR_MASK   0x000007FF"
+.SS "#define MCI_CMD_ACTIVE   0x00000800"
+.SS "#define MCI_CMD_CRC_FAIL   0x00000001"
+.SS "#define MCI_CMD_RESP_END   0x00000040"
+.SS "#define MCI_CMD_SENT   0x00000080"
+.SS "#define MCI_CMD_TIMEOUT   0x00000004"
+.SS "#define MCI_DATA_BLK_END   0x00000400"
+.SS "#define MCI_DATA_CRC_FAIL   0x00000002"
+.SS "#define MCI_DATA_END   0x00000100"
+.SS "#define MCI_DATA_TIMEOUT   0x00000008"
+.SS "#define mci_init   mmc_init"
+.SS "#define mci_read_config   mmc_read_config"
+.SS "#define mci_read_sect   mmc_read_sect"
+.SS "#define MCI_RESP_INVALID   0xFFFFFFFF"
+.SS "#define MCI_RX_ACTIVE   0x00002000"
+.SS "#define MCI_RX_DATA_AVAIL   0x00200000"
+.SS "#define MCI_RX_FIFO_EMPTY   0x00080000"
+.SS "#define MCI_RX_FIFO_FULL   0x00020000"
+.SS "#define MCI_RX_HALF_FULL   0x00008000"
+.SS "#define MCI_RX_OVERRUN   0x00000020"
+.SS "#define MCI_START_BIT_ERR   0x00000200"
+.SS "#define MCI_TX_ACTIVE   0x00001000"
+.SS "#define MCI_TX_DATA_AVAIL   0x00100000"
+.SS "#define MCI_TX_FIFO_EMPTY   0x00040000"
+.SS "#define MCI_TX_FIFO_FULL   0x00010000"
+.SS "#define MCI_TX_HALF_EMPTY   0x00004000"
+.SS "#define MCI_TX_UNDERRUN   0x00000010"
+.SS "#define mci_write_sect   mmc_write_sect"
+.SS "#define OCR_INDEX   0x00FF8000"
+.SS "#define OPEN_DRAIN_MODE   0"
+.SS "#define PUSH_PULL_MODE   1"
+.SS "#define READ_BLOCK   17"
+.SS "#define READ_MULT_BLOCK   18"
+.SS "#define RESP_LONG   2"
+.SS "#define RESP_NONE   0"
+.SS "#define RESP_SHORT   1"
+.SS "#define SD_CLK   24000000"
+.SS "#define SELECT_CARD   7"
+.SS "#define SEND_APP_OP_COND   41"
+.SS "#define SEND_CID   10"
+.SS "#define SEND_CSD   9"
+.SS "#define SEND_OP_COND   1"
+.SS "#define SEND_STATUS   13"
+.SS "#define SET_ACMD_BUS_WIDTH   6"
+.SS "#define SET_BLOCK_LEN   16"
+.SS "#define SET_RELATIVE_ADDR   3"
+.SS "#define STAT_ACMD_ENABLE   0x00000020"
+.SS "#define STAT_CURRENT_STATE   0x00001E00"
+.SS "#define STAT_ERASE_RESET   0x00002000"
+.SS "#define STAT_RDY_DATA   0x00000100"
+.SS "#define STOP_TRANSMISSION   12"
+.SS "#define WRITE_BLOCK   24"
+.SS "#define WRITE_MULT_BLOCK   25"
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Object Oriented Library for ARM 7 from the source code.

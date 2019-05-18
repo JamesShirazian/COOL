@@ -1,0 +1,195 @@
+.TH "StopWatch0" 3 "Tue Jun 21 2011" "Version 1.100.000" "Object Oriented Library for ARM 7" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+StopWatch0 \- 
+.PP
+class \fBStopWatch0\fP: is a class which use measure time between two points of time for instance it can be use to measure the amount of time that ARM 7 took to display a text on screen or the amount of time which is taken to create file in the SD card, this class use timer0 of ARM7.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <StopWatch0.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBStopWatch0\fP ()"
+.br
+.ti -1c
+.RI "\fBStopWatch0\fP (int newPriority)"
+.br
+.ti -1c
+.RI "void \fBstart\fP (void)"
+.br
+.ti -1c
+.RI "void \fBstop\fP (void)"
+.br
+.ti -1c
+.RI "void \fBreset\fP (void)"
+.br
+.ti -1c
+.RI "float \fBgetDuration\fP (void)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+class \fBStopWatch0\fP: is a class which use measure time between two points of time for instance it can be use to measure the amount of time that ARM 7 took to display a text on screen or the amount of time which is taken to create file in the SD card, this class use timer0 of ARM7. 
+
+\fBSee also:\fP
+.RS 4
+\fBStopWatch1\fP 
+.PP
+\fBStopWatch2\fP 
+.PP
+\fBStopWatch3\fP 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "StopWatch0::StopWatch0 ()"
+.br
+Default constructor which set the priority level 0.
+.br
+ 
+.br
+Example:
+.br
+
+.br
+ \fBStopWatch0\fP SW0;
+.br
+ SW0.start(); 
+.br
+ for(counter=0;counter<400000;counter++); 
+.br
+ SW0.stop(); 
+.br
+ 
+.SS "StopWatch0::StopWatch0 (intnewPriority)"
+.br
+Second constructor which set the priority level on base of its priority.
+.br
+ 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIint\fP newPriority: Priority 
+.br
+ 
+.br
+Example:
+.br
+
+.br
+ \fBStopWatch0\fP SW0(5);
+.br
+ SW0.start(); 
+.br
+ for(counter=0;counter<400000;counter++); 
+.br
+ SW0.stop(); 
+.br
+ 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "float StopWatch0::getDuration (void)"
+.br
+get the duration from WatchTime.
+.br
+ 
+.PP
+\fBReturns:\fP
+.RS 4
+float StopWatchTimeDuration: return the amount of time from the moment the StopWatch has started till it stops.
+.br
+ 
+.br
+Example:
+.br
+
+.br
+ \fBStopWatch0\fP SW0; 
+.br
+ SW0.start(); 
+.br
+ for(counter=0;counter<400000;counter++); 
+.br
+ SW0.stop(); 
+.br
+ \fBLCD.display\fP(SW0.getDuration(),3,0,0);
+.br
+ 
+.RE
+.PP
+
+.SS "void StopWatch0::reset (void)"
+.br
+reset the StopWatch value to 0.
+.br
+ 
+.br
+Example:
+.br
+
+.br
+ \fBStopWatch0\fP SW0; 
+.br
+ SW0.start(); 
+.br
+ for(counter=0;counter<400000;counter++); 
+.br
+ SW0.stop(); 
+.br
+ \fBLCD.display\fP(SW0.getDuration(),3,0,0);
+.br
+ SW0.reset();
+.br
+ 
+.SS "void StopWatch0::start (void)"
+.br
+Start WatchTime.
+.br
+ 
+.br
+Example:
+.br
+
+.br
+ \fBStopWatch0\fP SW0; 
+.br
+ SW0.start(); 
+.br
+ for(counter=0;counter<400000;counter++); 
+.br
+ SW0.stop(); 
+.br
+ 
+.SS "void StopWatch0::stop (void)"
+.br
+Stop WatchTime.
+.br
+ 
+.br
+Example:
+.br
+
+.br
+ \fBStopWatch0\fP SW0; 
+.br
+ SW0.start(); 
+.br
+ for(counter=0;counter<400000;counter++); 
+.br
+ SW0.stop(); 
+.br
+ 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Object Oriented Library for ARM 7 from the source code.

@@ -1,0 +1,82 @@
+\hypertarget{class_timer_delay2}{
+\section{TimerDelay2 Class Reference}
+\label{class_timer_delay2}\index{TimerDelay2@{TimerDelay2}}
+}
+
+
+class \hyperlink{class_timer_delay2}{TimerDelay2}: is a class which use to generate delay it uses timer2 of ARM7.  
+
+
+
+
+{\ttfamily \#include $<$TimerDelay2.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_timer_delay2_a0971a5e76678b61f7aabb664363de89a}{TimerDelay2} ()
+\item 
+void \hyperlink{class_timer_delay2_aef27679b4a8c7af25ead4b8367a9dd9a}{wait} (float newInterval)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class \hyperlink{class_timer_delay2}{TimerDelay2}: is a class which use to generate delay it uses timer2 of ARM7. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_timer_delay0}{TimerDelay0} 
+
+\hyperlink{class_timer_delay1}{TimerDelay1} 
+
+\hyperlink{class_timer_delay3}{TimerDelay3} 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_timer_delay2_a0971a5e76678b61f7aabb664363de89a}{
+\index{TimerDelay2@{TimerDelay2}!TimerDelay2@{TimerDelay2}}
+\index{TimerDelay2@{TimerDelay2}!TimerDelay2@{TimerDelay2}}
+\subsubsection[{TimerDelay2}]{\setlength{\rightskip}{0pt plus 5cm}TimerDelay2::TimerDelay2 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_timer_delay2_a0971a5e76678b61f7aabb664363de89a}
+\par
+Default constructor of \hyperlink{class_timer_delay0}{TimerDelay0}.\par
+ \par
+Example:\par
+\par
+ \hyperlink{class_timer_delay0}{TimerDelay0} TD0;\par
+ 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_timer_delay2_aef27679b4a8c7af25ead4b8367a9dd9a}{
+\index{TimerDelay2@{TimerDelay2}!wait@{wait}}
+\index{wait@{wait}!TimerDelay2@{TimerDelay2}}
+\subsubsection[{wait}]{\setlength{\rightskip}{0pt plus 5cm}void TimerDelay2::wait (
+\begin{DoxyParamCaption}
+\item[{float}]{newInterval}
+\end{DoxyParamCaption}
+)}}
+\label{class_timer_delay2_aef27679b4a8c7af25ead4b8367a9dd9a}
+\par
+This method use to the set the delay time where ever is needed.\par
+ 
+\begin{DoxyParams}{Parameters}
+{\em float} & newInterval: delay value\par
+ \par
+Example:\par
+\par
+ \hyperlink{class_timer_delay0}{TimerDelay0} TD0;\par
+ TD.wait(4.5); \par
+ \hyperlink{group__group4_ga5ca68ce24b8f3a462bfba470e4707bb9}{LCD.display}(\char`\"{}Hi james!\char`\"{},0,0); \par
+ \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+TimerDelay2.h\item 
+TimerDelay2.cpp\end{DoxyCompactItemize}

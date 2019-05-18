@@ -1,0 +1,88 @@
+\hypertarget{_m_c_i___l_p_c23xx_8c}{
+\section{MCI\_\-LPC23xx.c File Reference}
+\label{da/dbe/_m_c_i___l_p_c23xx_8c}\index{MCI\_\-LPC23xx.c@{MCI\_\-LPC23xx.c}}
+}
+{\ttfamily \#include $<$File\_\-Config.h$>$}\par
+{\ttfamily \#include $<$LPC23xx.h$>$}\par
+{\ttfamily \#include \char`\"{}MCI\_\-LPC23xx.h\char`\"{}}\par
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_m_c_i___l_p_c23xx_8c_aa256bcf9ea8ab69cd23dbca00eeb1926}{WR\_\-TOUT}~100000
+\item 
+\#define \hyperlink{_m_c_i___l_p_c23xx_8c_a302ab16e96a77ffb375c763a497bf92e}{RD\_\-STOP\_\-TOUT}~100
+\item 
+\#define \hyperlink{_m_c_i___l_p_c23xx_8c_ac313da6e2a88f0bc3ad4a7201cd73cd0}{DMA\_\-TOUT}~10000
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{type_8h_ac3247c51e4e3de674affb32998e133e2}{BOOL} \hyperlink{_m_c_i___l_p_c23xx_8c_a11b469ffb4187c9e3c64df964f48268b}{mci\_\-init} (void)
+\item 
+\hyperlink{type_8h_ac3247c51e4e3de674affb32998e133e2}{BOOL} \hyperlink{_m_c_i___l_p_c23xx_8c_a96b3117b20174794be2892fee3e807cc}{mci\_\-read\_\-sect} (U32 sect, U8 $\ast$buf, U32 cnt)
+\item 
+\hyperlink{type_8h_ac3247c51e4e3de674affb32998e133e2}{BOOL} \hyperlink{_m_c_i___l_p_c23xx_8c_a18ced3a86d38933d18797f42e42e9a02}{mci\_\-write\_\-sect} (U32 sect, U8 $\ast$buf, U32 cnt)
+\item 
+\hyperlink{type_8h_ac3247c51e4e3de674affb32998e133e2}{BOOL} \hyperlink{_m_c_i___l_p_c23xx_8c_ac8234c998a55e53951700f6cbd7f7755}{mci\_\-read\_\-config} (MMCFG $\ast$cfg)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_m_c_i___l_p_c23xx_8c_ac313da6e2a88f0bc3ad4a7201cd73cd0}{
+\index{MCI\_\-LPC23xx.c@{MCI\_\-LPC23xx.c}!DMA\_\-TOUT@{DMA\_\-TOUT}}
+\index{DMA\_\-TOUT@{DMA\_\-TOUT}!MCI_LPC23xx.c@{MCI\_\-LPC23xx.c}}
+\subsubsection[{DMA\_\-TOUT}]{\setlength{\rightskip}{0pt plus 5cm}\#define DMA\_\-TOUT~10000}}
+\label{da/dbe/_m_c_i___l_p_c23xx_8c_ac313da6e2a88f0bc3ad4a7201cd73cd0}
+\hypertarget{_m_c_i___l_p_c23xx_8c_a302ab16e96a77ffb375c763a497bf92e}{
+\index{MCI\_\-LPC23xx.c@{MCI\_\-LPC23xx.c}!RD\_\-STOP\_\-TOUT@{RD\_\-STOP\_\-TOUT}}
+\index{RD\_\-STOP\_\-TOUT@{RD\_\-STOP\_\-TOUT}!MCI_LPC23xx.c@{MCI\_\-LPC23xx.c}}
+\subsubsection[{RD\_\-STOP\_\-TOUT}]{\setlength{\rightskip}{0pt plus 5cm}\#define RD\_\-STOP\_\-TOUT~100}}
+\label{da/dbe/_m_c_i___l_p_c23xx_8c_a302ab16e96a77ffb375c763a497bf92e}
+\hypertarget{_m_c_i___l_p_c23xx_8c_aa256bcf9ea8ab69cd23dbca00eeb1926}{
+\index{MCI\_\-LPC23xx.c@{MCI\_\-LPC23xx.c}!WR\_\-TOUT@{WR\_\-TOUT}}
+\index{WR\_\-TOUT@{WR\_\-TOUT}!MCI_LPC23xx.c@{MCI\_\-LPC23xx.c}}
+\subsubsection[{WR\_\-TOUT}]{\setlength{\rightskip}{0pt plus 5cm}\#define WR\_\-TOUT~100000}}
+\label{da/dbe/_m_c_i___l_p_c23xx_8c_aa256bcf9ea8ab69cd23dbca00eeb1926}
+
+
+\subsection{Function Documentation}
+\hypertarget{_m_c_i___l_p_c23xx_8c_a11b469ffb4187c9e3c64df964f48268b}{
+\index{MCI\_\-LPC23xx.c@{MCI\_\-LPC23xx.c}!mci\_\-init@{mci\_\-init}}
+\index{mci\_\-init@{mci\_\-init}!MCI_LPC23xx.c@{MCI\_\-LPC23xx.c}}
+\subsubsection[{mci\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}{\bf BOOL} mci\_\-init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{da/dbe/_m_c_i___l_p_c23xx_8c_a11b469ffb4187c9e3c64df964f48268b}
+\hypertarget{_m_c_i___l_p_c23xx_8c_ac8234c998a55e53951700f6cbd7f7755}{
+\index{MCI\_\-LPC23xx.c@{MCI\_\-LPC23xx.c}!mci\_\-read\_\-config@{mci\_\-read\_\-config}}
+\index{mci\_\-read\_\-config@{mci\_\-read\_\-config}!MCI_LPC23xx.c@{MCI\_\-LPC23xx.c}}
+\subsubsection[{mci\_\-read\_\-config}]{\setlength{\rightskip}{0pt plus 5cm}{\bf BOOL} mci\_\-read\_\-config (
+\begin{DoxyParamCaption}
+\item[{MMCFG $\ast$}]{cfg}
+\end{DoxyParamCaption}
+)}}
+\label{da/dbe/_m_c_i___l_p_c23xx_8c_ac8234c998a55e53951700f6cbd7f7755}
+\hypertarget{_m_c_i___l_p_c23xx_8c_a96b3117b20174794be2892fee3e807cc}{
+\index{MCI\_\-LPC23xx.c@{MCI\_\-LPC23xx.c}!mci\_\-read\_\-sect@{mci\_\-read\_\-sect}}
+\index{mci\_\-read\_\-sect@{mci\_\-read\_\-sect}!MCI_LPC23xx.c@{MCI\_\-LPC23xx.c}}
+\subsubsection[{mci\_\-read\_\-sect}]{\setlength{\rightskip}{0pt plus 5cm}{\bf BOOL} mci\_\-read\_\-sect (
+\begin{DoxyParamCaption}
+\item[{U32}]{sect, }
+\item[{U8 $\ast$}]{buf, }
+\item[{U32}]{cnt}
+\end{DoxyParamCaption}
+)}}
+\label{da/dbe/_m_c_i___l_p_c23xx_8c_a96b3117b20174794be2892fee3e807cc}
+\hypertarget{_m_c_i___l_p_c23xx_8c_a18ced3a86d38933d18797f42e42e9a02}{
+\index{MCI\_\-LPC23xx.c@{MCI\_\-LPC23xx.c}!mci\_\-write\_\-sect@{mci\_\-write\_\-sect}}
+\index{mci\_\-write\_\-sect@{mci\_\-write\_\-sect}!MCI_LPC23xx.c@{MCI\_\-LPC23xx.c}}
+\subsubsection[{mci\_\-write\_\-sect}]{\setlength{\rightskip}{0pt plus 5cm}{\bf BOOL} mci\_\-write\_\-sect (
+\begin{DoxyParamCaption}
+\item[{U32}]{sect, }
+\item[{U8 $\ast$}]{buf, }
+\item[{U32}]{cnt}
+\end{DoxyParamCaption}
+)}}
+\label{da/dbe/_m_c_i___l_p_c23xx_8c_a18ced3a86d38933d18797f42e42e9a02}

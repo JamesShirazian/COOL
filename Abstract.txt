@@ -1,0 +1,26 @@
+ The concentration of solvent gas/vapours can be measure using Metal Oxide Semiconductor [MOS] based devices. In the presence of a detectable gas, the sensor's conductivity increases depending on the gas concentration in the air. A simple electrical circuit converts the change in conductivity to an output signal (voltage) which corresponds to the gas concentration.
+The gas concentration level is calculated from the formula below and valid for concentrations in the range of 100 - 10 000 (parts per million) ppm.
+
+The output from the sensor driver electronics is an analogue signal in the range of 0 to +3.3 volts which corresponds to a measured gas concentration using the formula given above. To simulate the sensor output the potentiometer on the Keil boards produces a voltage in the range 0 to approx. +3.3 volts, which is input to the microcontroller through an analogue to digital converter (ADC). The ADC of the NXP LPC2368 is a 10-bit ADC producing 1024 possible digital values in the range 0 to 1023.
+Your program should read the ADC at periodic time intervals (using a hardware Timer) and convert the digital value into its equivalent concentration in ppm using the information provided above. The measured concentration level should be continuously displayed on the LCD as a numerical value and as a moving bar graph (see figure below as an example). You may be required to make your own LCD characters to achieve a reasonable resolution of the bar graph display. Note: You may wish to use a Real Time Operating System (RTOS) for the final implementation of the gas sensor system and therefore should consider your overall approach and structure your code accordingly.
+Basic Features	(40-50%)
+1.	Risk of explosion is significant if the concentrations remain above 2500ppm the Lower Explosion Limit (LEL). If the sensor reads a concentration level which constantly stays above 2500ppm for more than 10 seconds the LED's should flash, warning of possible risk of explosion.
+2.	Store the sampled data over a set period of time and or number of samples into an array for analysis at a later time. At the end of the set time period or end sample number the values should be output to the UART for display on a PC.
+
+
+
+Additional Features (50-70%)
+3.	If the data is stored in an array located RAM memory (default option when arrays are created) the logged data will be lost when power is removed from the chip. Store the data in non volatile memory such as the internal flash or an external EEPROM connected to the microcontroller using the I2C or SPI bus. (Ask the lecturer for more information on the external peripherals which may be accessed through the I2C or SPI bus).
+4.	Increase the resolution of the system by using one of the external high resolution ADC's available on the I2C and SPI peripheral boards.
+5.	Add user configurable parameters such as setting the sample period, number of samples to be taken or changing the concentration warning levels. These could be set using HyperTerminal and the serial UART connection of the MCB2300.
+6.	Implement an instantaneous increase but gradual decay of the bar graph on LCD.
+7.	Use the Real Time Clock (RTC) to timestamp the logged data.
+8.	Use the DAC and connected speaker to emit a 1 kHz test tone if the INT0 button is held down for more than 3 seconds.
+
+
+Advanced Features (70 %+)
+9.	Store the logged data to the SD card for analysis on a PC.
+10. Use the CAN bus to connect multiple senor nodes.
+11. Use of the RL ARM Real Time Operating System (RTOS) to coordinate the operation/flow of your program. This may require you to form a new overall approach to the problem and restructure your code.
+12. Add USB functionality to your system replacing the data transfer of the UART.
+13. Add your own innovative features!

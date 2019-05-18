@@ -1,0 +1,257 @@
+\hypertarget{_file___config_8c}{
+\section{File\_\-Config.c File Reference}
+\label{d7/d31/_file___config_8c}\index{File\_\-Config.c@{File\_\-Config.c}}
+}
+{\ttfamily \#include $<$File\_\-Config.h$>$}\par
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$absacc.h$>$}\par
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_file___config_8c_aead4c56cc5d4d77dbc23b950ef7c22af}{FL\_\-DEV}~0
+\item 
+\#define \hyperlink{_file___config_8c_a9bfc8877fe3a4c1038c0f1ba30a40a61}{FL\_\-BADR}~0x80000000
+\item 
+\#define \hyperlink{_file___config_8c_a431c0a006d41a0066d3b46db6b6201f5}{FL\_\-SIZE}~0x0200000
+\item 
+\#define \hyperlink{_file___config_8c_ab678383db6d54f6738318c41d3d43967}{FL\_\-INITV}~0xFF
+\item 
+\#define \hyperlink{_file___config_8c_af86ac22bbcbc3d503a3be435515260b0}{FL\_\-HFILE}~\char`\"{}Flash$\backslash$FS\_\-FlashDev.h\char`\"{}
+\item 
+\#define \hyperlink{_file___config_8c_a33bae5abfe11dabad45f945b8b15a2ba}{SF\_\-DEV}~0
+\item 
+\#define \hyperlink{_file___config_8c_a2ca76f3b4810ec0655c111c9b5af8b4b}{SF\_\-INITV}~0xFF
+\item 
+\#define \hyperlink{_file___config_8c_a6f0aaf24d9c56d8b8b6930c1bd9dbbae}{SF\_\-HFILE}~\char`\"{}FS\_\-SPI\_\-FlashDev.h\char`\"{}
+\item 
+\#define \hyperlink{_file___config_8c_af55bc5d6a19b8387797e113892a6f831}{RAM\_\-DEV}~0
+\item 
+\#define \hyperlink{_file___config_8c_af14a27eeb22d3a8daa8ca8cea31bc2d4}{RAM\_\-BADR}~0x81000000
+\item 
+\#define \hyperlink{_file___config_8c_ab82dd208a7e716e09a3f8c229bfe78d7}{RAM\_\-SIZE}~0x040000
+\item 
+\#define \hyperlink{_file___config_8c_a743ab88eac74b793c4fc24141e78ebc6}{RAM\_\-NSECT}~8
+\item 
+\#define \hyperlink{_file___config_8c_a7fef7dd5b1a5f014a1fe6cbccdf9e242}{MC\_\-DEV}~1
+\item 
+\#define \hyperlink{_file___config_8c_aa950f582e0b6ed2ce677dddbced9fd36}{MC\_\-CSIZE}~8
+\item 
+\#define \hyperlink{_file___config_8c_aaa0cb50ab2ddae35ce6fb4e6052ca60a}{MC\_\-RELOC}~1
+\item 
+\#define \hyperlink{_file___config_8c_aefef26203e8d15e6792679d223e824e4}{MC\_\-CADR}~0x7FD00000
+\item 
+\#define \hyperlink{_file___config_8c_a42f57f58085a1e8e91aec7c511b54d04}{DEF\_\-DRIVE}~4
+\item 
+\#define \hyperlink{_file___config_8c_a830fd4b906cd391487712d11740c065f}{CPU\_\-CLK}~60000000
+\item 
+\#define \hyperlink{_file___config_8c_acf9500fcb6caada90c3e3ba3819ad13a}{\_\-\_\-AT\_\-MC\_\-CADR}~\_\-\_\-at(MC\_\-CADR)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct iob \hyperlink{_file___config_8c_a21234ec8b9b1a9e57e8f86ea2209c699}{\_\-iob} \mbox{[}FOPEN\_\-MAX\mbox{]}
+\item 
+U16 const \hyperlink{_file___config_8c_a808d4f5b901dc1276c1a4a5e532586af}{\_\-NFILE} = FOPEN\_\-MAX
+\item 
+U16 const \hyperlink{_file___config_8c_a687e1184a2c04f6e719b8005d717dbc7}{\_\-DEF\_\-DRIVE} = DEF\_\-DRIVE
+\item 
+U32 const \hyperlink{_file___config_8c_a0285fb5588059a59ed51565b9b3be183}{\_\-CPU\_\-CLK} = CPU\_\-CLK
+\item 
+DEVCONF const \hyperlink{_file___config_8c_a6f7ddf411159a5bb18e7249646e70c00}{FlashDev} \mbox{[}1\mbox{]} = \{0,0\}
+\item 
+U16 const \hyperlink{_file___config_8c_a14444c0367e8400088035d27364251dd}{\_\-FlashNumSect} = 0
+\item 
+U32 const \hyperlink{_file___config_8c_af516e820c43cf5ad5202a3c6504931ef}{\_\-BlockFREE} = 0x00000000
+\item 
+U32 const \hyperlink{_file___config_8c_a5d4e12f85badf6b377cce97419bea0c5}{\_\-BASE\_\-ADR} = FL\_\-BADR
+\item 
+DEVCONF const \hyperlink{_file___config_8c_a887a039eb81936d9c61ea1877c281331}{SpiDev} \mbox{[}1\mbox{]} = \{0,0\}
+\item 
+U16 const \hyperlink{_file___config_8c_a50db1701039dbc3f771f64aa86d74dd0}{\_\-SpiNumSect} = 0
+\item 
+U32 const \hyperlink{_file___config_8c_ac292f96077814ea7c86d7a3f65983bbe}{\_\-SpiBlFREE} = 0x00000000
+\item 
+DEVCONF const \hyperlink{_file___config_8c_a97f8a91d1605be83cb6541f40d0d2821}{RamDev} \mbox{[}1\mbox{]} = \{0,0\}
+\item 
+U16 const \hyperlink{_file___config_8c_a761b3a486e6107635824d6882ed8624c}{\_\-RamNumSect} = 0
+\item 
+U32 mc\_\-cache\mbox{[}128 $\ast$(MC\_\-CSIZE+2)\mbox{]} \hyperlink{_file___config_8c_a2b2c0f20d5565557d622df4a633f855b}{\_\-\_\-AT\_\-MC\_\-CADR}
+\item 
+U16 const \hyperlink{_file___config_8c_a1148485ca65c2718b05a3c63992b0796}{\_\-MC\_\-CSIZE} = MC\_\-CSIZE
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_file___config_8c_acf9500fcb6caada90c3e3ba3819ad13a}{
+\index{File\_\-Config.c@{File\_\-Config.c}!\_\-\_\-AT\_\-MC\_\-CADR@{\_\-\_\-AT\_\-MC\_\-CADR}}
+\index{\_\-\_\-AT\_\-MC\_\-CADR@{\_\-\_\-AT\_\-MC\_\-CADR}!File_Config.c@{File\_\-Config.c}}
+\subsubsection[{\_\-\_\-AT\_\-MC\_\-CADR}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \_\-\_\-AT\_\-MC\_\-CADR}~\_\-\_\-at(MC\_\-CADR)}}
+\label{d7/d31/_file___config_8c_acf9500fcb6caada90c3e3ba3819ad13a}
+\hypertarget{_file___config_8c_a830fd4b906cd391487712d11740c065f}{
+\index{File\_\-Config.c@{File\_\-Config.c}!CPU\_\-CLK@{CPU\_\-CLK}}
+\index{CPU\_\-CLK@{CPU\_\-CLK}!File_Config.c@{File\_\-Config.c}}
+\subsubsection[{CPU\_\-CLK}]{\setlength{\rightskip}{0pt plus 5cm}\#define CPU\_\-CLK~60000000}}
+\label{d7/d31/_file___config_8c_a830fd4b906cd391487712d11740c065f}
+\hypertarget{_file___config_8c_a42f57f58085a1e8e91aec7c511b54d04}{
+\index{File\_\-Config.c@{File\_\-Config.c}!DEF\_\-DRIVE@{DEF\_\-DRIVE}}
+\index{DEF\_\-DRIVE@{DEF\_\-DRIVE}!File_Config.c@{File\_\-Config.c}}
+\subsubsection[{DEF\_\-DRIVE}]{\setlength{\rightskip}{0pt plus 5cm}\#define DEF\_\-DRIVE~4}}
+\label{d7/d31/_file___config_8c_a42f57f58085a1e8e91aec7c511b54d04}
+\hypertarget{_file___config_8c_a9bfc8877fe3a4c1038c0f1ba30a40a61}{
+\index{File\_\-Config.c@{File\_\-Config.c}!FL\_\-BADR@{FL\_\-BADR}}
+\index{FL\_\-BADR@{FL\_\-BADR}!File_Config.c@{File\_\-Config.c}}
+\subsubsection[{FL\_\-BADR}]{\setlength{\rightskip}{0pt plus 5cm}\#define FL\_\-BADR~0x80000000}}
+\label{d7/d31/_file___config_8c_a9bfc8877fe3a4c1038c0f1ba30a40a61}
+\hypertarget{_file___config_8c_aead4c56cc5d4d77dbc23b950ef7c22af}{
+\index{File\_\-Config.c@{File\_\-Config.c}!FL\_\-DEV@{FL\_\-DEV}}
+\index{FL\_\-DEV@{FL\_\-DEV}!File_Config.c@{File\_\-Config.c}}
+\subsubsection[{FL\_\-DEV}]{\setlength{\rightskip}{0pt plus 5cm}\#define FL\_\-DEV~0}}
+\label{d7/d31/_file___config_8c_aead4c56cc5d4d77dbc23b950ef7c22af}
+\hypertarget{_file___config_8c_af86ac22bbcbc3d503a3be435515260b0}{
+\index{File\_\-Config.c@{File\_\-Config.c}!FL\_\-HFILE@{FL\_\-HFILE}}
+\index{FL\_\-HFILE@{FL\_\-HFILE}!File_Config.c@{File\_\-Config.c}}
+\subsubsection[{FL\_\-HFILE}]{\setlength{\rightskip}{0pt plus 5cm}\#define FL\_\-HFILE~\char`\"{}Flash$\backslash$FS\_\-FlashDev.h\char`\"{}}}
+\label{d7/d31/_file___config_8c_af86ac22bbcbc3d503a3be435515260b0}
+\hypertarget{_file___config_8c_ab678383db6d54f6738318c41d3d43967}{
+\index{File\_\-Config.c@{File\_\-Config.c}!FL\_\-INITV@{FL\_\-INITV}}
+\index{FL\_\-INITV@{FL\_\-INITV}!File_Config.c@{File\_\-Config.c}}
+\subsubsection[{FL\_\-INITV}]{\setlength{\rightskip}{0pt plus 5cm}\#define FL\_\-INITV~0xFF}}
+\label{d7/d31/_file___config_8c_ab678383db6d54f6738318c41d3d43967}
+\hypertarget{_file___config_8c_a431c0a006d41a0066d3b46db6b6201f5}{
+\index{File\_\-Config.c@{File\_\-Config.c}!FL\_\-SIZE@{FL\_\-SIZE}}
+\index{FL\_\-SIZE@{FL\_\-SIZE}!File_Config.c@{File\_\-Config.c}}
+\subsubsection[{FL\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define FL\_\-SIZE~0x0200000}}
+\label{d7/d31/_file___config_8c_a431c0a006d41a0066d3b46db6b6201f5}
+\hypertarget{_file___config_8c_aefef26203e8d15e6792679d223e824e4}{
+\index{File\_\-Config.c@{File\_\-Config.c}!MC\_\-CADR@{MC\_\-CADR}}
+\index{MC\_\-CADR@{MC\_\-CADR}!File_Config.c@{File\_\-Config.c}}
+\subsubsection[{MC\_\-CADR}]{\setlength{\rightskip}{0pt plus 5cm}\#define MC\_\-CADR~0x7FD00000}}
+\label{d7/d31/_file___config_8c_aefef26203e8d15e6792679d223e824e4}
+\hypertarget{_file___config_8c_aa950f582e0b6ed2ce677dddbced9fd36}{
+\index{File\_\-Config.c@{File\_\-Config.c}!MC\_\-CSIZE@{MC\_\-CSIZE}}
+\index{MC\_\-CSIZE@{MC\_\-CSIZE}!File_Config.c@{File\_\-Config.c}}
+\subsubsection[{MC\_\-CSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define MC\_\-CSIZE~8}}
+\label{d7/d31/_file___config_8c_aa950f582e0b6ed2ce677dddbced9fd36}
+\hypertarget{_file___config_8c_a7fef7dd5b1a5f014a1fe6cbccdf9e242}{
+\index{File\_\-Config.c@{File\_\-Config.c}!MC\_\-DEV@{MC\_\-DEV}}
+\index{MC\_\-DEV@{MC\_\-DEV}!File_Config.c@{File\_\-Config.c}}
+\subsubsection[{MC\_\-DEV}]{\setlength{\rightskip}{0pt plus 5cm}\#define MC\_\-DEV~1}}
+\label{d7/d31/_file___config_8c_a7fef7dd5b1a5f014a1fe6cbccdf9e242}
+\hypertarget{_file___config_8c_aaa0cb50ab2ddae35ce6fb4e6052ca60a}{
+\index{File\_\-Config.c@{File\_\-Config.c}!MC\_\-RELOC@{MC\_\-RELOC}}
+\index{MC\_\-RELOC@{MC\_\-RELOC}!File_Config.c@{File\_\-Config.c}}
+\subsubsection[{MC\_\-RELOC}]{\setlength{\rightskip}{0pt plus 5cm}\#define MC\_\-RELOC~1}}
+\label{d7/d31/_file___config_8c_aaa0cb50ab2ddae35ce6fb4e6052ca60a}
+\hypertarget{_file___config_8c_af14a27eeb22d3a8daa8ca8cea31bc2d4}{
+\index{File\_\-Config.c@{File\_\-Config.c}!RAM\_\-BADR@{RAM\_\-BADR}}
+\index{RAM\_\-BADR@{RAM\_\-BADR}!File_Config.c@{File\_\-Config.c}}
+\subsubsection[{RAM\_\-BADR}]{\setlength{\rightskip}{0pt plus 5cm}\#define RAM\_\-BADR~0x81000000}}
+\label{d7/d31/_file___config_8c_af14a27eeb22d3a8daa8ca8cea31bc2d4}
+\hypertarget{_file___config_8c_af55bc5d6a19b8387797e113892a6f831}{
+\index{File\_\-Config.c@{File\_\-Config.c}!RAM\_\-DEV@{RAM\_\-DEV}}
+\index{RAM\_\-DEV@{RAM\_\-DEV}!File_Config.c@{File\_\-Config.c}}
+\subsubsection[{RAM\_\-DEV}]{\setlength{\rightskip}{0pt plus 5cm}\#define RAM\_\-DEV~0}}
+\label{d7/d31/_file___config_8c_af55bc5d6a19b8387797e113892a6f831}
+\hypertarget{_file___config_8c_a743ab88eac74b793c4fc24141e78ebc6}{
+\index{File\_\-Config.c@{File\_\-Config.c}!RAM\_\-NSECT@{RAM\_\-NSECT}}
+\index{RAM\_\-NSECT@{RAM\_\-NSECT}!File_Config.c@{File\_\-Config.c}}
+\subsubsection[{RAM\_\-NSECT}]{\setlength{\rightskip}{0pt plus 5cm}\#define RAM\_\-NSECT~8}}
+\label{d7/d31/_file___config_8c_a743ab88eac74b793c4fc24141e78ebc6}
+\hypertarget{_file___config_8c_ab82dd208a7e716e09a3f8c229bfe78d7}{
+\index{File\_\-Config.c@{File\_\-Config.c}!RAM\_\-SIZE@{RAM\_\-SIZE}}
+\index{RAM\_\-SIZE@{RAM\_\-SIZE}!File_Config.c@{File\_\-Config.c}}
+\subsubsection[{RAM\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define RAM\_\-SIZE~0x040000}}
+\label{d7/d31/_file___config_8c_ab82dd208a7e716e09a3f8c229bfe78d7}
+\hypertarget{_file___config_8c_a33bae5abfe11dabad45f945b8b15a2ba}{
+\index{File\_\-Config.c@{File\_\-Config.c}!SF\_\-DEV@{SF\_\-DEV}}
+\index{SF\_\-DEV@{SF\_\-DEV}!File_Config.c@{File\_\-Config.c}}
+\subsubsection[{SF\_\-DEV}]{\setlength{\rightskip}{0pt plus 5cm}\#define SF\_\-DEV~0}}
+\label{d7/d31/_file___config_8c_a33bae5abfe11dabad45f945b8b15a2ba}
+\hypertarget{_file___config_8c_a6f0aaf24d9c56d8b8b6930c1bd9dbbae}{
+\index{File\_\-Config.c@{File\_\-Config.c}!SF\_\-HFILE@{SF\_\-HFILE}}
+\index{SF\_\-HFILE@{SF\_\-HFILE}!File_Config.c@{File\_\-Config.c}}
+\subsubsection[{SF\_\-HFILE}]{\setlength{\rightskip}{0pt plus 5cm}\#define SF\_\-HFILE~\char`\"{}FS\_\-SPI\_\-FlashDev.h\char`\"{}}}
+\label{d7/d31/_file___config_8c_a6f0aaf24d9c56d8b8b6930c1bd9dbbae}
+\hypertarget{_file___config_8c_a2ca76f3b4810ec0655c111c9b5af8b4b}{
+\index{File\_\-Config.c@{File\_\-Config.c}!SF\_\-INITV@{SF\_\-INITV}}
+\index{SF\_\-INITV@{SF\_\-INITV}!File_Config.c@{File\_\-Config.c}}
+\subsubsection[{SF\_\-INITV}]{\setlength{\rightskip}{0pt plus 5cm}\#define SF\_\-INITV~0xFF}}
+\label{d7/d31/_file___config_8c_a2ca76f3b4810ec0655c111c9b5af8b4b}
+
+
+\subsection{Variable Documentation}
+\hypertarget{_file___config_8c_a2b2c0f20d5565557d622df4a633f855b}{
+\index{File\_\-Config.c@{File\_\-Config.c}!\_\-\_\-AT\_\-MC\_\-CADR@{\_\-\_\-AT\_\-MC\_\-CADR}}
+\index{\_\-\_\-AT\_\-MC\_\-CADR@{\_\-\_\-AT\_\-MC\_\-CADR}!File_Config.c@{File\_\-Config.c}}
+\subsubsection[{\_\-\_\-AT\_\-MC\_\-CADR}]{\setlength{\rightskip}{0pt plus 5cm}U32 mc\_\-cache \mbox{[}128 $\ast$ (MC\_\-CSIZE + 2)\mbox{]} {\bf \_\-\_\-AT\_\-MC\_\-CADR}}}
+\label{d7/d31/_file___config_8c_a2b2c0f20d5565557d622df4a633f855b}
+\hypertarget{_file___config_8c_a5d4e12f85badf6b377cce97419bea0c5}{
+\index{File\_\-Config.c@{File\_\-Config.c}!\_\-BASE\_\-ADR@{\_\-BASE\_\-ADR}}
+\index{\_\-BASE\_\-ADR@{\_\-BASE\_\-ADR}!File_Config.c@{File\_\-Config.c}}
+\subsubsection[{\_\-BASE\_\-ADR}]{\setlength{\rightskip}{0pt plus 5cm}U32 const {\bf \_\-BASE\_\-ADR} = FL\_\-BADR}}
+\label{d7/d31/_file___config_8c_a5d4e12f85badf6b377cce97419bea0c5}
+\hypertarget{_file___config_8c_af516e820c43cf5ad5202a3c6504931ef}{
+\index{File\_\-Config.c@{File\_\-Config.c}!\_\-BlockFREE@{\_\-BlockFREE}}
+\index{\_\-BlockFREE@{\_\-BlockFREE}!File_Config.c@{File\_\-Config.c}}
+\subsubsection[{\_\-BlockFREE}]{\setlength{\rightskip}{0pt plus 5cm}U32 const {\bf \_\-BlockFREE} = 0x00000000}}
+\label{d7/d31/_file___config_8c_af516e820c43cf5ad5202a3c6504931ef}
+\hypertarget{_file___config_8c_a0285fb5588059a59ed51565b9b3be183}{
+\index{File\_\-Config.c@{File\_\-Config.c}!\_\-CPU\_\-CLK@{\_\-CPU\_\-CLK}}
+\index{\_\-CPU\_\-CLK@{\_\-CPU\_\-CLK}!File_Config.c@{File\_\-Config.c}}
+\subsubsection[{\_\-CPU\_\-CLK}]{\setlength{\rightskip}{0pt plus 5cm}U32 const {\bf \_\-CPU\_\-CLK} = CPU\_\-CLK}}
+\label{d7/d31/_file___config_8c_a0285fb5588059a59ed51565b9b3be183}
+\hypertarget{_file___config_8c_a687e1184a2c04f6e719b8005d717dbc7}{
+\index{File\_\-Config.c@{File\_\-Config.c}!\_\-DEF\_\-DRIVE@{\_\-DEF\_\-DRIVE}}
+\index{\_\-DEF\_\-DRIVE@{\_\-DEF\_\-DRIVE}!File_Config.c@{File\_\-Config.c}}
+\subsubsection[{\_\-DEF\_\-DRIVE}]{\setlength{\rightskip}{0pt plus 5cm}U16 const {\bf \_\-DEF\_\-DRIVE} = DEF\_\-DRIVE}}
+\label{d7/d31/_file___config_8c_a687e1184a2c04f6e719b8005d717dbc7}
+\hypertarget{_file___config_8c_a14444c0367e8400088035d27364251dd}{
+\index{File\_\-Config.c@{File\_\-Config.c}!\_\-FlashNumSect@{\_\-FlashNumSect}}
+\index{\_\-FlashNumSect@{\_\-FlashNumSect}!File_Config.c@{File\_\-Config.c}}
+\subsubsection[{\_\-FlashNumSect}]{\setlength{\rightskip}{0pt plus 5cm}U16 const {\bf \_\-FlashNumSect} = 0}}
+\label{d7/d31/_file___config_8c_a14444c0367e8400088035d27364251dd}
+\hypertarget{_file___config_8c_a21234ec8b9b1a9e57e8f86ea2209c699}{
+\index{File\_\-Config.c@{File\_\-Config.c}!\_\-iob@{\_\-iob}}
+\index{\_\-iob@{\_\-iob}!File_Config.c@{File\_\-Config.c}}
+\subsubsection[{\_\-iob}]{\setlength{\rightskip}{0pt plus 5cm}struct iob {\bf \_\-iob}\mbox{[}FOPEN\_\-MAX\mbox{]}}}
+\label{d7/d31/_file___config_8c_a21234ec8b9b1a9e57e8f86ea2209c699}
+\hypertarget{_file___config_8c_a1148485ca65c2718b05a3c63992b0796}{
+\index{File\_\-Config.c@{File\_\-Config.c}!\_\-MC\_\-CSIZE@{\_\-MC\_\-CSIZE}}
+\index{\_\-MC\_\-CSIZE@{\_\-MC\_\-CSIZE}!File_Config.c@{File\_\-Config.c}}
+\subsubsection[{\_\-MC\_\-CSIZE}]{\setlength{\rightskip}{0pt plus 5cm}U16 const {\bf \_\-MC\_\-CSIZE} = MC\_\-CSIZE}}
+\label{d7/d31/_file___config_8c_a1148485ca65c2718b05a3c63992b0796}
+\hypertarget{_file___config_8c_a808d4f5b901dc1276c1a4a5e532586af}{
+\index{File\_\-Config.c@{File\_\-Config.c}!\_\-NFILE@{\_\-NFILE}}
+\index{\_\-NFILE@{\_\-NFILE}!File_Config.c@{File\_\-Config.c}}
+\subsubsection[{\_\-NFILE}]{\setlength{\rightskip}{0pt plus 5cm}U16 const {\bf \_\-NFILE} = FOPEN\_\-MAX}}
+\label{d7/d31/_file___config_8c_a808d4f5b901dc1276c1a4a5e532586af}
+\hypertarget{_file___config_8c_a761b3a486e6107635824d6882ed8624c}{
+\index{File\_\-Config.c@{File\_\-Config.c}!\_\-RamNumSect@{\_\-RamNumSect}}
+\index{\_\-RamNumSect@{\_\-RamNumSect}!File_Config.c@{File\_\-Config.c}}
+\subsubsection[{\_\-RamNumSect}]{\setlength{\rightskip}{0pt plus 5cm}U16 const {\bf \_\-RamNumSect} = 0}}
+\label{d7/d31/_file___config_8c_a761b3a486e6107635824d6882ed8624c}
+\hypertarget{_file___config_8c_ac292f96077814ea7c86d7a3f65983bbe}{
+\index{File\_\-Config.c@{File\_\-Config.c}!\_\-SpiBlFREE@{\_\-SpiBlFREE}}
+\index{\_\-SpiBlFREE@{\_\-SpiBlFREE}!File_Config.c@{File\_\-Config.c}}
+\subsubsection[{\_\-SpiBlFREE}]{\setlength{\rightskip}{0pt plus 5cm}U32 const {\bf \_\-SpiBlFREE} = 0x00000000}}
+\label{d7/d31/_file___config_8c_ac292f96077814ea7c86d7a3f65983bbe}
+\hypertarget{_file___config_8c_a50db1701039dbc3f771f64aa86d74dd0}{
+\index{File\_\-Config.c@{File\_\-Config.c}!\_\-SpiNumSect@{\_\-SpiNumSect}}
+\index{\_\-SpiNumSect@{\_\-SpiNumSect}!File_Config.c@{File\_\-Config.c}}
+\subsubsection[{\_\-SpiNumSect}]{\setlength{\rightskip}{0pt plus 5cm}U16 const {\bf \_\-SpiNumSect} = 0}}
+\label{d7/d31/_file___config_8c_a50db1701039dbc3f771f64aa86d74dd0}
+\hypertarget{_file___config_8c_a6f7ddf411159a5bb18e7249646e70c00}{
+\index{File\_\-Config.c@{File\_\-Config.c}!FlashDev@{FlashDev}}
+\index{FlashDev@{FlashDev}!File_Config.c@{File\_\-Config.c}}
+\subsubsection[{FlashDev}]{\setlength{\rightskip}{0pt plus 5cm}DEVCONF const {\bf FlashDev}\mbox{[}1\mbox{]} = \{0,0\}}}
+\label{d7/d31/_file___config_8c_a6f7ddf411159a5bb18e7249646e70c00}
+\hypertarget{_file___config_8c_a97f8a91d1605be83cb6541f40d0d2821}{
+\index{File\_\-Config.c@{File\_\-Config.c}!RamDev@{RamDev}}
+\index{RamDev@{RamDev}!File_Config.c@{File\_\-Config.c}}
+\subsubsection[{RamDev}]{\setlength{\rightskip}{0pt plus 5cm}DEVCONF const {\bf RamDev}\mbox{[}1\mbox{]} = \{0,0\}}}
+\label{d7/d31/_file___config_8c_a97f8a91d1605be83cb6541f40d0d2821}
+\hypertarget{_file___config_8c_a887a039eb81936d9c61ea1877c281331}{
+\index{File\_\-Config.c@{File\_\-Config.c}!SpiDev@{SpiDev}}
+\index{SpiDev@{SpiDev}!File_Config.c@{File\_\-Config.c}}
+\subsubsection[{SpiDev}]{\setlength{\rightskip}{0pt plus 5cm}DEVCONF const {\bf SpiDev}\mbox{[}1\mbox{]} = \{0,0\}}}
+\label{d7/d31/_file___config_8c_a887a039eb81936d9c61ea1877c281331}

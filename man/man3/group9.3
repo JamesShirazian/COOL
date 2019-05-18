@@ -1,0 +1,440 @@
+.TH "Real Time Clock" 3 "Sun Jun 26 2011" "Version 1.100.000" "Object Oriented Library for ARM 7" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Real Time Clock \- 
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBRealTimeClock\fP"
+.br
+.RI "\fIclass \fBRealTimeClock\fP: is a class in charge of Real Time clock which is connected to ARM 7 processor.
+.PP
+/sa \fBInterrupt\fP \fP"
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRealTimeClock::RealTimeClock\fP (bool autoStart)"
+.br
+.ti -1c
+.RI "\fBRealTimeClock::RealTimeClock\fP (int year, int month, int day, int hour, int minute, int second, bool autoStart)"
+.br
+.ti -1c
+.RI "void \fBRealTimeClock::setTime\fP (int hour, int min, int sec)"
+.br
+.ti -1c
+.RI "void \fBRealTimeClock::setDate\fP (int year, int month, int day)"
+.br
+.ti -1c
+.RI "void \fBRealTimeClock::start\fP (void)"
+.br
+.ti -1c
+.RI "void \fBRealTimeClock::stop\fP (void)"
+.br
+.ti -1c
+.RI "void \fBRealTimeClock::reset\fP (void)"
+.br
+.ti -1c
+.RI "int \fBRealTimeClock::getYear\fP ()"
+.br
+.ti -1c
+.RI "int \fBRealTimeClock::getMonth\fP ()"
+.br
+.ti -1c
+.RI "int \fBRealTimeClock::getDay\fP ()"
+.br
+.ti -1c
+.RI "int \fBRealTimeClock::getHour\fP ()"
+.br
+.ti -1c
+.RI "int \fBRealTimeClock::getMinute\fP ()"
+.br
+.ti -1c
+.RI "int \fBRealTimeClock::getSecond\fP ()"
+.br
+.ti -1c
+.RI "char * \fBRealTimeClock::getTime\fP (char delimiter)"
+.br
+.ti -1c
+.RI "char * \fBRealTimeClock::getDate\fP (char delimiter)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Real Time Clock 
+.SH "Function Documentation"
+.PP 
+.SS "char * RealTimeClock::getDate (chardelimiter)"Return Date from real time clock, it is output is an pointer to the array of charachter:
+.br
+
+.br
+ 
+.PP
+\fBParameters:\fP
+.RS 4
+\fI\fP char delimiter: display delimiter between year and month and day 
+.br
+ 
+.br
+ 
+.br
+.RE
+.PP
+\fBExample:\fP
+.br
+ In this example, the date value is going to write on \fBSerialPort\fP and \fBLCD\fP at same time:
+.br
+ \fBLCD\fP myLCD;
+.br
+ \fBSerialPort\fP SP;
+.br
+ \fBRealTimeClock\fP myRTC(2011,6,15,12,33,23,true);
+.br
+ SP.open();
+.br
+ SP.write(myRTC.getDate('/'),true);
+.br
+ myLCD(myRTC.getTime('/'),0,0);
+.br
+ 
+.SS "int RealTimeClock::getDay ()"Return the value of day from real time clock<br>
+.br
+ 
+.PP
+\fBReturns:\fP
+.RS 4
+: int Year: value of day 
+.br
+ 
+.br
+.RE
+.PP
+\fBExample:\fP
+.br
+ \fBRealTimeClock\fP myRTC
+.br
+ myRTC.getDay();
+.br
+ 
+.SS "int RealTimeClock::getHour ()"Return the value of hour from real time clock<br>
+.br
+ 
+.PP
+\fBReturns:\fP
+.RS 4
+: int Year: value of hour
+.br
+ 
+.br
+.RE
+.PP
+\fBExample:\fP
+.br
+ \fBRealTimeClock\fP myRTC
+.br
+ myRTC.getHour();
+.br
+ 
+.SS "int RealTimeClock::getMinute ()"Return the value of minute from real time clock<br>
+.br
+ 
+.PP
+\fBReturns:\fP
+.RS 4
+: int Year: value of minute 
+.br
+ 
+.br
+.RE
+.PP
+\fBExample:\fP
+.br
+ \fBRealTimeClock\fP myRTC
+.br
+ myRTC.getMinute();
+.br
+ 
+.SS "int RealTimeClock::getMonth ()"Return the value of month from real time clock<br>
+.br
+ 
+.PP
+\fBReturns:\fP
+.RS 4
+: int Year: value of month 
+.br
+ 
+.br
+.RE
+.PP
+\fBExample:\fP
+.br
+ \fBRealTimeClock\fP myRTC
+.br
+ myRTC.getMonth();
+.br
+ 
+.SS "int RealTimeClock::getSecond ()"Return the value of second from real time clock<br>
+.br
+ 
+.PP
+\fBReturns:\fP
+.RS 4
+: int Year: value of second 
+.br
+ 
+.br
+.RE
+.PP
+\fBExample:\fP
+.br
+ \fBRealTimeClock\fP myRTC
+.br
+ myRTC.getSecond();
+.br
+ 
+.SS "char * RealTimeClock::getTime (chardelimiter)"Return Time from real time clock, it is output is an pointer to the array of charachter:
+.br
+
+.br
+ 
+.PP
+\fBParameters:\fP
+.RS 4
+\fI\fP char delimiter: display delimiter between houre and minutes and second 
+.br
+ 
+.br
+ 
+.br
+.RE
+.PP
+\fBExample:\fP
+.br
+ In this example, the time value is going to write on \fBSerialPort\fP and \fBLCD\fP at same time:
+.br
+ \fBLCD\fP myLCD;
+.br
+ \fBSerialPort\fP SP;
+.br
+ \fBRealTimeClock\fP myRTC(2011,6,15,12,33,23,true);
+.br
+ SP.open();
+.br
+ SP.write(myRTC.getTime(':'),true);
+.br
+ myLCD(myRTC.getTime(':'),0,0);
+.br
+ 
+.SS "int RealTimeClock::getYear ()"Return the value of year from real time clock<br>
+.br
+ 
+.PP
+\fBReturns:\fP
+.RS 4
+: int Year: value of year 
+.br
+ 
+.br
+.RE
+.PP
+\fBExample:\fP
+.br
+ \fBRealTimeClock\fP myRTC
+.br
+ myRTC.getYear();
+.br
+ 
+.SS "RealTimeClock::RealTimeClock (intyear, intmonth, intday, inthour, intminute, intsecond, boolautoStart)"Fifth constructor
+.br
+ Real Time Clock set its value to the respective values of this constructor:
+.br
+
+.br
+ 
+.PP
+\fBParameters:\fP
+.RS 4
+\fI\fP int year: set the year of real time clock
+.br
+ 
+.br
+\fI\fP int month: set the month of real time clock
+.br
+ 
+.br
+\fI\fP int day: set the day of real time clock
+.br
+ 
+.br
+\fI\fP int hour: set the hour of real time clock
+.br
+ 
+.br
+\fI\fP int minute: set the minute of real time clock
+.br
+ 
+.br
+\fI\fP int second: set the second of real time clock
+.br
+ 
+.br
+\fI\fP bool autoStart: 
+.br
+.IP "\(bu" 2
+True : Real Time clock start by default
+.br
+
+.IP "\(bu" 2
+False: Real Time Clock stop by default 
+.PP
+.RE
+.PP
+
+.SS "RealTimeClock::RealTimeClock (boolautoStart)"Second constructor
+.br
+ Real time clock set to:
+.br
+ -Year = 0 
+.br
+ -Month = 0
+.br
+ -Day = 0 
+.br
+ -Hour = 0 
+.br
+ -Minute = 0
+.br
+ -Sec = 0 
+.br
+ 
+.PP
+\fBParameters:\fP
+.RS 4
+\fI\fP bool autoStart 
+.br
+.IP "\(bu" 2
+True : Real Time clock start by default
+.br
+
+.IP "\(bu" 2
+False: Real Time Clock stop by default 
+.br
+ 
+.br
+ 
+.PP
+.RE
+.PP
+
+.SS "void RealTimeClock::reset (void)"re-start the real time clock:
+.br
+
+.br
+ 
+.br
+.PP
+\fBExample:\fP
+.br
+ \fBRealTimeClock\fP myRTC
+.br
+ myRTC.reset();
+.br
+ 
+.SS "void RealTimeClock::setDate (intyear, intmonth, intday)"Set date to Real time clock:
+.br
+
+.br
+ 
+.PP
+\fBParameters:\fP
+.RS 4
+\fI\fP int year: set year support till 2099
+.br
+ 
+.br
+\fI\fP int month: set month from 1 to 12 
+.br
+ 
+.br
+\fI\fP int day: set day from 0 to 31 
+.br
+.RE
+.PP
+
+.br
+.PP
+\fBExample:\fP
+.br
+ \fBLCD\fP myLCD; \fBRealTimeClock\fP myRTC(true,do1);
+.br
+ myRTC.setDate(2011,6,18); 
+.br
+ myLCD(myRTC.getDate('-'),0,0);
+.br
+ 
+.SS "void RealTimeClock::setTime (inthour, intminute, intsecond)"Set time to Real time clock:
+.br
+
+.br
+ 
+.PP
+\fBParameters:\fP
+.RS 4
+\fI\fP int hour: set hour 
+.br
+ 
+.br
+\fI\fP int minute: set minute 
+.br
+ 
+.br
+\fI\fP int second: set second 
+.br
+.RE
+.PP
+
+.br
+.PP
+\fBExample:\fP
+.br
+ \fBLCD\fP myLCD; \fBRealTimeClock\fP myRTC(true,do1);
+.br
+ myRTC.setTime(22,35,10); 
+.br
+ myLCD(myRTC.getTime(':'),0,0);
+.br
+ 
+.SS "void RealTimeClock::start (void)"start the real time clock:
+.br
+
+.br
+ 
+.br
+.PP
+\fBExample:\fP
+.br
+ \fBRealTimeClock\fP myRTC
+.br
+ myRTC.start();
+.br
+ 
+.SS "void RealTimeClock::stop (void)"stop the real time clock:
+.br
+
+.br
+ 
+.br
+.PP
+\fBExample:\fP
+.br
+ \fBRealTimeClock\fP myRTC
+.br
+ myRTC.stop();
+.br
+ 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Object Oriented Library for ARM 7 from the source code.

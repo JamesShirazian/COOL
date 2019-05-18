@@ -1,0 +1,81 @@
+\hypertarget{class_port_pin}{
+\section{PortPin Class Reference}
+\label{class_port_pin}\index{PortPin@{PortPin}}
+}
+
+
+class \hyperlink{class_real_time_clock}{RealTimeClock}: is a class in charge of GPIO (Port 0,1,2,3,4) which is connected to ARM 7 processor.
+
+/sa \hyperlink{class_interrupt}{Interrupt}  
+
+
+
+
+{\ttfamily \#include $<$PortPin.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_port_pin_a8dc8b07b5dd2d33c07f9fc8218bd37fe}{PortPin} (uint8\_\-t newPortID, int pinID, std::string IO)
+\item 
+\hyperlink{group__group7_gae4b6c1ca5935d5e3d68253490cae00a8}{PortPin} (uint8\_\-t newPortID, int newPinID, std::string IO, std::string initState)
+\item 
+void \hyperlink{group__group7_ga7dfeaef858c6fadac016106aac028278}{on} (void)
+\item 
+void \hyperlink{group__group7_ga779ca8e89b76bff26659244a4e4888a7}{off} (void)
+\item 
+bool \hyperlink{group__group7_gabc0f706193ead5769118388757374e85}{getPinValue} (void)
+\item 
+\hypertarget{group__group7_ga965a0cef4266fee8909e7b5998b1bae8}{
+int {\bfseries getPinNumber} (void)}
+\label{group__group7_ga965a0cef4266fee8909e7b5998b1bae8}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class \hyperlink{class_real_time_clock}{RealTimeClock}: is a class in charge of GPIO (Port 0,1,2,3,4) which is connected to ARM 7 processor.
+
+/sa \hyperlink{class_interrupt}{Interrupt} 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_port_pin_a8dc8b07b5dd2d33c07f9fc8218bd37fe}{
+\index{PortPin@{PortPin}!PortPin@{PortPin}}
+\index{PortPin@{PortPin}!PortPin@{PortPin}}
+\subsubsection[{PortPin}]{\setlength{\rightskip}{0pt plus 5cm}PortPin::PortPin (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t}]{newPortID, }
+\item[{int}]{newPinID, }
+\item[{std::string}]{IO}
+\end{DoxyParamCaption}
+)}}
+\label{class_port_pin_a8dc8b07b5dd2d33c07f9fc8218bd37fe}
+Default constructor: Initialize a PIN of any five availabel Port.\par
+ 
+\begin{DoxyParams}{Parameters}
+{\em uint8\_\-t} & newPortID: Port number \par
+ \\
+\hline
+{\em int} & newPinID: Pin number \par
+ \\
+\hline
+{\em std::string} & IO: set the IO status of pin \par
+
+\begin{DoxyItemize}
+\item INPUT : set the pin as an input
+\item OUTPUT : set the pin as an output \par
+
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+{\bfseries Example:}\par
+
+
+\hyperlink{class_port_pin}{PortPin} pin10(2,10,\char`\"{}INPUT\char`\"{}); \par
+ \hyperlink{class_port_pin}{PortPin} pin0(2,0,\char`\"{}OUTPUT\char`\"{}); \par
+ 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+PortPin.h\item 
+PortPin.cpp\end{DoxyCompactItemize}

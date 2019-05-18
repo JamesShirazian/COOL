@@ -1,0 +1,97 @@
+.TH "RealTimeClock" 3 "Sun Jun 26 2011" "Version 1.100.000" "Object Oriented Library for ARM 7" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RealTimeClock \- 
+.PP
+class \fBRealTimeClock\fP: is a class in charge of Real Time clock which is connected to ARM 7 processor.
+.PP
+/sa \fBInterrupt\fP  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <RealTimeClock.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRealTimeClock\fP ()"
+.br
+.ti -1c
+.RI "\fBRealTimeClock\fP (bool autoStart)"
+.br
+.ti -1c
+.RI "\fBRealTimeClock\fP (int year, int month, int day, int hour, int minute, int second, bool autoStart)"
+.br
+.ti -1c
+.RI "void \fBsetTime\fP (int hour, int min, int sec)"
+.br
+.ti -1c
+.RI "void \fBsetDate\fP (int year, int month, int day)"
+.br
+.ti -1c
+.RI "void \fBstart\fP (void)"
+.br
+.ti -1c
+.RI "void \fBstop\fP (void)"
+.br
+.ti -1c
+.RI "void \fBreset\fP (void)"
+.br
+.ti -1c
+.RI "int \fBgetYear\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetMonth\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetDay\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetHour\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetMinute\fP ()"
+.br
+.ti -1c
+.RI "int \fBgetSecond\fP ()"
+.br
+.ti -1c
+.RI "char * \fBgetTime\fP (char delimiter)"
+.br
+.ti -1c
+.RI "char * \fBgetDate\fP (char delimiter)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+class \fBRealTimeClock\fP: is a class in charge of Real Time clock which is connected to ARM 7 processor.
+.PP
+/sa \fBInterrupt\fP 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "RealTimeClock::RealTimeClock ()"Default constructor
+.br
+ Real time clock set to:
+.br
+
+.br
+ -Year = 0 
+.br
+ -Month = 0
+.br
+ -Day = 0 
+.br
+ -Hour = 0 
+.br
+ -Minute = 0
+.br
+ -Sec = 0 
+.br
+ and its clock is on stop state. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Object Oriented Library for ARM 7 from the source code.

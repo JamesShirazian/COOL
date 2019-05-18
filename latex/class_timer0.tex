@@ -1,0 +1,218 @@
+\hypertarget{class_timer0}{
+\section{Timer0 Class Reference}
+\label{class_timer0}\index{Timer0@{Timer0}}
+}
+
+
+class \hyperlink{class_timer0}{Timer0}: is a class in charge of timer0 of ARM 7 processor  
+
+
+
+
+{\ttfamily \#include $<$Timer0.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_timer0_a660c8150e1d5462c7e0cd5b5f173bf5a}{Timer0} ()
+\item 
+\hyperlink{class_timer0_ad9497fedf464ccd6962c8bb366010bb6}{Timer0} (float newInterval, bool autoStart, void($\ast$function)(void))
+\item 
+void \hyperlink{class_timer0_a05eb482b0059b1f13170a1812d435dc5}{start} (void)
+\item 
+void \hyperlink{class_timer0_a471f77e9b4db02e4e658975b15c288ca}{stop} (void)
+\item 
+void \hyperlink{class_timer0_a4a790d8cd03849191892f8e5398eb237}{run} (void)
+\item 
+void \hyperlink{class_timer0_a58b5706e30695a287c0ee5de3b31aa1d}{wait} (float newInterval)
+\item 
+void \hyperlink{class_timer0_ac4ef615f850afbf4aa23c7a20442553d}{setTimerIntervalTo} (float newInterval)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class \hyperlink{class_timer0}{Timer0}: is a class in charge of timer0 of ARM 7 processor 
+
+\begin{DoxySeeAlso}{See also}
+Timer1 
+
+Timer2 
+
+Timer3 
+\end{DoxySeeAlso}
+
+
+Definition at line 15 of file Timer0.h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_timer0_a660c8150e1d5462c7e0cd5b5f173bf5a}{
+\index{Timer0@{Timer0}!Timer0@{Timer0}}
+\index{Timer0@{Timer0}!Timer0@{Timer0}}
+\subsubsection[{Timer0}]{\setlength{\rightskip}{0pt plus 5cm}Timer0::Timer0 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_timer0_a660c8150e1d5462c7e0cd5b5f173bf5a}
+Default constructor\par
+ {\bfseries \hyperlink{class_timer0_a660c8150e1d5462c7e0cd5b5f173bf5a}{Timer0()} constructor use to generate delay.} 
+
+Definition at line 9 of file Timer0.cpp.
+
+\hypertarget{class_timer0_ad9497fedf464ccd6962c8bb366010bb6}{
+\index{Timer0@{Timer0}!Timer0@{Timer0}}
+\index{Timer0@{Timer0}!Timer0@{Timer0}}
+\subsubsection[{Timer0}]{\setlength{\rightskip}{0pt plus 5cm}Timer0::Timer0 (
+\begin{DoxyParamCaption}
+\item[{float}]{newInterval, }
+\item[{bool}]{autoStart, }
+\item[{void($\ast$)(void)}]{function}
+\end{DoxyParamCaption}
+)}}
+\label{class_timer0_ad9497fedf464ccd6962c8bb366010bb6}
+Second constructor\par
+ 
+\begin{DoxyParams}{Parameters}
+{\em float} & newInterval: set the timer interval from 0.0 to infinity \\
+\hline
+{\em bool} & autoStart:
+\begin{DoxyItemize}
+\item True: activate the timer and start it at same time
+\item False: activate the timer 
+\end{DoxyItemize}\\
+\hline
+{\em void} & $\ast$fucntion(void): function which run on base of timer interval \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 21 of file Timer0.cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_timer0_a4a790d8cd03849191892f8e5398eb237}{
+\index{Timer0@{Timer0}!run@{run}}
+\index{run@{run}!Timer0@{Timer0}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void Timer0::run (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{class_timer0_a4a790d8cd03849191892f8e5398eb237}
+This function must be use with second constructor. \par
+\par
+ {\bfseries  \char`\"{}Timer0::Timer0(float newInterval,bool autoStart,void($\ast$function)(void))\char`\"{} } \par
+ \par
+ this fucntion excute the function on base of assgined interval if this method use in \char`\"{}while(1)\char`\"{} it do the same but it will repeat its functionalty every interval second. 
+
+Definition at line 73 of file Timer0.cpp.
+
+\hypertarget{class_timer0_ac4ef615f850afbf4aa23c7a20442553d}{
+\index{Timer0@{Timer0}!setTimerIntervalTo@{setTimerIntervalTo}}
+\index{setTimerIntervalTo@{setTimerIntervalTo}!Timer0@{Timer0}}
+\subsubsection[{setTimerIntervalTo}]{\setlength{\rightskip}{0pt plus 5cm}void Timer0::setTimerIntervalTo (
+\begin{DoxyParamCaption}
+\item[{float}]{newInterval}
+\end{DoxyParamCaption}
+)}}
+\label{class_timer0_ac4ef615f850afbf4aa23c7a20442553d}
+This method set the timer0 interval value, if needed \par
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & float interval: set timer0 interval to create delay for interval second, from 0.0 to infinity\\
+\hline
+\end{DoxyParams}
+{\bfseries \par
+Example:\par
+{\bfseries \par
+}}
+
+{\bfseries {\bfseries  \hyperlink{class_timer0}{Timer0} TM0(2,true,do);\par
+ TM0.run(); \par
+ \hyperlink{class_l_c_d_a445cd6497e7d4ff4d15826f3ca1ee648}{LCD.display}(\char`\"{}Hi after 2.54 second\char`\"{},0,0);\par
+ TM0.setTimerIntervalTo(5);\par
+ \hyperlink{class_l_c_d_a445cd6497e7d4ff4d15826f3ca1ee648}{LCD.display}(\char`\"{}Hi after 5 second\char`\"{},0,0);\par
+ }}
+
+Definition at line 126 of file Timer0.cpp.
+
+\hypertarget{class_timer0_a05eb482b0059b1f13170a1812d435dc5}{
+\index{Timer0@{Timer0}!start@{start}}
+\index{start@{start}!Timer0@{Timer0}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}void Timer0::start (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{class_timer0_a05eb482b0059b1f13170a1812d435dc5}
+Start timer0 \par
+ {\bfseries \par
+Example:\par
+{\bfseries \par
+}}
+
+{\bfseries {\bfseries  \hyperlink{class_timer0}{Timer0} TM0(2,false,runMe); \hyperlink{class_timer0}{Timer0} circuit turn on but it is on stop mode \par
+ TM0.start(;) start Timer 0 \par
+ \hyperlink{class_l_c_d_a445cd6497e7d4ff4d15826f3ca1ee648}{LCD.display}(\char`\"{}Hi after 2.54 second\char`\"{},0,0);\par
+ }}
+
+Definition at line 46 of file Timer0.cpp.
+
+\hypertarget{class_timer0_a471f77e9b4db02e4e658975b15c288ca}{
+\index{Timer0@{Timer0}!stop@{stop}}
+\index{stop@{stop}!Timer0@{Timer0}}
+\subsubsection[{stop}]{\setlength{\rightskip}{0pt plus 5cm}void Timer0::stop (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{class_timer0_a471f77e9b4db02e4e658975b15c288ca}
+Stop timer0 \par
+ {\bfseries \par
+Example:\par
+{\bfseries \par
+}}
+
+{\bfseries {\bfseries  \hyperlink{class_timer0}{Timer0} TM0(2,true,runMe); \hyperlink{class_timer0}{Timer0} is on auto start mode\par
+ \hyperlink{class_l_c_d_a445cd6497e7d4ff4d15826f3ca1ee648}{LCD.display}(\char`\"{}Hi after 2.54 second\char`\"{},0,0);\par
+ TM0.stop(); Stop the timer\par
+ }}
+
+Definition at line 60 of file Timer0.cpp.
+
+\hypertarget{class_timer0_a58b5706e30695a287c0ee5de3b31aa1d}{
+\index{Timer0@{Timer0}!wait@{wait}}
+\index{wait@{wait}!Timer0@{Timer0}}
+\subsubsection[{wait}]{\setlength{\rightskip}{0pt plus 5cm}void Timer0::wait (
+\begin{DoxyParamCaption}
+\item[{float}]{newInterval}
+\end{DoxyParamCaption}
+)}}
+\label{class_timer0_a58b5706e30695a287c0ee5de3b31aa1d}
+This method create delay and it use with default constructor: \par
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & float interval: set timer0 interval to create delay for interval second, from 0.0 to infinity\\
+\hline
+\end{DoxyParams}
+{\bfseries \par
+Example:\par
+{\bfseries \par
+}}
+
+{\bfseries {\bfseries  \hyperlink{class_timer0}{Timer0} TM0;\par
+ TM0.wait(2.54);  wait for 2.54 and then go to the next line \par
+ \hyperlink{class_l_c_d_a445cd6497e7d4ff4d15826f3ca1ee648}{LCD.display}(\char`\"{}Hi after 2.54 second\char`\"{},0,0);\par
+ }}
+
+Definition at line 95 of file Timer0.cpp.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_timer0_8h}{Timer0.h}\item 
+\hyperlink{_timer0_8cpp}{Timer0.cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,81 @@
+.TH "PortPin" 3 "Sun Jun 26 2011" "Version 1.100.000" "Object Oriented Library for ARM 7" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PortPin \- 
+.PP
+class \fBRealTimeClock\fP: is a class in charge of GPIO (Port 0,1,2,3,4) which is connected to ARM 7 processor.
+.PP
+/sa \fBInterrupt\fP  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <PortPin.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPortPin\fP (uint8_t newPortID, int pinID, std::string IO)"
+.br
+.ti -1c
+.RI "\fBPortPin\fP (uint8_t newPortID, int newPinID, std::string IO, std::string initState)"
+.br
+.ti -1c
+.RI "void \fBon\fP (void)"
+.br
+.ti -1c
+.RI "void \fBoff\fP (void)"
+.br
+.ti -1c
+.RI "bool \fBgetPinValue\fP (void)"
+.br
+.ti -1c
+.RI "int \fBgetPinNumber\fP (void)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+class \fBRealTimeClock\fP: is a class in charge of GPIO (Port 0,1,2,3,4) which is connected to ARM 7 processor.
+.PP
+/sa \fBInterrupt\fP 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "PortPin::PortPin (uint8_tnewPortID, intnewPinID, std::stringIO)"Default constructor: Initialize a PIN of any five availabel Port.
+.br
+ 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIuint8_t\fP newPortID: Port number 
+.br
+ 
+.br
+\fIint\fP newPinID: Pin number 
+.br
+ 
+.br
+\fIstd::string\fP IO: set the IO status of pin 
+.br
+.IP "\(bu" 2
+INPUT : set the pin as an input
+.IP "\(bu" 2
+OUTPUT : set the pin as an output 
+.br
+
+.PP
+.RE
+.PP
+\fBExample:\fP
+.br
+.PP
+\fBPortPin\fP pin10(2,10,'INPUT'); 
+.br
+ \fBPortPin\fP pin0(2,0,'OUTPUT'); 
+.br
+ 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Object Oriented Library for ARM 7 from the source code.

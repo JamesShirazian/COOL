@@ -1,0 +1,1 @@
+--cpp  --thumb -c --cpu ARM7TDMI -D__RTX -g -O2 --apcs=interwork -I..\Library -I "C:\Keil\ARM\INC" -I "C:\Keil\ARM\INC\Philips" -o ".\Obj\stopwatch2.o" --omf_browse ".\Obj\stopwatch2.crf" --depend ".\Obj\stopwatch2.d" "StopWatch2.cpp"

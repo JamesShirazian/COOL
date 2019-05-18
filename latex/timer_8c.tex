@@ -1,0 +1,150 @@
+\hypertarget{timer_8c}{
+\section{timer.c File Reference}
+\label{timer_8c}\index{timer.c@{timer.c}}
+}
+{\ttfamily \#include \char`\"{}LPC23xx.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}type.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}irq.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}target.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}timer.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{timer_8c_a7a56753ed66291804c311bcbf4d018d8}{delayMs} (\hyperlink{type_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE} timer\_\-num, \hyperlink{type_8h_ad342ac907eb044443153a22f964bf0af}{DWORD} delayInMs)
+\item 
+void \hyperlink{timer_8c_abc74d1bf444effc85e5f1090bcc0c017}{Timer0Handler} (void)
+\item 
+void \hyperlink{timer_8c_abed1632eba2afda564c2bdd7fb77ee2e}{Timer1Handler} (void)
+\item 
+void \hyperlink{timer_8c_ae01a3a378c508d171c3b1e4704679f70}{enable\_\-timer} (\hyperlink{type_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE} timer\_\-num)
+\item 
+void \hyperlink{timer_8c_a9386879e1cc71d00cf94ec3368678ab1}{disable\_\-timer} (\hyperlink{type_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE} timer\_\-num)
+\item 
+void \hyperlink{timer_8c_a81ef50b0394570479902b2501a1f657d}{reset\_\-timer} (\hyperlink{type_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE} timer\_\-num)
+\item 
+\hyperlink{type_8h_ad342ac907eb044443153a22f964bf0af}{DWORD} \hyperlink{timer_8c_a76f10bf063ded0ab51409a8d2759a27e}{init\_\-timer} (\hyperlink{type_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE} timer\_\-num, \hyperlink{type_8h_ad342ac907eb044443153a22f964bf0af}{DWORD} TimerInterval)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile \hyperlink{type_8h_ad342ac907eb044443153a22f964bf0af}{DWORD} \hyperlink{timer_8c_a599f2913fcee64b53242090cc3138344}{timer0\_\-counter} = 0
+\item 
+volatile \hyperlink{type_8h_ad342ac907eb044443153a22f964bf0af}{DWORD} \hyperlink{timer_8c_a1d9f9e44f2acc3965d66ec14dbf5c7ac}{timer1\_\-counter} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{timer_8c_a7a56753ed66291804c311bcbf4d018d8}{
+\index{timer.c@{timer.c}!delayMs@{delayMs}}
+\index{delayMs@{delayMs}!timer.c@{timer.c}}
+\subsubsection[{delayMs}]{\setlength{\rightskip}{0pt plus 5cm}void delayMs (
+\begin{DoxyParamCaption}
+\item[{{\bf BYTE}}]{timer\_\-num, }
+\item[{{\bf DWORD}}]{delayInMs}
+\end{DoxyParamCaption}
+)}}
+\label{timer_8c_a7a56753ed66291804c311bcbf4d018d8}
+
+
+Definition at line 31 of file timer.c.
+
+\hypertarget{timer_8c_a9386879e1cc71d00cf94ec3368678ab1}{
+\index{timer.c@{timer.c}!disable\_\-timer@{disable\_\-timer}}
+\index{disable\_\-timer@{disable\_\-timer}!timer.c@{timer.c}}
+\subsubsection[{disable\_\-timer}]{\setlength{\rightskip}{0pt plus 5cm}void disable\_\-timer (
+\begin{DoxyParamCaption}
+\item[{{\bf BYTE}}]{timer\_\-num}
+\end{DoxyParamCaption}
+)}}
+\label{timer_8c_a9386879e1cc71d00cf94ec3368678ab1}
+
+
+Definition at line 179 of file timer.c.
+
+\hypertarget{timer_8c_ae01a3a378c508d171c3b1e4704679f70}{
+\index{timer.c@{timer.c}!enable\_\-timer@{enable\_\-timer}}
+\index{enable\_\-timer@{enable\_\-timer}!timer.c@{timer.c}}
+\subsubsection[{enable\_\-timer}]{\setlength{\rightskip}{0pt plus 5cm}void enable\_\-timer (
+\begin{DoxyParamCaption}
+\item[{{\bf BYTE}}]{timer\_\-num}
+\end{DoxyParamCaption}
+)}}
+\label{timer_8c_ae01a3a378c508d171c3b1e4704679f70}
+
+
+Definition at line 157 of file timer.c.
+
+\hypertarget{timer_8c_a76f10bf063ded0ab51409a8d2759a27e}{
+\index{timer.c@{timer.c}!init\_\-timer@{init\_\-timer}}
+\index{init\_\-timer@{init\_\-timer}!timer.c@{timer.c}}
+\subsubsection[{init\_\-timer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DWORD} init\_\-timer (
+\begin{DoxyParamCaption}
+\item[{{\bf BYTE}}]{timer\_\-num, }
+\item[{{\bf DWORD}}]{TimerInterval}
+\end{DoxyParamCaption}
+)}}
+\label{timer_8c_a76f10bf063ded0ab51409a8d2759a27e}
+
+
+Definition at line 231 of file timer.c.
+
+\hypertarget{timer_8c_a81ef50b0394570479902b2501a1f657d}{
+\index{timer.c@{timer.c}!reset\_\-timer@{reset\_\-timer}}
+\index{reset\_\-timer@{reset\_\-timer}!timer.c@{timer.c}}
+\subsubsection[{reset\_\-timer}]{\setlength{\rightskip}{0pt plus 5cm}void reset\_\-timer (
+\begin{DoxyParamCaption}
+\item[{{\bf BYTE}}]{timer\_\-num}
+\end{DoxyParamCaption}
+)}}
+\label{timer_8c_a81ef50b0394570479902b2501a1f657d}
+
+
+Definition at line 201 of file timer.c.
+
+\hypertarget{timer_8c_abc74d1bf444effc85e5f1090bcc0c017}{
+\index{timer.c@{timer.c}!Timer0Handler@{Timer0Handler}}
+\index{Timer0Handler@{Timer0Handler}!timer.c@{timer.c}}
+\subsubsection[{Timer0Handler}]{\setlength{\rightskip}{0pt plus 5cm}void Timer0Handler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{timer_8c_abc74d1bf444effc85e5f1090bcc0c017}
+
+
+Definition at line 77 of file timer.c.
+
+\hypertarget{timer_8c_abed1632eba2afda564c2bdd7fb77ee2e}{
+\index{timer.c@{timer.c}!Timer1Handler@{Timer1Handler}}
+\index{Timer1Handler@{Timer1Handler}!timer.c@{timer.c}}
+\subsubsection[{Timer1Handler}]{\setlength{\rightskip}{0pt plus 5cm}void Timer1Handler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{timer_8c_abed1632eba2afda564c2bdd7fb77ee2e}
+
+
+Definition at line 118 of file timer.c.
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{timer_8c_a599f2913fcee64b53242090cc3138344}{
+\index{timer.c@{timer.c}!timer0\_\-counter@{timer0\_\-counter}}
+\index{timer0\_\-counter@{timer0\_\-counter}!timer.c@{timer.c}}
+\subsubsection[{timer0\_\-counter}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf DWORD} {\bf timer0\_\-counter} = 0}}
+\label{timer_8c_a599f2913fcee64b53242090cc3138344}
+
+
+Definition at line 17 of file timer.c.
+
+\hypertarget{timer_8c_a1d9f9e44f2acc3965d66ec14dbf5c7ac}{
+\index{timer.c@{timer.c}!timer1\_\-counter@{timer1\_\-counter}}
+\index{timer1\_\-counter@{timer1\_\-counter}!timer.c@{timer.c}}
+\subsubsection[{timer1\_\-counter}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf DWORD} {\bf timer1\_\-counter} = 0}}
+\label{timer_8c_a1d9f9e44f2acc3965d66ec14dbf5c7ac}
+
+
+Definition at line 18 of file timer.c.
+

@@ -1,0 +1,42 @@
+.TH "Interrupt.cpp" 3 "Sun Jun 19 2011" "Object Oriented Library for ARM 7" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Interrupt.cpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'Interrupt.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBRTC0isr\fP (void) __irq"
+.br
+.ti -1c
+.RI "void \fBinterruptHandler\fP (void) __irq"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "void(* \fBinterruptFunction\fP )(void)"
+.br
+.ti -1c
+.RI "void(* \fBrtcInterruptFunction\fP )(void)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void interruptHandler (void)"
+.SS "void RTC0isr (void)"
+.SH "Variable Documentation"
+.PP 
+.SS "void(* \fBinterruptFunction\fP)(void)"
+.SS "void(* \fBrtcInterruptFunction\fP)(void)"
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Object Oriented Library for ARM 7 from the source code.

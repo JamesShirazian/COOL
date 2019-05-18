@@ -1,0 +1,44 @@
+.TH "StopWatch2.h" 3 "Sun Jun 19 2011" "Object Oriented Library for ARM 7" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+StopWatch2.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <LPC23xx.H>\fP
+.br
+\fC#include 'TimerManager.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBStopWatch2\fP"
+.br
+.RI "\fIclass \fBStopWatch2\fP: is a class which use measure time between two points of time for instance it can be use to measure the amount of time that ARM 7 took to display a text on screen or the amount of time which is taken to create file in the SD card, this class use timer2 of ARM7. \fP"
+.in -1c
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBOneSecond\fP   11999999"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBStopWatchT2isr\fP (void) __irq"
+.br
+.in -1c
+.SH "Define Documentation"
+.PP 
+.SS "#define OneSecond   11999999"
+.SH "Function Documentation"
+.PP 
+.SS "void StopWatchT2isr (void)"
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Object Oriented Library for ARM 7 from the source code.

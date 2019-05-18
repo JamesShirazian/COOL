@@ -1,0 +1,202 @@
+\hypertarget{class_l_c_d_display}{
+\section{LCDDisplay Class Reference}
+\label{class_l_c_d_display}\index{LCDDisplay@{LCDDisplay}}
+}
+
+
+class \hyperlink{class_l_c_d_display}{LCDDisplay}: is a class in charge of LCD which is connected to ARM 7 processor.  
+
+
+
+
+{\ttfamily \#include $<$LCD.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_l_c_d_display_a0527cd7dafe07b1d3e26a06e24c82861}{LCDDisplay} ()
+\item 
+\hyperlink{class_l_c_d_display_a62c8d8c84a94215c3cff9937d89e83af}{LCDDisplay} (unsigned char newCol, unsigned char newRow)
+\item 
+void \hyperlink{class_l_c_d_display_a336e3f07dacfde9f3422a1c499744e9f}{display} (char $\ast$text, unsigned char row, unsigned char col)
+\item 
+void \hyperlink{class_l_c_d_display_a65c1bf27c97ed6f16758d0ddfddf7602}{display} (std::string text, unsigned char newCol, unsigned char newRow)
+\item 
+void \hyperlink{class_l_c_d_display_ab85f3f85e5126fb0a87971f2aacdc30c}{display} (int value, int maxNumberOfDigit, unsigned char col, unsigned char row)
+\item 
+void \hyperlink{class_l_c_d_display_a4ae3bbd3565ed7eb0d44866ce46b77f5}{display} (float value, int decimalPoint, unsigned char col, unsigned char row)
+\item 
+void \hyperlink{class_l_c_d_display_a5d12e8f2d63a1352646d747c1b543a8d}{clear} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class \hyperlink{class_l_c_d_display}{LCDDisplay}: is a class in charge of LCD which is connected to ARM 7 processor. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_l_c_d_display_a0527cd7dafe07b1d3e26a06e24c82861}{
+\index{LCDDisplay@{LCDDisplay}!LCDDisplay@{LCDDisplay}}
+\index{LCDDisplay@{LCDDisplay}!LCDDisplay@{LCDDisplay}}
+\subsubsection[{LCDDisplay}]{\setlength{\rightskip}{0pt plus 5cm}LCDDisplay::LCDDisplay (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_l_c_d_display_a0527cd7dafe07b1d3e26a06e24c82861}
+Default constructor\par
+ {\bfseries \hyperlink{class_l_c_d_display_a0527cd7dafe07b1d3e26a06e24c82861}{LCDDisplay()} constructor use to support 16 by 2 LCDs by default.} \hypertarget{class_l_c_d_display_a62c8d8c84a94215c3cff9937d89e83af}{
+\index{LCDDisplay@{LCDDisplay}!LCDDisplay@{LCDDisplay}}
+\index{LCDDisplay@{LCDDisplay}!LCDDisplay@{LCDDisplay}}
+\subsubsection[{LCDDisplay}]{\setlength{\rightskip}{0pt plus 5cm}LCDDisplay::LCDDisplay (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{newCol, }
+\item[{unsigned char}]{newRow}
+\end{DoxyParamCaption}
+)}}
+\label{class_l_c_d_display_a62c8d8c84a94215c3cff9937d89e83af}
+Second constructor\par
+ 
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & char newCol: set the number of LCD columns \\
+\hline
+{\em unsigned} & char newRow: set the number of LCD rows \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_l_c_d_display_a5d12e8f2d63a1352646d747c1b543a8d}{
+\index{LCDDisplay@{LCDDisplay}!clear@{clear}}
+\index{clear@{clear}!LCDDisplay@{LCDDisplay}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void LCDDisplay::clear (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{class_l_c_d_display_a5d12e8f2d63a1352646d747c1b543a8d}
+Clear LCD\par
+ {\bfseries \par
+Example:\par
+{\bfseries \par
+}}
+
+{\bfseries {\bfseries  \hyperlink{class_l_c_d_display}{LCDDisplay} LCD; \par
+ LCD.clear() \par
+ LCD.display(234,3,0,0) \par
+ }}\hypertarget{class_l_c_d_display_a65c1bf27c97ed6f16758d0ddfddf7602}{
+\index{LCDDisplay@{LCDDisplay}!display@{display}}
+\index{display@{display}!LCDDisplay@{LCDDisplay}}
+\subsubsection[{display}]{\setlength{\rightskip}{0pt plus 5cm}void LCDDisplay::display (
+\begin{DoxyParamCaption}
+\item[{std::string}]{text, }
+\item[{unsigned char}]{newCol, }
+\item[{unsigned char}]{newRow}
+\end{DoxyParamCaption}
+)}}
+\label{class_l_c_d_display_a65c1bf27c97ed6f16758d0ddfddf7602}
+Display string in the LCD\par
+ 
+\begin{DoxyParams}{Parameters}
+{\em std::string,:} & string that display on LCD \\
+\hline
+{\em unsigned} & char newCol: set the text columns position \\
+\hline
+{\em unsigned} & char newRow: set the text rows position {\bfseries \par
+Example:\par
+{\bfseries \par
+}}\\
+\hline
+\end{DoxyParams}
+\hyperlink{class_l_c_d_display}{LCDDisplay} LCD; \par
+ std::string myName=\char`\"{}Afshin James Shirazian\char`\"{}; \par
+ LCD.display(myName,0,0) \par
+ \hypertarget{class_l_c_d_display_a4ae3bbd3565ed7eb0d44866ce46b77f5}{
+\index{LCDDisplay@{LCDDisplay}!display@{display}}
+\index{display@{display}!LCDDisplay@{LCDDisplay}}
+\subsubsection[{display}]{\setlength{\rightskip}{0pt plus 5cm}void LCDDisplay::display (
+\begin{DoxyParamCaption}
+\item[{float}]{value, }
+\item[{int}]{decimalPoint, }
+\item[{unsigned char}]{col, }
+\item[{unsigned char}]{row}
+\end{DoxyParamCaption}
+)}}
+\label{class_l_c_d_display_a4ae3bbd3565ed7eb0d44866ce46b77f5}
+Display float in the LCD\par
+ 
+\begin{DoxyParams}{Parameters}
+{\em int} & value: integer which will display on LCD \\
+\hline
+{\em int} & decimalPoint: number of decimal point of \char`\"{}value\char`\"{} , from 0 to 9 \\
+\hline
+{\em unsigned} & char newCol: set the text columns position \\
+\hline
+{\em unsigned} & char newRow: set the text rows position {\bfseries \par
+Example:\par
+{\bfseries \par
+}}\\
+\hline
+\end{DoxyParams}
+\hyperlink{class_l_c_d_display}{LCDDisplay} LCD; \par
+ LCD.display(23.34,2,0,0) \par
+ \hypertarget{class_l_c_d_display_ab85f3f85e5126fb0a87971f2aacdc30c}{
+\index{LCDDisplay@{LCDDisplay}!display@{display}}
+\index{display@{display}!LCDDisplay@{LCDDisplay}}
+\subsubsection[{display}]{\setlength{\rightskip}{0pt plus 5cm}void LCDDisplay::display (
+\begin{DoxyParamCaption}
+\item[{int}]{value, }
+\item[{int}]{maxNumberOfDigit, }
+\item[{unsigned char}]{col, }
+\item[{unsigned char}]{row}
+\end{DoxyParamCaption}
+)}}
+\label{class_l_c_d_display_ab85f3f85e5126fb0a87971f2aacdc30c}
+Display integer in the LCD\par
+ 
+\begin{DoxyParams}{Parameters}
+{\em int} & value: integer which will display on LCD \\
+\hline
+{\em int} & maxNumberOfDigit: maximum number of digit which developer expect from \char`\"{}value\char`\"{} \\
+\hline
+{\em unsigned} & char newCol: set the text columns position \\
+\hline
+{\em unsigned} & char newRow: set the text rows position {\bfseries \par
+Example:\par
+{\bfseries \par
+}}\\
+\hline
+\end{DoxyParams}
+\hyperlink{class_l_c_d_display}{LCDDisplay} LCD; \par
+ LCD.display(234,3,0,0) \par
+ \hypertarget{class_l_c_d_display_a336e3f07dacfde9f3422a1c499744e9f}{
+\index{LCDDisplay@{LCDDisplay}!display@{display}}
+\index{display@{display}!LCDDisplay@{LCDDisplay}}
+\subsubsection[{display}]{\setlength{\rightskip}{0pt plus 5cm}void LCDDisplay::display (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{text, }
+\item[{unsigned char}]{newCol, }
+\item[{unsigned char}]{newRow}
+\end{DoxyParamCaption}
+)}}
+\label{class_l_c_d_display_a336e3f07dacfde9f3422a1c499744e9f}
+Display array of characher in the LCD\par
+ 
+\begin{DoxyParams}{Parameters}
+{\em char} & $\ast$text: array of charachter which will display on LCD \\
+\hline
+{\em unsigned} & char newCol: set the text columns position \\
+\hline
+{\em unsigned} & char newRow: set the text rows position {\bfseries \par
+Example:\par
+{\bfseries \par
+}}\\
+\hline
+\end{DoxyParams}
+\hyperlink{class_l_c_d_display}{LCDDisplay} LCD; \par
+ LCD.display(\char`\"{}Hello\char`\"{},0,0) \par
+ 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_l_c_d_8h}{LCD.h}\item 
+\hyperlink{_l_c_d_8cpp}{LCD.cpp}\end{DoxyCompactItemize}

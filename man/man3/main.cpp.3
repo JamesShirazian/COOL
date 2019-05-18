@@ -1,0 +1,140 @@
+.TH "main.cpp" 3 "Sun Jun 19 2011" "Object Oriented Library for ARM 7" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+main.cpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <LPC23xx.H>\fP
+.br
+\fC#include <stdint.h>\fP
+.br
+\fC#include <stdbool.h>\fP
+.br
+\fC#include <stdio.h>\fP
+.br
+\fC#include <algorithm>\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include <functional>\fP
+.br
+\fC#include <iterator>\fP
+.br
+\fC#include <assert.h>\fP
+.br
+\fC#include 'LCD.h'\fP
+.br
+\fC#include 'ADC.h'\fP
+.br
+\fC#include 'DAC.h'\fP
+.br
+\fC#include 'PortPin.h'\fP
+.br
+\fC#include 'TimerEvent0.h'\fP
+.br
+\fC#include 'TimerEvent1.h'\fP
+.br
+\fC#include 'TimerEvent2.h'\fP
+.br
+\fC#include 'TimerEvent3.h'\fP
+.br
+\fC#include 'StopWatch0.h'\fP
+.br
+\fC#include 'StopWatch1.h'\fP
+.br
+\fC#include 'StopWatch2.h'\fP
+.br
+\fC#include 'StopWatch3.h'\fP
+.br
+\fC#include 'TimerDelay0.h'\fP
+.br
+\fC#include 'TimerDelay1.h'\fP
+.br
+\fC#include 'TimerDelay2.h'\fP
+.br
+\fC#include 'TimerDelay3.h'\fP
+.br
+\fC#include 'SerialPort.h'\fP
+.br
+\fC#include 'RealTimeClock.h'\fP
+.br
+\fC#include 'Interrupt.h'\fP
+.br
+\fC#include 'FastInterrupt.h'\fP
+.br
+\fC#include <string.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBdo1\fP (void)"
+.br
+.ti -1c
+.RI "void \fBdo2\fP (void)"
+.br
+.ti -1c
+.RI "void \fBdo3\fP (void)"
+.br
+.ti -1c
+.RI "void \fBdo4\fP (void)"
+.br
+.ti -1c
+.RI "void \fBdo5\fP (void)"
+.br
+.ti -1c
+.RI "void \fBdelay\fP ()"
+.br
+.ti -1c
+.RI "int \fBmain\fP ()"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBLCD\fP \fBLCD\fP"
+.br
+.ti -1c
+.RI "int \fBa\fP = 0"
+.br
+.ti -1c
+.RI "int \fBb\fP = 0"
+.br
+.ti -1c
+.RI "int \fBr\fP = 0"
+.br
+.ti -1c
+.RI "int \fBp\fP = 0"
+.br
+.ti -1c
+.RI "\fBRealTimeClock\fP \fBmyRTC\fP (2011, 11, 22, 12, 12, 0, true)"
+.br
+.ti -1c
+.RI "\fBInterrupt\fP \fBmyIn\fP (\fBmyRTC\fP, do2)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void delay ()"
+.SS "void do1 (void)"
+.SS "void do2 (void)"
+.SS "void do3 (void)"
+.SS "void do4 (void)"
+.SS "void do5 (void)"
+.SS "int main ()"
+.SH "Variable Documentation"
+.PP 
+.SS "int \fBa\fP = 0"
+.SS "int \fBb\fP = 0"
+.SS "\fBLCD\fP \fBLCD\fP"
+.SS "\fBInterrupt\fP \fBmyIn\fP(\fBmyRTC\fP, do2)"
+.SS "\fBRealTimeClock\fP \fBmyRTC\fP(2011, 11, 22, 12, 12, 0, true)"
+.SS "int \fBp\fP = 0"
+.SS "int \fBr\fP = 0"
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Object Oriented Library for ARM 7 from the source code.

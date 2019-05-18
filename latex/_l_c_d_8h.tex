@@ -1,0 +1,154 @@
+\hypertarget{_l_c_d_8h}{
+\section{LCD.h File Reference}
+\label{_l_c_d_8h}\index{LCD.h@{LCD.h}}
+}
+{\ttfamily \#include $<$LPC23xx.H$>$}\par
+{\ttfamily \#include $<$stdint.h$>$}\par
+{\ttfamily \#include $<$stdarg.h$>$}\par
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$string$>$}\par
+{\ttfamily \#include \char`\"{}math.h\char`\"{}}\par
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_l_c_d}{LCD}
+\begin{DoxyCompactList}\small\item\em class LCDDisplay: is a class in charge of \hyperlink{class_l_c_d}{LCD} which is connected to ARM 7 processor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_l_c_d_8h_af2266b30f789dce3014ba7290ba0c693}{PIN\_\-E}~0x80000000
+\item 
+\#define \hyperlink{_l_c_d_8h_a2121001f100dc94b4292542ca9093874}{PIN\_\-RW}~0x20000000
+\item 
+\#define \hyperlink{_l_c_d_8h_a130b402933587698ca0687321614642d}{PIN\_\-RS}~0x10000000
+\item 
+\#define \hyperlink{_l_c_d_8h_ae9e59840d2c459ece6e089c2917ba566}{PINS\_\-CTRL}~0xB0000000
+\item 
+\#define \hyperlink{_l_c_d_8h_a781f0d84c97daef15c9d048c3433e18b}{PINS\_\-DATA}~0x0F000000
+\item 
+\#define \hyperlink{_l_c_d_8h_afb4b88fbcc5475a30c22c3e37103ca21}{LCD\_\-E}(x)~((x) ? (IOSET1 = PIN\_\-E)  : (IOCLR1 = PIN\_\-E) );
+\item 
+\#define \hyperlink{_l_c_d_8h_afad61cf19676c037d943d94d031b3519}{LCD\_\-RW}(x)~((x) ? (IOSET1 = PIN\_\-RW) : (IOCLR1 = PIN\_\-RW));
+\item 
+\#define \hyperlink{_l_c_d_8h_af2d555e89facdbbcba96c0c00fd8f462}{LCD\_\-RS}(x)~((x) ? (IOSET1 = PIN\_\-RS) : (IOCLR1 = PIN\_\-RS));
+\item 
+\#define \hyperlink{_l_c_d_8h_aaf469a71c776564ce543a8e73e257068}{LCD\_\-DATA\_\-IN}~((IOPIN1 $>$$>$ 24) \& 0xF)
+\item 
+\#define \hyperlink{_l_c_d_8h_a948ba57c018dde9ef6cee665a33a4e15}{LCD\_\-DATA\_\-OUT}(x)~IOCLR1 = PINS\_\-DATA; IOSET1 = (x \& 0xF) $<$$<$ 24;
+\item 
+\#define \hyperlink{_l_c_d_8h_a6e75612a156cbc41e396ee975e58e17b}{LCD\_\-ALL\_\-DIR\_\-OUT}~IODIR1  $|$=  PINS\_\-CTRL $|$ PINS\_\-DATA;
+\item 
+\#define \hyperlink{_l_c_d_8h_ae78258bd73e6d8c58b39c32e944d2f04}{LCD\_\-DATA\_\-DIR\_\-IN}~IODIR1 \&= $\sim$PINS\_\-DATA;
+\item 
+\#define \hyperlink{_l_c_d_8h_ae0bcc7ab4b0954da80577012f5ded4e1}{LCD\_\-DATA\_\-DIR\_\-OUT}~IODIR1 $|$=  PINS\_\-DATA;
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const unsigned char \hyperlink{_l_c_d_8h_a85c4d36ff6dcfaeb3ac4973a3a8a4399}{UserFont} \mbox{[}8\mbox{]}\mbox{[}8\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_l_c_d_8h_a6e75612a156cbc41e396ee975e58e17b}{
+\index{LCD.h@{LCD.h}!LCD\_\-ALL\_\-DIR\_\-OUT@{LCD\_\-ALL\_\-DIR\_\-OUT}}
+\index{LCD\_\-ALL\_\-DIR\_\-OUT@{LCD\_\-ALL\_\-DIR\_\-OUT}!LCD.h@{LCD.h}}
+\subsubsection[{LCD\_\-ALL\_\-DIR\_\-OUT}]{\setlength{\rightskip}{0pt plus 5cm}\#define LCD\_\-ALL\_\-DIR\_\-OUT~IODIR1  $|$=  PINS\_\-CTRL $|$ PINS\_\-DATA;}}
+\label{_l_c_d_8h_a6e75612a156cbc41e396ee975e58e17b}
+\hypertarget{_l_c_d_8h_ae78258bd73e6d8c58b39c32e944d2f04}{
+\index{LCD.h@{LCD.h}!LCD\_\-DATA\_\-DIR\_\-IN@{LCD\_\-DATA\_\-DIR\_\-IN}}
+\index{LCD\_\-DATA\_\-DIR\_\-IN@{LCD\_\-DATA\_\-DIR\_\-IN}!LCD.h@{LCD.h}}
+\subsubsection[{LCD\_\-DATA\_\-DIR\_\-IN}]{\setlength{\rightskip}{0pt plus 5cm}\#define LCD\_\-DATA\_\-DIR\_\-IN~IODIR1 \&= $\sim$PINS\_\-DATA;}}
+\label{_l_c_d_8h_ae78258bd73e6d8c58b39c32e944d2f04}
+\hypertarget{_l_c_d_8h_ae0bcc7ab4b0954da80577012f5ded4e1}{
+\index{LCD.h@{LCD.h}!LCD\_\-DATA\_\-DIR\_\-OUT@{LCD\_\-DATA\_\-DIR\_\-OUT}}
+\index{LCD\_\-DATA\_\-DIR\_\-OUT@{LCD\_\-DATA\_\-DIR\_\-OUT}!LCD.h@{LCD.h}}
+\subsubsection[{LCD\_\-DATA\_\-DIR\_\-OUT}]{\setlength{\rightskip}{0pt plus 5cm}\#define LCD\_\-DATA\_\-DIR\_\-OUT~IODIR1 $|$=  PINS\_\-DATA;}}
+\label{_l_c_d_8h_ae0bcc7ab4b0954da80577012f5ded4e1}
+\hypertarget{_l_c_d_8h_aaf469a71c776564ce543a8e73e257068}{
+\index{LCD.h@{LCD.h}!LCD\_\-DATA\_\-IN@{LCD\_\-DATA\_\-IN}}
+\index{LCD\_\-DATA\_\-IN@{LCD\_\-DATA\_\-IN}!LCD.h@{LCD.h}}
+\subsubsection[{LCD\_\-DATA\_\-IN}]{\setlength{\rightskip}{0pt plus 5cm}\#define LCD\_\-DATA\_\-IN~((IOPIN1 $>$$>$ 24) \& 0xF)}}
+\label{_l_c_d_8h_aaf469a71c776564ce543a8e73e257068}
+\hypertarget{_l_c_d_8h_a948ba57c018dde9ef6cee665a33a4e15}{
+\index{LCD.h@{LCD.h}!LCD\_\-DATA\_\-OUT@{LCD\_\-DATA\_\-OUT}}
+\index{LCD\_\-DATA\_\-OUT@{LCD\_\-DATA\_\-OUT}!LCD.h@{LCD.h}}
+\subsubsection[{LCD\_\-DATA\_\-OUT}]{\setlength{\rightskip}{0pt plus 5cm}\#define LCD\_\-DATA\_\-OUT(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~IOCLR1 = PINS\_\-DATA; IOSET1 = (x \& 0xF) $<$$<$ 24;}}
+\label{_l_c_d_8h_a948ba57c018dde9ef6cee665a33a4e15}
+\hypertarget{_l_c_d_8h_afb4b88fbcc5475a30c22c3e37103ca21}{
+\index{LCD.h@{LCD.h}!LCD\_\-E@{LCD\_\-E}}
+\index{LCD\_\-E@{LCD\_\-E}!LCD.h@{LCD.h}}
+\subsubsection[{LCD\_\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define LCD\_\-E(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~((x) ? (IOSET1 = PIN\_\-E)  : (IOCLR1 = PIN\_\-E) );}}
+\label{_l_c_d_8h_afb4b88fbcc5475a30c22c3e37103ca21}
+\hypertarget{_l_c_d_8h_af2d555e89facdbbcba96c0c00fd8f462}{
+\index{LCD.h@{LCD.h}!LCD\_\-RS@{LCD\_\-RS}}
+\index{LCD\_\-RS@{LCD\_\-RS}!LCD.h@{LCD.h}}
+\subsubsection[{LCD\_\-RS}]{\setlength{\rightskip}{0pt plus 5cm}\#define LCD\_\-RS(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~((x) ? (IOSET1 = PIN\_\-RS) : (IOCLR1 = PIN\_\-RS));}}
+\label{_l_c_d_8h_af2d555e89facdbbcba96c0c00fd8f462}
+\hypertarget{_l_c_d_8h_afad61cf19676c037d943d94d031b3519}{
+\index{LCD.h@{LCD.h}!LCD\_\-RW@{LCD\_\-RW}}
+\index{LCD\_\-RW@{LCD\_\-RW}!LCD.h@{LCD.h}}
+\subsubsection[{LCD\_\-RW}]{\setlength{\rightskip}{0pt plus 5cm}\#define LCD\_\-RW(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~((x) ? (IOSET1 = PIN\_\-RW) : (IOCLR1 = PIN\_\-RW));}}
+\label{_l_c_d_8h_afad61cf19676c037d943d94d031b3519}
+\hypertarget{_l_c_d_8h_af2266b30f789dce3014ba7290ba0c693}{
+\index{LCD.h@{LCD.h}!PIN\_\-E@{PIN\_\-E}}
+\index{PIN\_\-E@{PIN\_\-E}!LCD.h@{LCD.h}}
+\subsubsection[{PIN\_\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define PIN\_\-E~0x80000000}}
+\label{_l_c_d_8h_af2266b30f789dce3014ba7290ba0c693}
+\hypertarget{_l_c_d_8h_a130b402933587698ca0687321614642d}{
+\index{LCD.h@{LCD.h}!PIN\_\-RS@{PIN\_\-RS}}
+\index{PIN\_\-RS@{PIN\_\-RS}!LCD.h@{LCD.h}}
+\subsubsection[{PIN\_\-RS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PIN\_\-RS~0x10000000}}
+\label{_l_c_d_8h_a130b402933587698ca0687321614642d}
+\hypertarget{_l_c_d_8h_a2121001f100dc94b4292542ca9093874}{
+\index{LCD.h@{LCD.h}!PIN\_\-RW@{PIN\_\-RW}}
+\index{PIN\_\-RW@{PIN\_\-RW}!LCD.h@{LCD.h}}
+\subsubsection[{PIN\_\-RW}]{\setlength{\rightskip}{0pt plus 5cm}\#define PIN\_\-RW~0x20000000}}
+\label{_l_c_d_8h_a2121001f100dc94b4292542ca9093874}
+\hypertarget{_l_c_d_8h_ae9e59840d2c459ece6e089c2917ba566}{
+\index{LCD.h@{LCD.h}!PINS\_\-CTRL@{PINS\_\-CTRL}}
+\index{PINS\_\-CTRL@{PINS\_\-CTRL}!LCD.h@{LCD.h}}
+\subsubsection[{PINS\_\-CTRL}]{\setlength{\rightskip}{0pt plus 5cm}\#define PINS\_\-CTRL~0xB0000000}}
+\label{_l_c_d_8h_ae9e59840d2c459ece6e089c2917ba566}
+\hypertarget{_l_c_d_8h_a781f0d84c97daef15c9d048c3433e18b}{
+\index{LCD.h@{LCD.h}!PINS\_\-DATA@{PINS\_\-DATA}}
+\index{PINS\_\-DATA@{PINS\_\-DATA}!LCD.h@{LCD.h}}
+\subsubsection[{PINS\_\-DATA}]{\setlength{\rightskip}{0pt plus 5cm}\#define PINS\_\-DATA~0x0F000000}}
+\label{_l_c_d_8h_a781f0d84c97daef15c9d048c3433e18b}
+
+
+\subsection{Variable Documentation}
+\hypertarget{_l_c_d_8h_a85c4d36ff6dcfaeb3ac4973a3a8a4399}{
+\index{LCD.h@{LCD.h}!UserFont@{UserFont}}
+\index{UserFont@{UserFont}!LCD.h@{LCD.h}}
+\subsubsection[{UserFont}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned char {\bf UserFont}\mbox{[}8\mbox{]}\mbox{[}8\mbox{]}}}
+\label{_l_c_d_8h_a85c4d36ff6dcfaeb3ac4973a3a8a4399}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ {
+  { 0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00 },
+  { 0x10,0x10,0x10,0x10,0x10,0x10,0x10,0x10 },
+  { 0x18,0x18,0x18,0x18,0x18,0x18,0x18,0x18 },
+  { 0x1C,0x1C,0x1C,0x1C,0x1C,0x1C,0x1C,0x1C },
+  { 0x1E,0x1E,0x1E,0x1E,0x1E,0x1E,0x1E,0x1E },
+  { 0x1F,0x1F,0x1F,0x1F,0x1F,0x1F,0x1F,0x1F },
+  { 0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00 },
+  { 0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00 }
+}
+\end{DoxyCode}

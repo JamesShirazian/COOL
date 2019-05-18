@@ -1,0 +1,141 @@
+\hypertarget{_retarget_8c}{
+\section{Retarget.c File Reference}
+\label{da/d3a/_retarget_8c}\index{Retarget.c@{Retarget.c}}
+}
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$rt\_\-misc.h$>$}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_retarget_8c_ae96b42af8a6476ad4053485da5c5bf5b}{sendchar} (int ch)
+\item 
+int \hyperlink{_retarget_8c_abac7707b6be5733e890091048fcb99a2}{fputc} (int ch, FILE $\ast$f)
+\item 
+int \hyperlink{_retarget_8c_a5972ac73ba11086858f08a1ccd846333}{fgetc} (FILE $\ast$fp)
+\item 
+int \hyperlink{_retarget_8c_a16899976ac8e865813485db3d5f5186f}{fclose} (FILE $\ast$f)
+\item 
+int \hyperlink{_retarget_8c_a7d3d2b0c891c340cfaf0921aacfe392c}{ferror} (FILE $\ast$f)
+\item 
+int \hyperlink{_retarget_8c_af12cbc47d6c54551e45dc811c6cd3147}{fseek} (FILE $\ast$fp, long nPos, int nMode)
+\item 
+int \hyperlink{_retarget_8c_ac4a506c70739ae98fac7bf91aa5a746a}{fflush} (FILE $\ast$pStream)
+\item 
+void \hyperlink{_retarget_8c_a1647e9479b4be5731d79c81af76826c5}{\_\-ttywrch} (int ch)
+\item 
+void \hyperlink{_retarget_8c_a7b9ac395975163ef0a591db5c48ad7ae}{\_\-sys\_\-exit} (int return\_\-code)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+FILE \hyperlink{_retarget_8c_ac1f65ebf7d6f28fb49530ee0095306cb}{\_\-\_\-stdout}
+\item 
+FILE \hyperlink{_retarget_8c_abb2a819d3c88269eba04ea62d759bef5}{\_\-\_\-stdin}
+\item 
+FILE \hyperlink{_retarget_8c_a4c78cf3e794f2e14c8765bc41ef55b8d}{\_\-\_\-stderr}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_retarget_8c_a7b9ac395975163ef0a591db5c48ad7ae}{
+\index{Retarget.c@{Retarget.c}!\_\-sys\_\-exit@{\_\-sys\_\-exit}}
+\index{\_\-sys\_\-exit@{\_\-sys\_\-exit}!Retarget.c@{Retarget.c}}
+\subsubsection[{\_\-sys\_\-exit}]{\setlength{\rightskip}{0pt plus 5cm}void \_\-sys\_\-exit (
+\begin{DoxyParamCaption}
+\item[{int}]{return\_\-code}
+\end{DoxyParamCaption}
+)}}
+\label{da/d3a/_retarget_8c_a7b9ac395975163ef0a591db5c48ad7ae}
+\hypertarget{_retarget_8c_a1647e9479b4be5731d79c81af76826c5}{
+\index{Retarget.c@{Retarget.c}!\_\-ttywrch@{\_\-ttywrch}}
+\index{\_\-ttywrch@{\_\-ttywrch}!Retarget.c@{Retarget.c}}
+\subsubsection[{\_\-ttywrch}]{\setlength{\rightskip}{0pt plus 5cm}void \_\-ttywrch (
+\begin{DoxyParamCaption}
+\item[{int}]{ch}
+\end{DoxyParamCaption}
+)}}
+\label{da/d3a/_retarget_8c_a1647e9479b4be5731d79c81af76826c5}
+\hypertarget{_retarget_8c_a16899976ac8e865813485db3d5f5186f}{
+\index{Retarget.c@{Retarget.c}!fclose@{fclose}}
+\index{fclose@{fclose}!Retarget.c@{Retarget.c}}
+\subsubsection[{fclose}]{\setlength{\rightskip}{0pt plus 5cm}int fclose (
+\begin{DoxyParamCaption}
+\item[{FILE $\ast$}]{f}
+\end{DoxyParamCaption}
+)}}
+\label{da/d3a/_retarget_8c_a16899976ac8e865813485db3d5f5186f}
+\hypertarget{_retarget_8c_a7d3d2b0c891c340cfaf0921aacfe392c}{
+\index{Retarget.c@{Retarget.c}!ferror@{ferror}}
+\index{ferror@{ferror}!Retarget.c@{Retarget.c}}
+\subsubsection[{ferror}]{\setlength{\rightskip}{0pt plus 5cm}int ferror (
+\begin{DoxyParamCaption}
+\item[{FILE $\ast$}]{f}
+\end{DoxyParamCaption}
+)}}
+\label{da/d3a/_retarget_8c_a7d3d2b0c891c340cfaf0921aacfe392c}
+\hypertarget{_retarget_8c_ac4a506c70739ae98fac7bf91aa5a746a}{
+\index{Retarget.c@{Retarget.c}!fflush@{fflush}}
+\index{fflush@{fflush}!Retarget.c@{Retarget.c}}
+\subsubsection[{fflush}]{\setlength{\rightskip}{0pt plus 5cm}int fflush (
+\begin{DoxyParamCaption}
+\item[{FILE $\ast$}]{pStream}
+\end{DoxyParamCaption}
+)}}
+\label{da/d3a/_retarget_8c_ac4a506c70739ae98fac7bf91aa5a746a}
+\hypertarget{_retarget_8c_a5972ac73ba11086858f08a1ccd846333}{
+\index{Retarget.c@{Retarget.c}!fgetc@{fgetc}}
+\index{fgetc@{fgetc}!Retarget.c@{Retarget.c}}
+\subsubsection[{fgetc}]{\setlength{\rightskip}{0pt plus 5cm}int fgetc (
+\begin{DoxyParamCaption}
+\item[{FILE $\ast$}]{fp}
+\end{DoxyParamCaption}
+)}}
+\label{da/d3a/_retarget_8c_a5972ac73ba11086858f08a1ccd846333}
+\hypertarget{_retarget_8c_abac7707b6be5733e890091048fcb99a2}{
+\index{Retarget.c@{Retarget.c}!fputc@{fputc}}
+\index{fputc@{fputc}!Retarget.c@{Retarget.c}}
+\subsubsection[{fputc}]{\setlength{\rightskip}{0pt plus 5cm}int fputc (
+\begin{DoxyParamCaption}
+\item[{int}]{ch, }
+\item[{FILE $\ast$}]{f}
+\end{DoxyParamCaption}
+)}}
+\label{da/d3a/_retarget_8c_abac7707b6be5733e890091048fcb99a2}
+\hypertarget{_retarget_8c_af12cbc47d6c54551e45dc811c6cd3147}{
+\index{Retarget.c@{Retarget.c}!fseek@{fseek}}
+\index{fseek@{fseek}!Retarget.c@{Retarget.c}}
+\subsubsection[{fseek}]{\setlength{\rightskip}{0pt plus 5cm}int fseek (
+\begin{DoxyParamCaption}
+\item[{FILE $\ast$}]{fp, }
+\item[{long}]{nPos, }
+\item[{int}]{nMode}
+\end{DoxyParamCaption}
+)}}
+\label{da/d3a/_retarget_8c_af12cbc47d6c54551e45dc811c6cd3147}
+\hypertarget{_retarget_8c_ae96b42af8a6476ad4053485da5c5bf5b}{
+\index{Retarget.c@{Retarget.c}!sendchar@{sendchar}}
+\index{sendchar@{sendchar}!Retarget.c@{Retarget.c}}
+\subsubsection[{sendchar}]{\setlength{\rightskip}{0pt plus 5cm}int sendchar (
+\begin{DoxyParamCaption}
+\item[{int}]{ch}
+\end{DoxyParamCaption}
+)}}
+\label{da/d3a/_retarget_8c_ae96b42af8a6476ad4053485da5c5bf5b}
+
+
+\subsection{Variable Documentation}
+\hypertarget{_retarget_8c_a4c78cf3e794f2e14c8765bc41ef55b8d}{
+\index{Retarget.c@{Retarget.c}!\_\-\_\-stderr@{\_\-\_\-stderr}}
+\index{\_\-\_\-stderr@{\_\-\_\-stderr}!Retarget.c@{Retarget.c}}
+\subsubsection[{\_\-\_\-stderr}]{\setlength{\rightskip}{0pt plus 5cm}FILE {\bf \_\-\_\-stderr}}}
+\label{da/d3a/_retarget_8c_a4c78cf3e794f2e14c8765bc41ef55b8d}
+\hypertarget{_retarget_8c_abb2a819d3c88269eba04ea62d759bef5}{
+\index{Retarget.c@{Retarget.c}!\_\-\_\-stdin@{\_\-\_\-stdin}}
+\index{\_\-\_\-stdin@{\_\-\_\-stdin}!Retarget.c@{Retarget.c}}
+\subsubsection[{\_\-\_\-stdin}]{\setlength{\rightskip}{0pt plus 5cm}FILE {\bf \_\-\_\-stdin}}}
+\label{da/d3a/_retarget_8c_abb2a819d3c88269eba04ea62d759bef5}
+\hypertarget{_retarget_8c_ac1f65ebf7d6f28fb49530ee0095306cb}{
+\index{Retarget.c@{Retarget.c}!\_\-\_\-stdout@{\_\-\_\-stdout}}
+\index{\_\-\_\-stdout@{\_\-\_\-stdout}!Retarget.c@{Retarget.c}}
+\subsubsection[{\_\-\_\-stdout}]{\setlength{\rightskip}{0pt plus 5cm}FILE {\bf \_\-\_\-stdout}}}
+\label{da/d3a/_retarget_8c_ac1f65ebf7d6f28fb49530ee0095306cb}

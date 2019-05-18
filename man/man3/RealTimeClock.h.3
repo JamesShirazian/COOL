@@ -1,0 +1,68 @@
+.TH "RealTimeClock.h" 3 "Sun Jun 19 2011" "Object Oriented Library for ARM 7" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RealTimeClock.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'LPC23xx.H'\fP
+.br
+\fC#include 'type.h'\fP
+.br
+\fC#include <stdint.h>\fP
+.br
+\fC#include <stdbool.h>\fP
+.br
+\fC#include <stdio.h>\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include 'LCD.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBRealTimeClock\fP"
+.br
+.RI "\fIclass \fBRealTimeClock\fP: is a class in charge of Real Time clock which is connected to ARM 7 processor. RTC is capabel of generating interrupt per second and execute a fucntion. \fP"
+.in -1c
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBPREINT_RTC\fP   0x000001C8"
+.br
+.ti -1c
+.RI "#define \fBPREFRAC_RTC\fP   0x000061C0"
+.br
+.ti -1c
+.RI "#define \fBILR_RTCCIF\fP   0x01"
+.br
+.ti -1c
+.RI "#define \fBILR_RTCALF\fP   0x02"
+.br
+.ti -1c
+.RI "#define \fBCCR_CLKEN\fP   0x01"
+.br
+.ti -1c
+.RI "#define \fBCCR_CTCRST\fP   0x02"
+.br
+.ti -1c
+.RI "#define \fBCCR_CLKSRC\fP   0x10"
+.br
+.in -1c
+.SH "Define Documentation"
+.PP 
+.SS "#define CCR_CLKEN   0x01"
+.SS "#define CCR_CLKSRC   0x10"
+.SS "#define CCR_CTCRST   0x02"
+.SS "#define ILR_RTCALF   0x02"
+.SS "#define ILR_RTCCIF   0x01"
+.SS "#define PREFRAC_RTC   0x000061C0"
+.SS "#define PREINT_RTC   0x000001C8"
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Object Oriented Library for ARM 7 from the source code.

@@ -1,0 +1,229 @@
+.TH "TimerEvent1" 3 "Tue Jun 21 2011" "Version 1.100.000" "Object Oriented Library for ARM 7" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TimerEvent1 \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTimerEvent1\fP (float newInterval, int newNumberOfEventOccurrence, bool autoStart, void(*function)(void))"
+.br
+.ti -1c
+.RI "\fBTimerEvent1\fP (float newInterval, int newNumberOfEventOccurrence, int newPriority, bool autoStart, void(*function)(void))"
+.br
+.ti -1c
+.RI "void \fBstart\fP (void)"
+.br
+.ti -1c
+.RI "void \fBstop\fP (void)"
+.br
+.ti -1c
+.RI "void \fBsetTimerIntervalTo\fP (float newInterval)"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "TimerEvent1::TimerEvent1 (floatnewInterval, intnewNumberOfEventOccurrence, boolautoStart, void(*)(void)function)"
+.br
+This constructor initlize timer 1 of ARM 7 to create inttrupt and execute the given task.
+.br
+ 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfloat\fP newInterval: Timer interval 
+.br
+ 
+.br
+\fIint\fP newNumberOfEventOccurrence: number of occurance of this event
+.br
+.IP "\(bu" 2
+If its values set to '0', that event execute as long as program is running. 
+.PP
+.br
+\fIbool\fP autoStart: start the timer automatically if it is true and vice versa. 
+.br
+ 
+.br
+\fIvoid(*function)(void),:\fP this reprecent the function which this timer has to execute preidicualy. 
+.br
+ 
+.br
+Example:
+.br
+
+.br
+ int a=0; 
+.br
+ \fBTimerEvent1\fP TE1(1,0,true,do1);
+.br
+ void do1(void)
+.br
+ { 
+.br
+ a++; 
+.br
+ LCD.display(a,2,0,0);
+.br
+ }
+.br
+ 
+.RE
+.PP
+
+.SS "TimerEvent1::TimerEvent1 (floatnewInterval, intnewNumberOfEventOccurrence, intnewPriority, boolautoStart, void(*)(void)function)"
+.br
+This constructor initlize timer 0 of ARM 7 to create inttrupt and execute the given task.
+.br
+ 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfloat\fP newInterval: Timer interval 
+.br
+ 
+.br
+\fIint\fP newNumberOfEventOccurrence: number of occurance of this event
+.br
+.IP "\(bu" 2
+If its values set to '0', that event execute as long as program is running. 
+.PP
+.br
+\fIint\fP newPriority: set the priority of this event.
+.br
+ 
+.br
+\fIbool\fP autoStart: start the timer automatically if it is true and vice versa. 
+.br
+ 
+.br
+\fIvoid(*function)(void),:\fP this reprecent the function which this timer has to execute preidicualy. 
+.br
+ 
+.br
+Example:
+.br
+
+.br
+ int a=0; 
+.br
+ \fBTimerEvent1\fP TE1(1,0,6,true,do1);
+.br
+ void do1(void)
+.br
+ { 
+.br
+ a++; 
+.br
+ LCD.display(a,2,0,0);
+.br
+ }
+.br
+ 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void TimerEvent1::setTimerIntervalTo (floatnewInterval)"
+.br
+Adjust \fBTimerEvent1\fP interval if needed. it keeps the \fBTimerEvent0\fP status if it was on start mode it will be on start mode, same rule apply to stop mode.
+.br
+ 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfloat\fP newInterval: new interval of \fBTimerEvent1\fP 
+.br
+Example:
+.br
+
+.br
+ int a=0; 
+.br
+ \fBTimerEvent1\fP TE1(1,0,true,do1);
+.br
+ .... 
+.br
+ void do1(void)
+.br
+ { 
+.br
+ a++; 
+.br
+ LCD.display(a,2,0,0);
+.br
+ TE1.setTimerIntervalTo(10); 
+.br
+ }
+.br
+ 
+.RE
+.PP
+
+.SS "void TimerEvent1::start (void)"
+.br
+Start \fBTimerEvent1\fP.
+.br
+ 
+.br
+Example:
+.br
+
+.br
+ int a=0; 
+.br
+ \fBTimerEvent1\fP TE1(1,0,false,do1);
+.br
+ TE0.start(); 
+.br
+ .... 
+.br
+ void do1(void)
+.br
+ { 
+.br
+ a++; 
+.br
+ LCD.display(a,2,0,0);
+.br
+ }
+.br
+ 
+.SS "void TimerEvent1::stop (void)"
+.br
+Stop \fBTimerEvent1\fP.
+.br
+ 
+.br
+Example:
+.br
+
+.br
+ int a=0; 
+.br
+ \fBTimerEvent1\fP TE1(1,0,true,do1);
+.br
+ .... 
+.br
+ void do1(void)
+.br
+ { 
+.br
+ a++; 
+.br
+ LCD.display(a,2,0,0);
+.br
+ TE1.stop(); 
+.br
+ }
+.br
+ 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Object Oriented Library for ARM 7 from the source code.

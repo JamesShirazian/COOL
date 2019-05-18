@@ -1,0 +1,405 @@
+\hypertarget{group__group9}{
+\section{Real Time Clock}
+\label{group__group9}\index{Real Time Clock@{Real Time Clock}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_real_time_clock}{RealTimeClock}
+\begin{DoxyCompactList}\small\item\em class \hyperlink{class_real_time_clock}{RealTimeClock}: is a class in charge of Real Time clock which is connected to ARM 7 processor.
+
+/sa \hyperlink{class_interrupt}{Interrupt} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__group9_ga02c3e799d7541e2917ef46e71146ed90}{RealTimeClock::RealTimeClock} (bool autoStart)
+\item 
+\hyperlink{group__group9_gaad2bfb64a40a2a2729b569c08e7dcc49}{RealTimeClock::RealTimeClock} (int year, int month, int day, int hour, int minute, int second, bool autoStart)
+\item 
+void \hyperlink{group__group9_ga14ecce7648b24c7a85359af3f5b20af6}{RealTimeClock::setTime} (int hour, int min, int sec)
+\item 
+void \hyperlink{group__group9_ga4a5781efbfce128e0d3c461627ce371b}{RealTimeClock::setDate} (int year, int month, int day)
+\item 
+void \hyperlink{group__group9_gab62814ef94d0fe081e1f8a2756317a3c}{RealTimeClock::start} (void)
+\item 
+void \hyperlink{group__group9_ga116ebd0f42df71ef71d217527194d867}{RealTimeClock::stop} (void)
+\item 
+void \hyperlink{group__group9_ga81b09971229ddc88a7581bf5dcab7d1e}{RealTimeClock::reset} (void)
+\item 
+int \hyperlink{group__group9_ga58d426541706593b83016e0462e41625}{RealTimeClock::getYear} ()
+\item 
+int \hyperlink{group__group9_gaa8901871334c623b9473216de08c1432}{RealTimeClock::getMonth} ()
+\item 
+int \hyperlink{group__group9_ga29dbb224e31f5dca34c29e5e48ebeb2c}{RealTimeClock::getDay} ()
+\item 
+int \hyperlink{group__group9_ga86c10ef9f4da8dbee7fbd6236443fd53}{RealTimeClock::getHour} ()
+\item 
+int \hyperlink{group__group9_ga9784205a5ea194cca976af6cfee1308b}{RealTimeClock::getMinute} ()
+\item 
+int \hyperlink{group__group9_gaaddd01287cb8a6d2711b0650f7cbcc72}{RealTimeClock::getSecond} ()
+\item 
+char $\ast$ \hyperlink{group__group9_gaad4ca0e261b2a594e536303dee1116f4}{RealTimeClock::getTime} (char delimiter)
+\item 
+char $\ast$ \hyperlink{group__group9_gaa11261523ee392adf9081def9e3b1fcd}{RealTimeClock::getDate} (char delimiter)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Real Time Clock 
+
+\subsection{Function Documentation}
+\hypertarget{group__group9_gaa11261523ee392adf9081def9e3b1fcd}{
+\index{Real Time Clock@{Real Time Clock}!getDate@{getDate}}
+\index{getDate@{getDate}!Real Time Clock@{Real Time Clock}}
+\subsubsection[{getDate}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ RealTimeClock::getDate (
+\begin{DoxyParamCaption}
+\item[{char}]{delimiter}
+\end{DoxyParamCaption}
+)}}
+\label{group__group9_gaa11261523ee392adf9081def9e3b1fcd}
+Return Date from real time clock, it is output is an pointer to the array of charachter:\par
+\par
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & char delimiter: display delimiter between year and month and day \par
+ \par
+ \par
+\\
+\hline
+\end{DoxyParams}
+{\bfseries Example:}\par
+ In this example, the date value is going to write on \hyperlink{class_serial_port}{SerialPort} and \hyperlink{class_l_c_d}{LCD} at same time:\par
+ \hyperlink{class_l_c_d}{LCD} myLCD;\par
+ \hyperlink{class_serial_port}{SerialPort} SP;\par
+ \hyperlink{class_real_time_clock}{RealTimeClock} myRTC(2011,6,15,12,33,23,true);\par
+ SP.open();\par
+ SP.write(myRTC.getDate('/'),true);\par
+ myLCD(myRTC.getTime('/'),0,0);\par
+ \hypertarget{group__group9_ga29dbb224e31f5dca34c29e5e48ebeb2c}{
+\index{Real Time Clock@{Real Time Clock}!getDay@{getDay}}
+\index{getDay@{getDay}!Real Time Clock@{Real Time Clock}}
+\subsubsection[{getDay}]{\setlength{\rightskip}{0pt plus 5cm}int RealTimeClock::getDay (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{group__group9_ga29dbb224e31f5dca34c29e5e48ebeb2c}
+Return the value of day from real time clock$<$br$>$\par
+ \begin{DoxyReturn}{Returns}
+: int Year: value of day \par
+ \par
+
+\end{DoxyReturn}
+{\bfseries Example:}\par
+ \hyperlink{class_real_time_clock}{RealTimeClock} myRTC\par
+ myRTC.getDay();\par
+ \hypertarget{group__group9_ga86c10ef9f4da8dbee7fbd6236443fd53}{
+\index{Real Time Clock@{Real Time Clock}!getHour@{getHour}}
+\index{getHour@{getHour}!Real Time Clock@{Real Time Clock}}
+\subsubsection[{getHour}]{\setlength{\rightskip}{0pt plus 5cm}int RealTimeClock::getHour (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{group__group9_ga86c10ef9f4da8dbee7fbd6236443fd53}
+Return the value of hour from real time clock$<$br$>$\par
+ \begin{DoxyReturn}{Returns}
+: int Year: value of hour\par
+ \par
+
+\end{DoxyReturn}
+{\bfseries Example:}\par
+ \hyperlink{class_real_time_clock}{RealTimeClock} myRTC\par
+ myRTC.getHour();\par
+ \hypertarget{group__group9_ga9784205a5ea194cca976af6cfee1308b}{
+\index{Real Time Clock@{Real Time Clock}!getMinute@{getMinute}}
+\index{getMinute@{getMinute}!Real Time Clock@{Real Time Clock}}
+\subsubsection[{getMinute}]{\setlength{\rightskip}{0pt plus 5cm}int RealTimeClock::getMinute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{group__group9_ga9784205a5ea194cca976af6cfee1308b}
+Return the value of minute from real time clock$<$br$>$\par
+ \begin{DoxyReturn}{Returns}
+: int Year: value of minute \par
+ \par
+
+\end{DoxyReturn}
+{\bfseries Example:}\par
+ \hyperlink{class_real_time_clock}{RealTimeClock} myRTC\par
+ myRTC.getMinute();\par
+ \hypertarget{group__group9_gaa8901871334c623b9473216de08c1432}{
+\index{Real Time Clock@{Real Time Clock}!getMonth@{getMonth}}
+\index{getMonth@{getMonth}!Real Time Clock@{Real Time Clock}}
+\subsubsection[{getMonth}]{\setlength{\rightskip}{0pt plus 5cm}int RealTimeClock::getMonth (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{group__group9_gaa8901871334c623b9473216de08c1432}
+Return the value of month from real time clock$<$br$>$\par
+ \begin{DoxyReturn}{Returns}
+: int Year: value of month \par
+ \par
+
+\end{DoxyReturn}
+{\bfseries Example:}\par
+ \hyperlink{class_real_time_clock}{RealTimeClock} myRTC\par
+ myRTC.getMonth();\par
+ \hypertarget{group__group9_gaaddd01287cb8a6d2711b0650f7cbcc72}{
+\index{Real Time Clock@{Real Time Clock}!getSecond@{getSecond}}
+\index{getSecond@{getSecond}!Real Time Clock@{Real Time Clock}}
+\subsubsection[{getSecond}]{\setlength{\rightskip}{0pt plus 5cm}int RealTimeClock::getSecond (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{group__group9_gaaddd01287cb8a6d2711b0650f7cbcc72}
+Return the value of second from real time clock$<$br$>$\par
+ \begin{DoxyReturn}{Returns}
+: int Year: value of second \par
+ \par
+
+\end{DoxyReturn}
+{\bfseries Example:}\par
+ \hyperlink{class_real_time_clock}{RealTimeClock} myRTC\par
+ myRTC.getSecond();\par
+ \hypertarget{group__group9_gaad4ca0e261b2a594e536303dee1116f4}{
+\index{Real Time Clock@{Real Time Clock}!getTime@{getTime}}
+\index{getTime@{getTime}!Real Time Clock@{Real Time Clock}}
+\subsubsection[{getTime}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ RealTimeClock::getTime (
+\begin{DoxyParamCaption}
+\item[{char}]{delimiter}
+\end{DoxyParamCaption}
+)}}
+\label{group__group9_gaad4ca0e261b2a594e536303dee1116f4}
+Return Time from real time clock, it is output is an pointer to the array of charachter:\par
+\par
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & char delimiter: display delimiter between houre and minutes and second \par
+ \par
+ \par
+\\
+\hline
+\end{DoxyParams}
+{\bfseries Example:}\par
+ In this example, the time value is going to write on \hyperlink{class_serial_port}{SerialPort} and \hyperlink{class_l_c_d}{LCD} at same time:\par
+ \hyperlink{class_l_c_d}{LCD} myLCD;\par
+ \hyperlink{class_serial_port}{SerialPort} SP;\par
+ \hyperlink{class_real_time_clock}{RealTimeClock} myRTC(2011,6,15,12,33,23,true);\par
+ SP.open();\par
+ SP.write(myRTC.getTime(':'),true);\par
+ myLCD(myRTC.getTime(':'),0,0);\par
+ \hypertarget{group__group9_ga58d426541706593b83016e0462e41625}{
+\index{Real Time Clock@{Real Time Clock}!getYear@{getYear}}
+\index{getYear@{getYear}!Real Time Clock@{Real Time Clock}}
+\subsubsection[{getYear}]{\setlength{\rightskip}{0pt plus 5cm}int RealTimeClock::getYear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{group__group9_ga58d426541706593b83016e0462e41625}
+Return the value of year from real time clock$<$br$>$\par
+ \begin{DoxyReturn}{Returns}
+: int Year: value of year \par
+ \par
+
+\end{DoxyReturn}
+{\bfseries Example:}\par
+ \hyperlink{class_real_time_clock}{RealTimeClock} myRTC\par
+ myRTC.getYear();\par
+ \hypertarget{group__group9_gaad2bfb64a40a2a2729b569c08e7dcc49}{
+\index{Real Time Clock@{Real Time Clock}!RealTimeClock@{RealTimeClock}}
+\index{RealTimeClock@{RealTimeClock}!Real Time Clock@{Real Time Clock}}
+\subsubsection[{RealTimeClock}]{\setlength{\rightskip}{0pt plus 5cm}RealTimeClock::RealTimeClock (
+\begin{DoxyParamCaption}
+\item[{int}]{year, }
+\item[{int}]{month, }
+\item[{int}]{day, }
+\item[{int}]{hour, }
+\item[{int}]{minute, }
+\item[{int}]{second, }
+\item[{bool}]{autoStart}
+\end{DoxyParamCaption}
+)}}
+\label{group__group9_gaad2bfb64a40a2a2729b569c08e7dcc49}
+Fifth constructor\par
+ Real Time Clock set its value to the respective values of this constructor:\par
+\par
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & int year: set the year of real time clock\par
+ \\
+\hline
+{\em } & int month: set the month of real time clock\par
+ \\
+\hline
+{\em } & int day: set the day of real time clock\par
+ \\
+\hline
+{\em } & int hour: set the hour of real time clock\par
+ \\
+\hline
+{\em } & int minute: set the minute of real time clock\par
+ \\
+\hline
+{\em } & int second: set the second of real time clock\par
+ \\
+\hline
+{\em } & bool autoStart: \par
+
+\begin{DoxyItemize}
+\item True : Real Time clock start by default\par
+
+\item False: Real Time Clock stop by default 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\hypertarget{group__group9_ga02c3e799d7541e2917ef46e71146ed90}{
+\index{Real Time Clock@{Real Time Clock}!RealTimeClock@{RealTimeClock}}
+\index{RealTimeClock@{RealTimeClock}!Real Time Clock@{Real Time Clock}}
+\subsubsection[{RealTimeClock}]{\setlength{\rightskip}{0pt plus 5cm}RealTimeClock::RealTimeClock (
+\begin{DoxyParamCaption}
+\item[{bool}]{autoStart}
+\end{DoxyParamCaption}
+)}}
+\label{group__group9_ga02c3e799d7541e2917ef46e71146ed90}
+Second constructor\par
+ Real time clock set to:\par
+ -\/Year = 0 \par
+ -\/Month = 0\par
+ -\/Day = 0 \par
+ -\/Hour = 0 \par
+ -\/Minute = 0\par
+ -\/Sec = 0 \par
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & bool autoStart \par
+
+\begin{DoxyItemize}
+\item True : Real Time clock start by default\par
+
+\item False: Real Time Clock stop by default \par
+ \par
+ 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\hypertarget{group__group9_ga81b09971229ddc88a7581bf5dcab7d1e}{
+\index{Real Time Clock@{Real Time Clock}!reset@{reset}}
+\index{reset@{reset}!Real Time Clock@{Real Time Clock}}
+\subsubsection[{reset}]{\setlength{\rightskip}{0pt plus 5cm}void RealTimeClock::reset (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{group__group9_ga81b09971229ddc88a7581bf5dcab7d1e}
+re-\/start the real time clock:\par
+\par
+ \par
+
+
+{\bfseries Example:}\par
+ \hyperlink{class_real_time_clock}{RealTimeClock} myRTC\par
+ myRTC.reset();\par
+ \hypertarget{group__group9_ga4a5781efbfce128e0d3c461627ce371b}{
+\index{Real Time Clock@{Real Time Clock}!setDate@{setDate}}
+\index{setDate@{setDate}!Real Time Clock@{Real Time Clock}}
+\subsubsection[{setDate}]{\setlength{\rightskip}{0pt plus 5cm}void RealTimeClock::setDate (
+\begin{DoxyParamCaption}
+\item[{int}]{year, }
+\item[{int}]{month, }
+\item[{int}]{day}
+\end{DoxyParamCaption}
+)}}
+\label{group__group9_ga4a5781efbfce128e0d3c461627ce371b}
+Set date to Real time clock:\par
+\par
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & int year: set year support till 2099\par
+ \\
+\hline
+{\em } & int month: set month from 1 to 12 \par
+ \\
+\hline
+{\em } & int day: set day from 0 to 31 \par
+\\
+\hline
+\end{DoxyParams}
+\par
+
+
+{\bfseries Example:}\par
+ \hyperlink{class_l_c_d}{LCD} myLCD; \hyperlink{class_real_time_clock}{RealTimeClock} myRTC(true,do1);\par
+ myRTC.setDate(2011,6,18); \par
+ myLCD(myRTC.getDate('-\/'),0,0);\par
+ \hypertarget{group__group9_ga14ecce7648b24c7a85359af3f5b20af6}{
+\index{Real Time Clock@{Real Time Clock}!setTime@{setTime}}
+\index{setTime@{setTime}!Real Time Clock@{Real Time Clock}}
+\subsubsection[{setTime}]{\setlength{\rightskip}{0pt plus 5cm}void RealTimeClock::setTime (
+\begin{DoxyParamCaption}
+\item[{int}]{hour, }
+\item[{int}]{minute, }
+\item[{int}]{second}
+\end{DoxyParamCaption}
+)}}
+\label{group__group9_ga14ecce7648b24c7a85359af3f5b20af6}
+Set time to Real time clock:\par
+\par
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & int hour: set hour \par
+ \\
+\hline
+{\em } & int minute: set minute \par
+ \\
+\hline
+{\em } & int second: set second \par
+\\
+\hline
+\end{DoxyParams}
+\par
+
+
+{\bfseries Example:}\par
+ \hyperlink{class_l_c_d}{LCD} myLCD; \hyperlink{class_real_time_clock}{RealTimeClock} myRTC(true,do1);\par
+ myRTC.setTime(22,35,10); \par
+ myLCD(myRTC.getTime(':'),0,0);\par
+ \hypertarget{group__group9_gab62814ef94d0fe081e1f8a2756317a3c}{
+\index{Real Time Clock@{Real Time Clock}!start@{start}}
+\index{start@{start}!Real Time Clock@{Real Time Clock}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}void RealTimeClock::start (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{group__group9_gab62814ef94d0fe081e1f8a2756317a3c}
+start the real time clock:\par
+\par
+ \par
+
+
+{\bfseries Example:}\par
+ \hyperlink{class_real_time_clock}{RealTimeClock} myRTC\par
+ myRTC.start();\par
+ \hypertarget{group__group9_ga116ebd0f42df71ef71d217527194d867}{
+\index{Real Time Clock@{Real Time Clock}!stop@{stop}}
+\index{stop@{stop}!Real Time Clock@{Real Time Clock}}
+\subsubsection[{stop}]{\setlength{\rightskip}{0pt plus 5cm}void RealTimeClock::stop (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{group__group9_ga116ebd0f42df71ef71d217527194d867}
+stop the real time clock:\par
+\par
+ \par
+
+
+{\bfseries Example:}\par
+ \hyperlink{class_real_time_clock}{RealTimeClock} myRTC\par
+ myRTC.stop();\par
+ 

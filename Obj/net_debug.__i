@@ -1,0 +1,1 @@
+ --thumb -c --cpu ARM7TDMI -D__RTX -g -O2 --apcs=interwork -I..\Library -I "C:\Keil\ARM\INC" -I "C:\Keil\ARM\INC\Philips" -o ".\Obj\net_debug.o" --omf_browse ".\Obj\net_debug.crf" --depend ".\Obj\net_debug.d" "Net_Debug.c"

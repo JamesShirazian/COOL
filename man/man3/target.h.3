@@ -1,0 +1,95 @@
+.TH "target.h" 3 "Sun Jun 19 2011" "Object Oriented Library for ARM 7" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+target.h \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBENG_BOARD_LPC24XX\fP   0"
+.br
+.ti -1c
+.RI "#define \fBKEIL_BOARD_LPC23XX\fP   1"
+.br
+.ti -1c
+.RI "#define \fBEA_BOARD_LPC24XX\fP   0"
+.br
+.ti -1c
+.RI "#define \fBIAR_BOARD_LPC23XX\fP   0"
+.br
+.ti -1c
+.RI "#define \fBNATIONAL_PHY\fP   1"
+.br
+.ti -1c
+.RI "#define \fBMICREL_PHY\fP   2"
+.br
+.ti -1c
+.RI "#define \fBUSE_USB\fP   1"
+.br
+.ti -1c
+.RI "#define \fBPLL_MValue\fP   11"
+.br
+.ti -1c
+.RI "#define \fBPLL_NValue\fP   0"
+.br
+.ti -1c
+.RI "#define \fBCCLKDivValue\fP   5"
+.br
+.ti -1c
+.RI "#define \fBUSBCLKDivValue\fP   5"
+.br
+.ti -1c
+.RI "#define \fBFosc\fP   12000000"
+.br
+.ti -1c
+.RI "#define \fBFcclk\fP   48000000"
+.br
+.ti -1c
+.RI "#define \fBFcco\fP   288000000"
+.br
+.ti -1c
+.RI "#define \fBFpclk\fP   (Fcclk / 2)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBTargetInit\fP (void)"
+.br
+.ti -1c
+.RI "void \fBConfigurePLL\fP (void)"
+.br
+.ti -1c
+.RI "void \fBTargetResetInit\fP (void)"
+.br
+.in -1c
+.SH "Define Documentation"
+.PP 
+.SS "#define CCLKDivValue   5"
+.SS "#define EA_BOARD_LPC24XX   0"
+.SS "#define ENG_BOARD_LPC24XX   0"
+.SS "#define Fcclk   48000000"
+.SS "#define Fcco   288000000"
+.SS "#define Fosc   12000000"
+.SS "#define Fpclk   (Fcclk / 2)"
+.SS "#define IAR_BOARD_LPC23XX   0"
+.SS "#define KEIL_BOARD_LPC23XX   1"
+.SS "#define MICREL_PHY   2"
+.SS "#define NATIONAL_PHY   1"
+.SS "#define PLL_MValue   11"
+.SS "#define PLL_NValue   0"
+.SS "#define USBCLKDivValue   5"
+.SS "#define USE_USB   1"
+.SH "Function Documentation"
+.PP 
+.SS "void ConfigurePLL (void)"
+.SS "void TargetInit (void)"
+.SS "void TargetResetInit (void)"
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Object Oriented Library for ARM 7 from the source code.

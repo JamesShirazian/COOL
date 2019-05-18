@@ -1,0 +1,60 @@
+\hypertarget{class_interrupt}{
+\section{Interrupt Class Reference}
+\label{da/dc3/class_interrupt}\index{Interrupt@{Interrupt}}
+}
+
+
+class \hyperlink{class_interrupt}{Interrupt}: is a class in charge of \hyperlink{class_interrupt}{Interrupt} in ARM 7 processor it handels EXTINT0, EXTINT1, EXTINT2, EXTINT3.  
+
+
+
+
+{\ttfamily \#include $<$Interrupt.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_interrupt_a2af932cad2bb12d21bcf6d3c65a7424b}{Interrupt} (void)
+\item 
+\hyperlink{group__group10_ga4fd8be38d92c8b0086b15b3c30ea1868}{Interrupt} (\hyperlink{class_port_pin}{PortPin} pin, int priority, void($\ast$function)(void))
+\item 
+void \hyperlink{group__group10_gafee631d8690407d619fe9ba2741b6c4d}{setFunctionToInterrupt} (void($\ast$assginedfunction)(void))
+\item 
+void \hyperlink{group__group10_ga4cd6bc79c3fa54378a156117de5f12a9}{setInterruptPriorityTo} (int newPriority)
+\item 
+int \hyperlink{group__group10_ga8d3124b3721e2426dc24fc8416f12e38}{getInterruptPriority} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class \hyperlink{class_interrupt}{Interrupt}: is a class in charge of \hyperlink{class_interrupt}{Interrupt} in ARM 7 processor it handels EXTINT0, EXTINT1, EXTINT2, EXTINT3. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_fast_interrupt}{FastInterrupt} 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_interrupt_a2af932cad2bb12d21bcf6d3c65a7424b}{
+\index{Interrupt@{Interrupt}!Interrupt@{Interrupt}}
+\index{Interrupt@{Interrupt}!Interrupt@{Interrupt}}
+\subsubsection[{Interrupt}]{\setlength{\rightskip}{0pt plus 5cm}Interrupt::Interrupt (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{da/dc3/class_interrupt_a2af932cad2bb12d21bcf6d3c65a7424b}
+Default constructor: activate EXTINT0 by default and set its priority to 0 which can be alter by \char`\"{}setFunctionToInterrupt\char`\"{}\par
+ {\bfseries \par
+Example:\par
+{\bfseries \par
+}}
+
+{\bfseries {\bfseries  \hyperlink{class_interrupt}{Interrupt} myInterrupt; \par
+ myInterrupt.setFunctionToInterrupt(do1); \par
+ }}
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_interrupt_8h}{Interrupt.h}\item 
+\hyperlink{_interrupt_8cpp}{Interrupt.cpp}\end{DoxyCompactItemize}

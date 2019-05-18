@@ -1,0 +1,84 @@
+.TH "TimerDelay3" 3 "Tue Jun 21 2011" "Version 1.100.000" "Object Oriented Library for ARM 7" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TimerDelay3 \- 
+.PP
+class \fBTimerDelay3\fP: is a class which use to generate delay it uses timer3 of ARM7.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <TimerDelay3.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTimerDelay3\fP ()"
+.br
+.ti -1c
+.RI "void \fBwait\fP (float newInterval)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+class \fBTimerDelay3\fP: is a class which use to generate delay it uses timer3 of ARM7. 
+
+\fBSee also:\fP
+.RS 4
+\fBTimerDelay0\fP 
+.PP
+\fBTimerDelay1\fP 
+.PP
+\fBTimerDelay2\fP 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "TimerDelay3::TimerDelay3 ()"
+.br
+Default constructor of \fBTimerDelay0\fP.
+.br
+ 
+.br
+Example:
+.br
+
+.br
+ \fBTimerDelay0\fP TD0;
+.br
+ 
+.SH "Member Function Documentation"
+.PP 
+.SS "void TimerDelay3::wait (floatnewInterval)"
+.br
+This method use to the set the delay time where ever is needed.
+.br
+ 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfloat\fP newInterval: delay value
+.br
+ 
+.br
+Example:
+.br
+
+.br
+ \fBTimerDelay0\fP TD0;
+.br
+ TD.wait(4.5); 
+.br
+ \fBLCD.display\fP('Hi james!',0,0); 
+.br
+ 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Object Oriented Library for ARM 7 from the source code.

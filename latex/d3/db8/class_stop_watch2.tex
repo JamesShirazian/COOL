@@ -1,0 +1,173 @@
+\hypertarget{class_stop_watch2}{
+\section{StopWatch2 Class Reference}
+\label{d3/db8/class_stop_watch2}\index{StopWatch2@{StopWatch2}}
+}
+
+
+class \hyperlink{class_stop_watch2}{StopWatch2}: is a class which use measure time between two points of time for instance it can be use to measure the amount of time that ARM 7 took to display a text on screen or the amount of time which is taken to create file in the SD card, this class use timer2 of ARM7.  
+
+
+
+
+{\ttfamily \#include $<$StopWatch2.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_stop_watch2_ab106264849ec08dab55b0bea3174130e}{StopWatch2} ()
+\item 
+\hyperlink{class_stop_watch2_a307210caa6a62c35a5261b30a2bdf094}{StopWatch2} (int newPriority)
+\item 
+void \hyperlink{class_stop_watch2_a29fb45d9597bccfa6d63f93482436c36}{start} (void)
+\item 
+void \hyperlink{class_stop_watch2_a15919995d29787101992c7bdd97f1e74}{stop} (void)
+\item 
+void \hyperlink{class_stop_watch2_a160723a656745e86a638f23185894a79}{reset} (void)
+\item 
+float \hyperlink{class_stop_watch2_a10d27376c0b0d3a52d0ec874a89df9ad}{getDuration} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class \hyperlink{class_stop_watch2}{StopWatch2}: is a class which use measure time between two points of time for instance it can be use to measure the amount of time that ARM 7 took to display a text on screen or the amount of time which is taken to create file in the SD card, this class use timer2 of ARM7. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_stop_watch0}{StopWatch0} 
+
+\hyperlink{class_stop_watch1}{StopWatch1} 
+
+\hyperlink{class_stop_watch3}{StopWatch3} 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_stop_watch2_ab106264849ec08dab55b0bea3174130e}{
+\index{StopWatch2@{StopWatch2}!StopWatch2@{StopWatch2}}
+\index{StopWatch2@{StopWatch2}!StopWatch2@{StopWatch2}}
+\subsubsection[{StopWatch2}]{\setlength{\rightskip}{0pt plus 5cm}StopWatch2::StopWatch2 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{d3/db8/class_stop_watch2_ab106264849ec08dab55b0bea3174130e}
+\par
+Default constructor which set the priority level 0.\par
+ \par
+Example:\par
+\par
+ \hyperlink{class_stop_watch0}{StopWatch0} SW0;\par
+ SW0.start(); \par
+ for(counter=0;counter$<$400000;counter++); \par
+ SW0.stop(); \par
+ \hypertarget{class_stop_watch2_a307210caa6a62c35a5261b30a2bdf094}{
+\index{StopWatch2@{StopWatch2}!StopWatch2@{StopWatch2}}
+\index{StopWatch2@{StopWatch2}!StopWatch2@{StopWatch2}}
+\subsubsection[{StopWatch2}]{\setlength{\rightskip}{0pt plus 5cm}StopWatch2::StopWatch2 (
+\begin{DoxyParamCaption}
+\item[{int}]{newPriority}
+\end{DoxyParamCaption}
+)}}
+\label{d3/db8/class_stop_watch2_a307210caa6a62c35a5261b30a2bdf094}
+\par
+Second constructor which set the priority level on base of its priority.\par
+ 
+\begin{DoxyParams}{Parameters}
+{\em int} & newPriority: Priority \par
+ \par
+Example:\par
+\par
+ \hyperlink{class_stop_watch0}{StopWatch0} SW0(5);\par
+ SW0.start(); \par
+ for(counter=0;counter$<$400000;counter++); \par
+ SW0.stop(); \par
+ \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_stop_watch2_a10d27376c0b0d3a52d0ec874a89df9ad}{
+\index{StopWatch2@{StopWatch2}!getDuration@{getDuration}}
+\index{getDuration@{getDuration}!StopWatch2@{StopWatch2}}
+\subsubsection[{getDuration}]{\setlength{\rightskip}{0pt plus 5cm}float StopWatch2::getDuration (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{d3/db8/class_stop_watch2_a10d27376c0b0d3a52d0ec874a89df9ad}
+\par
+get the duration from WatchTime.\par
+ \begin{DoxyReturn}{Returns}
+float StopWatchTimeDuration: return the amount of time from the moment the StopWatch has started till it stops.\par
+ \par
+Example:\par
+\par
+ \hyperlink{class_stop_watch0}{StopWatch0} SW0; \par
+ SW0.start(); \par
+ for(counter=0;counter$<$400000;counter++); \par
+ SW0.stop(); \par
+ \hyperlink{group__group4_ga445cd6497e7d4ff4d15826f3ca1ee648}{LCD.display}(SW0.getDuration(),3,0,0);\par
+ 
+\end{DoxyReturn}
+\hypertarget{class_stop_watch2_a160723a656745e86a638f23185894a79}{
+\index{StopWatch2@{StopWatch2}!reset@{reset}}
+\index{reset@{reset}!StopWatch2@{StopWatch2}}
+\subsubsection[{reset}]{\setlength{\rightskip}{0pt plus 5cm}void StopWatch2::reset (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{d3/db8/class_stop_watch2_a160723a656745e86a638f23185894a79}
+\par
+reset the StopWatch value to 0.\par
+ \par
+Example:\par
+\par
+ \hyperlink{class_stop_watch0}{StopWatch0} SW0; \par
+ SW0.start(); \par
+ for(counter=0;counter$<$400000;counter++); \par
+ SW0.stop(); \par
+ \hyperlink{group__group4_ga445cd6497e7d4ff4d15826f3ca1ee648}{LCD.display}(SW0.getDuration(),3,0,0);\par
+ SW0.reset();\par
+ \hypertarget{class_stop_watch2_a29fb45d9597bccfa6d63f93482436c36}{
+\index{StopWatch2@{StopWatch2}!start@{start}}
+\index{start@{start}!StopWatch2@{StopWatch2}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}void StopWatch2::start (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{d3/db8/class_stop_watch2_a29fb45d9597bccfa6d63f93482436c36}
+\par
+Start WatchTime.\par
+ \par
+Example:\par
+\par
+ \hyperlink{class_stop_watch0}{StopWatch0} SW0; \par
+ SW0.start(); \par
+ for(counter=0;counter$<$400000;counter++); \par
+ SW0.stop(); \par
+ \hypertarget{class_stop_watch2_a15919995d29787101992c7bdd97f1e74}{
+\index{StopWatch2@{StopWatch2}!stop@{stop}}
+\index{stop@{stop}!StopWatch2@{StopWatch2}}
+\subsubsection[{stop}]{\setlength{\rightskip}{0pt plus 5cm}void StopWatch2::stop (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{d3/db8/class_stop_watch2_a15919995d29787101992c7bdd97f1e74}
+\par
+Stop WatchTime.\par
+ \par
+Example:\par
+\par
+ \hyperlink{class_stop_watch0}{StopWatch0} SW0; \par
+ SW0.start(); \par
+ for(counter=0;counter$<$400000;counter++); \par
+ SW0.stop(); \par
+ 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_stop_watch2_8h}{StopWatch2.h}\item 
+\hyperlink{_stop_watch2_8cpp}{StopWatch2.cpp}\end{DoxyCompactItemize}

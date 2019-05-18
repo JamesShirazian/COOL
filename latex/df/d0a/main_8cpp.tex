@@ -1,0 +1,191 @@
+\hypertarget{main_8cpp}{
+\section{main.cpp File Reference}
+\label{df/d0a/main_8cpp}\index{main.cpp@{main.cpp}}
+}
+{\ttfamily \#include $<$LPC23xx.H$>$}\par
+{\ttfamily \#include $<$stdint.h$>$}\par
+{\ttfamily \#include $<$stdbool.h$>$}\par
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$algorithm$>$}\par
+{\ttfamily \#include $<$vector$>$}\par
+{\ttfamily \#include $<$functional$>$}\par
+{\ttfamily \#include $<$iterator$>$}\par
+{\ttfamily \#include $<$assert.h$>$}\par
+{\ttfamily \#include \char`\"{}LCD.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}ADC.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}DAC.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}PortPin.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TimerEvent0.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TimerEvent1.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TimerEvent2.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TimerEvent3.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}StopWatch0.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}StopWatch1.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}StopWatch2.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}StopWatch3.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TimerDelay0.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TimerDelay1.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TimerDelay2.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TimerDelay3.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}SerialPort.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}RealTimeClock.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}Interrupt.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}FastInterrupt.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}Buzzer.h\char`\"{}}\par
+{\ttfamily \#include $<$string.h$>$}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{main_8cpp_a0696e10773eba98d187d935d543a23fb}{fastInterruptHandler} (void) \_\-\_\-irq
+\item 
+void \hyperlink{main_8cpp_a6f6b769350d62a237ee918e52d844b28}{do1} (void)
+\item 
+void \hyperlink{main_8cpp_a5e67f55cfd7e3158b2b2546cd9ca54b3}{do2} (void)
+\item 
+void \hyperlink{main_8cpp_a5e89833f0920f367cbe4d2d8d11eb5df}{do3} (void)
+\item 
+void \hyperlink{main_8cpp_acf8f34a996019d2c71dcee8ca5063ff0}{do4} (void)
+\item 
+void \hyperlink{main_8cpp_a8f60589010499fe865fba026721dcb02}{do5} (void)
+\item 
+void \hyperlink{main_8cpp_abb9ee10191569258e0f22bdd0a95ba62}{delay} ()
+\item 
+int \hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_l_c_d}{LCD} \hyperlink{main_8cpp_a04e1f514c443c9c58325ef72c36c655d}{LCD}
+\item 
+int \hyperlink{main_8cpp_aa4c2a5552e9bc49b1816ff532f558c74}{a} = 0
+\item 
+int \hyperlink{main_8cpp_a148e3876077787926724625411d6e7a9}{b} = 0
+\item 
+int \hyperlink{main_8cpp_acab531abaa74a7e664e3986f2522b33a}{r} = 0
+\item 
+int \hyperlink{main_8cpp_a533391314665d6bf1b5575e9a9cd8552}{p} = 0
+\item 
+\hyperlink{class_buzzer}{Buzzer} \hyperlink{main_8cpp_ac947ed364845f17c3f618a5e3eb36d3a}{bz}
+\item 
+\hyperlink{class_port_pin}{PortPin} \hyperlink{main_8cpp_acffcd39c099686ec9b12ad0719bde916}{pin0} (2, 0,\char`\"{}OFF\char`\"{},\char`\"{}OUTPUT\char`\"{})
+\item 
+\hyperlink{class_real_time_clock}{RealTimeClock} \hyperlink{main_8cpp_a143dd0529511fed5a5f88db97e87fcc8}{myRTC} (2011, 12, 1, 12, 23, 23, true, do2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{main_8cpp_abb9ee10191569258e0f22bdd0a95ba62}{
+\index{main.cpp@{main.cpp}!delay@{delay}}
+\index{delay@{delay}!main.cpp@{main.cpp}}
+\subsubsection[{delay}]{\setlength{\rightskip}{0pt plus 5cm}void delay (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{df/d0a/main_8cpp_abb9ee10191569258e0f22bdd0a95ba62}
+\hypertarget{main_8cpp_a6f6b769350d62a237ee918e52d844b28}{
+\index{main.cpp@{main.cpp}!do1@{do1}}
+\index{do1@{do1}!main.cpp@{main.cpp}}
+\subsubsection[{do1}]{\setlength{\rightskip}{0pt plus 5cm}void do1 (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{df/d0a/main_8cpp_a6f6b769350d62a237ee918e52d844b28}
+\hypertarget{main_8cpp_a5e67f55cfd7e3158b2b2546cd9ca54b3}{
+\index{main.cpp@{main.cpp}!do2@{do2}}
+\index{do2@{do2}!main.cpp@{main.cpp}}
+\subsubsection[{do2}]{\setlength{\rightskip}{0pt plus 5cm}void do2 (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{df/d0a/main_8cpp_a5e67f55cfd7e3158b2b2546cd9ca54b3}
+\hypertarget{main_8cpp_a5e89833f0920f367cbe4d2d8d11eb5df}{
+\index{main.cpp@{main.cpp}!do3@{do3}}
+\index{do3@{do3}!main.cpp@{main.cpp}}
+\subsubsection[{do3}]{\setlength{\rightskip}{0pt plus 5cm}void do3 (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{df/d0a/main_8cpp_a5e89833f0920f367cbe4d2d8d11eb5df}
+\hypertarget{main_8cpp_acf8f34a996019d2c71dcee8ca5063ff0}{
+\index{main.cpp@{main.cpp}!do4@{do4}}
+\index{do4@{do4}!main.cpp@{main.cpp}}
+\subsubsection[{do4}]{\setlength{\rightskip}{0pt plus 5cm}void do4 (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{df/d0a/main_8cpp_acf8f34a996019d2c71dcee8ca5063ff0}
+\hypertarget{main_8cpp_a8f60589010499fe865fba026721dcb02}{
+\index{main.cpp@{main.cpp}!do5@{do5}}
+\index{do5@{do5}!main.cpp@{main.cpp}}
+\subsubsection[{do5}]{\setlength{\rightskip}{0pt plus 5cm}void do5 (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{df/d0a/main_8cpp_a8f60589010499fe865fba026721dcb02}
+\hypertarget{main_8cpp_a0696e10773eba98d187d935d543a23fb}{
+\index{main.cpp@{main.cpp}!fastInterruptHandler@{fastInterruptHandler}}
+\index{fastInterruptHandler@{fastInterruptHandler}!main.cpp@{main.cpp}}
+\subsubsection[{fastInterruptHandler}]{\setlength{\rightskip}{0pt plus 5cm}void fastInterruptHandler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{df/d0a/main_8cpp_a0696e10773eba98d187d935d543a23fb}
+\hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{df/d0a/main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+
+\subsection{Variable Documentation}
+\hypertarget{main_8cpp_aa4c2a5552e9bc49b1816ff532f558c74}{
+\index{main.cpp@{main.cpp}!a@{a}}
+\index{a@{a}!main.cpp@{main.cpp}}
+\subsubsection[{a}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf a} = 0}}
+\label{df/d0a/main_8cpp_aa4c2a5552e9bc49b1816ff532f558c74}
+\hypertarget{main_8cpp_a148e3876077787926724625411d6e7a9}{
+\index{main.cpp@{main.cpp}!b@{b}}
+\index{b@{b}!main.cpp@{main.cpp}}
+\subsubsection[{b}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf b} = 0}}
+\label{df/d0a/main_8cpp_a148e3876077787926724625411d6e7a9}
+\hypertarget{main_8cpp_ac947ed364845f17c3f618a5e3eb36d3a}{
+\index{main.cpp@{main.cpp}!bz@{bz}}
+\index{bz@{bz}!main.cpp@{main.cpp}}
+\subsubsection[{bz}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Buzzer} {\bf bz}}}
+\label{df/d0a/main_8cpp_ac947ed364845f17c3f618a5e3eb36d3a}
+\hypertarget{main_8cpp_a04e1f514c443c9c58325ef72c36c655d}{
+\index{main.cpp@{main.cpp}!LCD@{LCD}}
+\index{LCD@{LCD}!main.cpp@{main.cpp}}
+\subsubsection[{LCD}]{\setlength{\rightskip}{0pt plus 5cm}{\bf LCD} {\bf LCD}}}
+\label{df/d0a/main_8cpp_a04e1f514c443c9c58325ef72c36c655d}
+\hypertarget{main_8cpp_a143dd0529511fed5a5f88db97e87fcc8}{
+\index{main.cpp@{main.cpp}!myRTC@{myRTC}}
+\index{myRTC@{myRTC}!main.cpp@{main.cpp}}
+\subsubsection[{myRTC}]{\setlength{\rightskip}{0pt plus 5cm}{\bf RealTimeClock} {\bf myRTC}(2011, 12, 1, 12, 23, 23, true, do2)}}
+\label{df/d0a/main_8cpp_a143dd0529511fed5a5f88db97e87fcc8}
+\hypertarget{main_8cpp_a533391314665d6bf1b5575e9a9cd8552}{
+\index{main.cpp@{main.cpp}!p@{p}}
+\index{p@{p}!main.cpp@{main.cpp}}
+\subsubsection[{p}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf p} = 0}}
+\label{df/d0a/main_8cpp_a533391314665d6bf1b5575e9a9cd8552}
+\hypertarget{main_8cpp_acffcd39c099686ec9b12ad0719bde916}{
+\index{main.cpp@{main.cpp}!pin0@{pin0}}
+\index{pin0@{pin0}!main.cpp@{main.cpp}}
+\subsubsection[{pin0}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PortPin} {\bf pin0}(2, 0,\char`\"{}OFF\char`\"{},\char`\"{}OUTPUT\char`\"{})}}
+\label{df/d0a/main_8cpp_acffcd39c099686ec9b12ad0719bde916}
+\hypertarget{main_8cpp_acab531abaa74a7e664e3986f2522b33a}{
+\index{main.cpp@{main.cpp}!r@{r}}
+\index{r@{r}!main.cpp@{main.cpp}}
+\subsubsection[{r}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf r} = 0}}
+\label{df/d0a/main_8cpp_acab531abaa74a7e664e3986f2522b33a}

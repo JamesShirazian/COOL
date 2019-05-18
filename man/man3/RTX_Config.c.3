@@ -1,0 +1,160 @@
+.TH "RTX_Config.c" 3 "Sun Jun 19 2011" "Object Oriented Library for ARM 7" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RTX_Config.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <RTL.h>\fP
+.br
+\fC#include <LPC23xx.H>\fP
+.br
+\fC#include <RTX_lib.c>\fP
+.br
+
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBOS_TASKCNT\fP   6"
+.br
+.ti -1c
+.RI "#define \fBOS_PRIVCNT\fP   0"
+.br
+.ti -1c
+.RI "#define \fBOS_STKSIZE\fP   200"
+.br
+.ti -1c
+.RI "#define \fBOS_STKCHECK\fP   1"
+.br
+.ti -1c
+.RI "#define \fBOS_TIMERCNT\fP   0"
+.br
+.ti -1c
+.RI "#define \fBOS_TIMER\fP   0"
+.br
+.ti -1c
+.RI "#define \fBOS_CLOCK\fP   12000000"
+.br
+.ti -1c
+.RI "#define \fBOS_TICK\fP   10000"
+.br
+.ti -1c
+.RI "#define \fBOS_ROBIN\fP   1"
+.br
+.ti -1c
+.RI "#define \fBOS_ROBINTOUT\fP   1000"
+.br
+.ti -1c
+.RI "#define \fBOS_MUTEXCNT\fP   8"
+.br
+.ti -1c
+.RI "#define \fBOS_TID_\fP   4"
+.br
+.ti -1c
+.RI "#define \fBPCON_VAL\fP   1"
+.br
+.ti -1c
+.RI "#define \fBTIMx\fP(reg)   T0##reg"
+.br
+.ti -1c
+.RI "#define \fBVICVectAddrX\fP   VICVectAddr4"
+.br
+.ti -1c
+.RI "#define \fBOS_TIM_\fP   (1 << OS_TID_)"
+.br
+.ti -1c
+.RI "#define \fBOS_TRV\fP   ((U32)(((double)OS_CLOCK*(double)OS_TICK)/1E6)-1)"
+.br
+.ti -1c
+.RI "#define \fBOS_TVAL\fP   TIMx(TC)"
+.br
+.ti -1c
+.RI "#define \fBOS_TOVF\fP   (TIMx(IR) & 1)"
+.br
+.ti -1c
+.RI "#define \fBOS_TFIRQ\fP()   VICSoftInt    = OS_TIM_;"
+.br
+.ti -1c
+.RI "#define \fBOS_TIACK\fP()"
+.br
+.ti -1c
+.RI "#define \fBOS_TINIT\fP()"
+.br
+.ti -1c
+.RI "#define \fBOS_IACK\fP()   VICVectAddr   = 0;"
+.br
+.ti -1c
+.RI "#define \fBOS_LOCK\fP()   VICIntEnClr   = OS_TIM_;"
+.br
+.ti -1c
+.RI "#define \fBOS_UNLOCK\fP()   VICIntEnable  = OS_TIM_;"
+.br
+.ti -1c
+.RI "#define \fB_idle_\fP()   PCON |= 1;"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "__task void \fBos_idle_demon\fP (void)"
+.br
+.ti -1c
+.RI "void \fBos_tmr_call\fP (U16 info)"
+.br
+.ti -1c
+.RI "void \fBos_stk_overflow\fP (OS_TID task_id)"
+.br
+.in -1c
+.SH "Define Documentation"
+.PP 
+.SS "#define _idle_()   PCON |= 1;"
+.SS "#define OS_CLOCK   12000000"
+.SS "#define OS_IACK()   VICVectAddr   = 0;"
+.SS "#define OS_LOCK()   VICIntEnClr   = OS_TIM_;"
+.SS "#define OS_MUTEXCNT   8"
+.SS "#define OS_PRIVCNT   0"
+.SS "#define OS_ROBIN   1"
+.SS "#define OS_ROBINTOUT   1000"
+.SS "#define OS_STKCHECK   1"
+.SS "#define OS_STKSIZE   200"
+.SS "#define OS_TASKCNT   6"
+.SS "#define OS_TFIRQ()   VICSoftInt    = OS_TIM_;"
+.SS "#define OS_TIACK()"\fBValue:\fP
+.PP
+.nf
+TIMx(IR) = 1;                   /*  Interrupt Ack   */ \
+                        VICSoftIntClr = OS_TIM_;                               \
+                        VICVectAddr   = 0;
+.fi
+.SS "#define OS_TICK   10000"
+.SS "#define OS_TID_   4"
+.SS "#define OS_TIM_   (1 << OS_TID_)"
+.SS "#define OS_TIMER   0"
+.SS "#define OS_TIMERCNT   0"
+.SS "#define OS_TINIT()"\fBValue:\fP
+.PP
+.nf
+PCONP |= (1<<PCON_VAL);         /*  Initialization  */ \
+                        TIMx(MR0) = OS_TRV;                                    \
+                        TIMx(MCR) = 3;                                         \
+                        TIMx(TCR) = 1;                                         \
+                        VICVectAddrX = (U32)os_clock_interrupt;
+.fi
+.SS "#define OS_TOVF   (TIMx(IR) & 1)"
+.SS "#define OS_TRV   ((U32)(((double)OS_CLOCK*(double)OS_TICK)/1E6)-1)"
+.SS "#define OS_TVAL   TIMx(TC)"
+.SS "#define OS_UNLOCK()   VICIntEnable  = OS_TIM_;"
+.SS "#define PCON_VAL   1"
+.SS "#define TIMx(reg)   T0##reg"
+.SS "#define VICVectAddrX   VICVectAddr4"
+.SH "Function Documentation"
+.PP 
+.SS "__task void os_idle_demon (void)"
+.SS "void os_stk_overflow (OS_TIDtask_id)"
+.SS "void os_tmr_call (U16info)"
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Object Oriented Library for ARM 7 from the source code.

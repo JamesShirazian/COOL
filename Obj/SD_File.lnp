@@ -1,0 +1,4 @@
+--cpu ARM7TDMI "C:\Keil\ARM\RV31\LIB\FS_ARM_L.lib" ".\obj\lpc2300.o" ".\obj\file_config.o" ".\obj\mci_lpc23xx.o" ".\obj\rtx_config.o" ".\obj\rta_config.o" ".\obj\main.o" ".\obj\lcd.o" ".\obj\adc.o" ".\obj\dac.o" ".\obj\portpin.o" ".\obj\serialport.o" ".\obj\realtimeclock.o" ".\obj\interrupt.o" ".\obj\attachedtimer.o" ".\obj\stopwatch.o" ".\obj\timer.o" ".\obj\buzzer.o" ".\obj\key.o" ".\obj\sdcard.o" --strict --scatter ".\Obj\SD_File.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\Lst\SD_File.map" -o ".\Obj\SD_File.axf"

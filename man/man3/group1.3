@@ -1,0 +1,96 @@
+.TH "TimerEvent" 3 "Tue Jun 21 2011" "Version 1.100.000" "Object Oriented Library for ARM 7" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TimerEvent \- 
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBLCD\fP"
+.br
+.RI "\fIclass LCDDisplay: is a class in charge of \fBLCD\fP which is connected to ARM 7 processor. \fP"
+.ti -1c
+.RI "class \fBStopWatch0\fP"
+.br
+.RI "\fIclass \fBStopWatch0\fP: is a class which use measure time between two points of time for instance it can be use to measure the amount of time that ARM 7 took to display a text on screen or the amount of time which is taken to create file in the SD card, this class use timer0 of ARM7. \fP"
+.ti -1c
+.RI "class \fBTimerEvent0\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBTimerEventT0isr\fP (void) __irq"
+.br
+.RI "\fIclass \fBTimerEvent0\fP: is a class which use to execute a task priodicaly on base of the given time there are four timer on ARM7 this class use Timer0 \fP"
+.ti -1c
+.RI "void \fBTimerEventT1isr\fP (void) __irq"
+.br
+.RI "\fIclass \fBTimerEvent1\fP: is a class which use to execute a task priodicaly on base of the given time there are four timer on ARM7 this class use Timer1 \fP"
+.ti -1c
+.RI "void \fBTimerEventT2isr\fP (void) __irq"
+.br
+.RI "\fIclass \fBTimerEvent2\fP: is a class which use to execute a task priodicaly on base of the given time there are four timer on ARM7 this class use Timer2 \fP"
+.ti -1c
+.RI "void \fBTimerEventT3isr\fP (void) __irq"
+.br
+.RI "\fIclass \fBTimerEvent3\fP: is a class which use to execute a task priodicaly on base of the given time there are four timer on ARM7 this class use Timer3 \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+TimerEvent 
+.SH "Function Documentation"
+.PP 
+.SS "void TimerEventT0isr (void)"
+.PP
+class \fBTimerEvent0\fP: is a class which use to execute a task priodicaly on base of the given time there are four timer on ARM7 this class use Timer0 \fBSee also:\fP
+.RS 4
+\fBTimerEvent1\fP 
+.PP
+\fBTimerEvent2\fP 
+.PP
+\fBTimerEvent3\fP 
+.RE
+.PP
+
+.SS "void TimerEventT1isr (void)"
+.PP
+class \fBTimerEvent1\fP: is a class which use to execute a task priodicaly on base of the given time there are four timer on ARM7 this class use Timer1 \fBSee also:\fP
+.RS 4
+\fBTimerEvent0\fP 
+.PP
+\fBTimerEvent2\fP 
+.PP
+\fBTimerEvent3\fP 
+.RE
+.PP
+
+.SS "void TimerEventT2isr (void)"
+.PP
+class \fBTimerEvent2\fP: is a class which use to execute a task priodicaly on base of the given time there are four timer on ARM7 this class use Timer2 \fBSee also:\fP
+.RS 4
+\fBTimerEvent0\fP 
+.PP
+\fBTimerEvent1\fP 
+.PP
+\fBTimerEvent3\fP 
+.RE
+.PP
+
+.SS "void TimerEventT3isr (void)"
+.PP
+class \fBTimerEvent3\fP: is a class which use to execute a task priodicaly on base of the given time there are four timer on ARM7 this class use Timer3 \fBSee also:\fP
+.RS 4
+\fBTimerEvent0\fP 
+.PP
+\fBTimerEvent1\fP 
+.PP
+\fBTimerEvent2\fP 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Object Oriented Library for ARM 7 from the source code.

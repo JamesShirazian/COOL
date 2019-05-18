@@ -1,0 +1,166 @@
+.TH "File_Config.c" 3 "Sun Jun 19 2011" "Object Oriented Library for ARM 7" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+File_Config.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <File_Config.h>\fP
+.br
+\fC#include <stdio.h>\fP
+.br
+\fC#include <absacc.h>\fP
+.br
+
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBFL_DEV\fP   0"
+.br
+.ti -1c
+.RI "#define \fBFL_BADR\fP   0x80000000"
+.br
+.ti -1c
+.RI "#define \fBFL_SIZE\fP   0x0200000"
+.br
+.ti -1c
+.RI "#define \fBFL_INITV\fP   0xFF"
+.br
+.ti -1c
+.RI "#define \fBFL_HFILE\fP   'Flash\\FS_FlashDev.h'"
+.br
+.ti -1c
+.RI "#define \fBSF_DEV\fP   0"
+.br
+.ti -1c
+.RI "#define \fBSF_INITV\fP   0xFF"
+.br
+.ti -1c
+.RI "#define \fBSF_HFILE\fP   'FS_SPI_FlashDev.h'"
+.br
+.ti -1c
+.RI "#define \fBRAM_DEV\fP   0"
+.br
+.ti -1c
+.RI "#define \fBRAM_BADR\fP   0x81000000"
+.br
+.ti -1c
+.RI "#define \fBRAM_SIZE\fP   0x040000"
+.br
+.ti -1c
+.RI "#define \fBRAM_NSECT\fP   8"
+.br
+.ti -1c
+.RI "#define \fBMC_DEV\fP   1"
+.br
+.ti -1c
+.RI "#define \fBMC_CSIZE\fP   8"
+.br
+.ti -1c
+.RI "#define \fBMC_RELOC\fP   1"
+.br
+.ti -1c
+.RI "#define \fBMC_CADR\fP   0x7FD00000"
+.br
+.ti -1c
+.RI "#define \fBDEF_DRIVE\fP   4"
+.br
+.ti -1c
+.RI "#define \fBCPU_CLK\fP   60000000"
+.br
+.ti -1c
+.RI "#define \fB__AT_MC_CADR\fP   __at(MC_CADR)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "struct iob \fB_iob\fP [FOPEN_MAX]"
+.br
+.ti -1c
+.RI "U16 const \fB_NFILE\fP = FOPEN_MAX"
+.br
+.ti -1c
+.RI "U16 const \fB_DEF_DRIVE\fP = DEF_DRIVE"
+.br
+.ti -1c
+.RI "U32 const \fB_CPU_CLK\fP = CPU_CLK"
+.br
+.ti -1c
+.RI "DEVCONF const \fBFlashDev\fP [1] = {0,0}"
+.br
+.ti -1c
+.RI "U16 const \fB_FlashNumSect\fP = 0"
+.br
+.ti -1c
+.RI "U32 const \fB_BlockFREE\fP = 0x00000000"
+.br
+.ti -1c
+.RI "U32 const \fB_BASE_ADR\fP = FL_BADR"
+.br
+.ti -1c
+.RI "DEVCONF const \fBSpiDev\fP [1] = {0,0}"
+.br
+.ti -1c
+.RI "U16 const \fB_SpiNumSect\fP = 0"
+.br
+.ti -1c
+.RI "U32 const \fB_SpiBlFREE\fP = 0x00000000"
+.br
+.ti -1c
+.RI "DEVCONF const \fBRamDev\fP [1] = {0,0}"
+.br
+.ti -1c
+.RI "U16 const \fB_RamNumSect\fP = 0"
+.br
+.ti -1c
+.RI "U32 mc_cache[128 *(MC_CSIZE+2)] \fB__AT_MC_CADR\fP"
+.br
+.ti -1c
+.RI "U16 const \fB_MC_CSIZE\fP = MC_CSIZE"
+.br
+.in -1c
+.SH "Define Documentation"
+.PP 
+.SS "#define \fB__AT_MC_CADR\fP   __at(MC_CADR)"
+.SS "#define CPU_CLK   60000000"
+.SS "#define DEF_DRIVE   4"
+.SS "#define FL_BADR   0x80000000"
+.SS "#define FL_DEV   0"
+.SS "#define FL_HFILE   'Flash\\FS_FlashDev.h'"
+.SS "#define FL_INITV   0xFF"
+.SS "#define FL_SIZE   0x0200000"
+.SS "#define MC_CADR   0x7FD00000"
+.SS "#define MC_CSIZE   8"
+.SS "#define MC_DEV   1"
+.SS "#define MC_RELOC   1"
+.SS "#define RAM_BADR   0x81000000"
+.SS "#define RAM_DEV   0"
+.SS "#define RAM_NSECT   8"
+.SS "#define RAM_SIZE   0x040000"
+.SS "#define SF_DEV   0"
+.SS "#define SF_HFILE   'FS_SPI_FlashDev.h'"
+.SS "#define SF_INITV   0xFF"
+.SH "Variable Documentation"
+.PP 
+.SS "U32 mc_cache [128 * (MC_CSIZE + 2)] \fB__AT_MC_CADR\fP"
+.SS "U32 const \fB_BASE_ADR\fP = FL_BADR"
+.SS "U32 const \fB_BlockFREE\fP = 0x00000000"
+.SS "U32 const \fB_CPU_CLK\fP = CPU_CLK"
+.SS "U16 const \fB_DEF_DRIVE\fP = DEF_DRIVE"
+.SS "U16 const \fB_FlashNumSect\fP = 0"
+.SS "struct iob \fB_iob\fP[FOPEN_MAX]"
+.SS "U16 const \fB_MC_CSIZE\fP = MC_CSIZE"
+.SS "U16 const \fB_NFILE\fP = FOPEN_MAX"
+.SS "U16 const \fB_RamNumSect\fP = 0"
+.SS "U32 const \fB_SpiBlFREE\fP = 0x00000000"
+.SS "U16 const \fB_SpiNumSect\fP = 0"
+.SS "DEVCONF const \fBFlashDev\fP[1] = {0,0}"
+.SS "DEVCONF const \fBRamDev\fP[1] = {0,0}"
+.SS "DEVCONF const \fBSpiDev\fP[1] = {0,0}"
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Object Oriented Library for ARM 7 from the source code.

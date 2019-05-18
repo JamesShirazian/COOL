@@ -1,0 +1,52 @@
+\hypertarget{class_l_c_d}{
+\section{LCD Class Reference}
+\label{class_l_c_d}\index{LCD@{LCD}}
+}
+
+
+class LCDDisplay: is a class in charge of \hyperlink{class_l_c_d}{LCD} which is connected to ARM 7 processor.  
+
+
+
+
+{\ttfamily \#include $<$LCD.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_l_c_d_a00bb2db1390721abc7b24ac4b8c276c8}{LCD} ()
+\item 
+\hyperlink{group__group4_gad7b32b8bdd06c2c869e3921a0e080463}{LCD} (uint8\_\-t newCol, uint8\_\-t newRow)
+\item 
+void \hyperlink{group__group4_ga94fccf508202dc5054e8f990926b9b70}{write} (char $\ast$text, uint8\_\-t row, uint8\_\-t col)
+\item 
+void \hyperlink{group__group4_gacd10a19161e4016bb70b9556928e2200}{write} (std::string text, uint8\_\-t newCol, uint8\_\-t newRow)
+\item 
+void \hyperlink{group__group4_ga8b72d022aa4a61e46118f40b428bbd3c}{write} (int value, int maxNumberOfDigit, uint8\_\-t col, uint8\_\-t row)
+\item 
+void \hyperlink{group__group4_ga8ed890a03ddaf7c5ba3ddaa569fb83ad}{write} (float value, int decimalPoint, uint8\_\-t col, uint8\_\-t row)
+\item 
+void \hyperlink{group__group4_gaca6cd9e401283d5fa4917d53260b3ba9}{clear} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class LCDDisplay: is a class in charge of \hyperlink{class_l_c_d}{LCD} which is connected to ARM 7 processor. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_l_c_d_a00bb2db1390721abc7b24ac4b8c276c8}{
+\index{LCD@{LCD}!LCD@{LCD}}
+\index{LCD@{LCD}!LCD@{LCD}}
+\subsubsection[{LCD}]{\setlength{\rightskip}{0pt plus 5cm}LCD::LCD (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_l_c_d_a00bb2db1390721abc7b24ac4b8c276c8}
+Default constructor: Initialize \hyperlink{class_l_c_d}{LCD} , by default it aasume that \hyperlink{class_l_c_d}{LCD} is 16x2 \par
+ 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+LCD.h\item 
+LCD.cpp\end{DoxyCompactItemize}

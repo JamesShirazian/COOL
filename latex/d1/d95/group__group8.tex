@@ -1,0 +1,122 @@
+\hypertarget{group__group8}{
+\section{SerialPort -\/ (UART0, UART1)}
+\label{d1/d95/group__group8}\index{SerialPort -\/ (UART0, UART1)@{SerialPort -\/ (UART0, UART1)}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_serial_port}{SerialPort}
+\begin{DoxyCompactList}\small\item\em class \hyperlink{class_serial_port}{SerialPort}: is a class in charge of UART or RS232 or serial port which is connected to ARM 7 processor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__group8_gaa95a052574086564644915c26aa42159}{SerialPort::SerialPort} (int serialPortNo)
+\item 
+void \hyperlink{group__group8_ga6d80380bb3415a1ee4355ffcec98773c}{SerialPort::open} (void)
+\item 
+void \hyperlink{group__group8_gaabba6d6f25800b197cee28ed8e605f2a}{SerialPort::close} (void)
+\item 
+char \hyperlink{group__group8_gaa38a0c0f839a8bf27786ac86d8ca525b}{SerialPort::read} (void)
+\item 
+void \hyperlink{group__group8_gae48d12719fd7e1e2b0e35f127a5006bf}{SerialPort::write} (char $\ast$charValue, bool newLine)
+\item 
+void \hyperlink{group__group8_ga93f70c8ee96c97eee2d31df578bdf51e}{SerialPort::write} (std::string stringValue, bool newLine)
+\item 
+void \hyperlink{group__group8_gad981db5bddd0681367480c272c87fb38}{SerialPort::write} (int integerValue, bool newLine)
+\item 
+void \hyperlink{group__group8_gab50edcebab73bfe52b729f677dd61636}{SerialPort::write} (float floatValue, int decimalPoint, bool newLine)
+\item 
+void \hyperlink{group__group8_gaa3dd171551bd6b38d949768f5cb335f2}{SerialPort::writeChar} (char ch)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_serial_port}{SerialPort} -\/ (UART0, UART1) 
+
+\subsection{Function Documentation}
+\hypertarget{group__group8_gaabba6d6f25800b197cee28ed8e605f2a}{
+\index{SerialPort -\/ (UART0, UART1)@{SerialPort -\/ (UART0, UART1)}!close@{close}}
+\index{close@{close}!SerialPort - (UART0, UART1)@{SerialPort -\/ (UART0, UART1)}}
+\subsubsection[{close}]{\setlength{\rightskip}{0pt plus 5cm}void SerialPort::close (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{d1/d95/group__group8_gaabba6d6f25800b197cee28ed8e605f2a}
+\hypertarget{group__group8_ga6d80380bb3415a1ee4355ffcec98773c}{
+\index{SerialPort -\/ (UART0, UART1)@{SerialPort -\/ (UART0, UART1)}!open@{open}}
+\index{open@{open}!SerialPort - (UART0, UART1)@{SerialPort -\/ (UART0, UART1)}}
+\subsubsection[{open}]{\setlength{\rightskip}{0pt plus 5cm}void SerialPort::open (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{d1/d95/group__group8_ga6d80380bb3415a1ee4355ffcec98773c}
+\hypertarget{group__group8_gaa38a0c0f839a8bf27786ac86d8ca525b}{
+\index{SerialPort -\/ (UART0, UART1)@{SerialPort -\/ (UART0, UART1)}!read@{read}}
+\index{read@{read}!SerialPort - (UART0, UART1)@{SerialPort -\/ (UART0, UART1)}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}char SerialPort::read (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{d1/d95/group__group8_gaa38a0c0f839a8bf27786ac86d8ca525b}
+\hypertarget{group__group8_gaa95a052574086564644915c26aa42159}{
+\index{SerialPort -\/ (UART0, UART1)@{SerialPort -\/ (UART0, UART1)}!SerialPort@{SerialPort}}
+\index{SerialPort@{SerialPort}!SerialPort - (UART0, UART1)@{SerialPort -\/ (UART0, UART1)}}
+\subsubsection[{SerialPort}]{\setlength{\rightskip}{0pt plus 5cm}SerialPort::SerialPort (
+\begin{DoxyParamCaption}
+\item[{int}]{serialPortNo}
+\end{DoxyParamCaption}
+)}}
+\label{d1/d95/group__group8_gaa95a052574086564644915c26aa42159}
+\hypertarget{group__group8_ga93f70c8ee96c97eee2d31df578bdf51e}{
+\index{SerialPort -\/ (UART0, UART1)@{SerialPort -\/ (UART0, UART1)}!write@{write}}
+\index{write@{write}!SerialPort - (UART0, UART1)@{SerialPort -\/ (UART0, UART1)}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void SerialPort::write (
+\begin{DoxyParamCaption}
+\item[{std::string}]{stringValue, }
+\item[{bool}]{newLine}
+\end{DoxyParamCaption}
+)}}
+\label{d1/d95/group__group8_ga93f70c8ee96c97eee2d31df578bdf51e}
+\hypertarget{group__group8_gad981db5bddd0681367480c272c87fb38}{
+\index{SerialPort -\/ (UART0, UART1)@{SerialPort -\/ (UART0, UART1)}!write@{write}}
+\index{write@{write}!SerialPort - (UART0, UART1)@{SerialPort -\/ (UART0, UART1)}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void SerialPort::write (
+\begin{DoxyParamCaption}
+\item[{int}]{integerValue, }
+\item[{bool}]{newLine}
+\end{DoxyParamCaption}
+)}}
+\label{d1/d95/group__group8_gad981db5bddd0681367480c272c87fb38}
+\hypertarget{group__group8_gab50edcebab73bfe52b729f677dd61636}{
+\index{SerialPort -\/ (UART0, UART1)@{SerialPort -\/ (UART0, UART1)}!write@{write}}
+\index{write@{write}!SerialPort - (UART0, UART1)@{SerialPort -\/ (UART0, UART1)}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void SerialPort::write (
+\begin{DoxyParamCaption}
+\item[{float}]{floatValue, }
+\item[{int}]{decimalPoint, }
+\item[{bool}]{newLine}
+\end{DoxyParamCaption}
+)}}
+\label{d1/d95/group__group8_gab50edcebab73bfe52b729f677dd61636}
+\hypertarget{group__group8_gae48d12719fd7e1e2b0e35f127a5006bf}{
+\index{SerialPort -\/ (UART0, UART1)@{SerialPort -\/ (UART0, UART1)}!write@{write}}
+\index{write@{write}!SerialPort - (UART0, UART1)@{SerialPort -\/ (UART0, UART1)}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void SerialPort::write (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{charValue, }
+\item[{bool}]{newLine}
+\end{DoxyParamCaption}
+)}}
+\label{d1/d95/group__group8_gae48d12719fd7e1e2b0e35f127a5006bf}
+\hypertarget{group__group8_gaa3dd171551bd6b38d949768f5cb335f2}{
+\index{SerialPort -\/ (UART0, UART1)@{SerialPort -\/ (UART0, UART1)}!writeChar@{writeChar}}
+\index{writeChar@{writeChar}!SerialPort - (UART0, UART1)@{SerialPort -\/ (UART0, UART1)}}
+\subsubsection[{writeChar}]{\setlength{\rightskip}{0pt plus 5cm}void SerialPort::writeChar (
+\begin{DoxyParamCaption}
+\item[{char}]{ch}
+\end{DoxyParamCaption}
+)}}
+\label{d1/d95/group__group8_gaa3dd171551bd6b38d949768f5cb335f2}

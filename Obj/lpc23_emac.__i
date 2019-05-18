@@ -1,0 +1,1 @@
+ --thumb -c --cpu ARM7TDMI -D__RTX -g -O2 --apcs=interwork -I..\Library -I "C:\Keil\ARM\INC" -I "C:\Keil\ARM\INC\Philips" -o ".\Obj\lpc23_emac.o" --omf_browse ".\Obj\lpc23_emac.crf" --depend ".\Obj\lpc23_emac.d" "LPC23_EMAC.c"

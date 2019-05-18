@@ -1,0 +1,78 @@
+\hypertarget{group__group5}{
+\section{Analoug to Digital Convertor (ADC)}
+\label{dc/d9a/group__group5}\index{Analoug to Digital Convertor (ADC)@{Analoug to Digital Convertor (ADC)}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_a_d_c}{ADC}
+\begin{DoxyCompactList}\small\item\em class \hyperlink{class_a_d_c}{ADC}: is a class in charge of \hyperlink{class_a_d_c}{ADC} channels from 0 to 7 of ARM 7 processor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__group5_gad8b2af8332757e9ac4e54b8aed5c874f}{ADC::getADCValue} (void)
+\item 
+void \hyperlink{group__group5_ga863274d7f0e3450c4ae52eadc397bea5}{ADC::stopADCConversion} (void)
+\item 
+void \hyperlink{group__group5_gae5f6a9de2dcd638d16f5054a8e0eb29f}{ADC::startADCConversion} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Analoug to Digital Convertor (\hyperlink{class_a_d_c}{ADC}) 
+
+\subsection{Function Documentation}
+\hypertarget{group__group5_gad8b2af8332757e9ac4e54b8aed5c874f}{
+\index{Analoug to Digital Convertor (ADC)@{Analoug to Digital Convertor (ADC)}!getADCValue@{getADCValue}}
+\index{getADCValue@{getADCValue}!Analoug to Digital Convertor (ADC)@{Analoug to Digital Convertor (ADC)}}
+\subsubsection[{getADCValue}]{\setlength{\rightskip}{0pt plus 5cm}int ADC::getADCValue (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{dc/d9a/group__group5_gad8b2af8332757e9ac4e54b8aed5c874f}
+read the value of respective \hyperlink{class_a_d_c}{ADC}.\par
+ \begin{DoxyReturn}{Returns}
+int ADCValue: return the \hyperlink{class_a_d_c}{ADC} value of the respective \hyperlink{class_a_d_c}{ADC} channel.\par
+ {\bfseries Example:\par
+{\bfseries \par
+ \hyperlink{class_a_d_c}{ADC} myADC(0); \par
+ int ADCValueOfChannel0=myADC.\hyperlink{group__group5_gad8b2af8332757e9ac4e54b8aed5c874f}{getADCValue()}; \par
+ }}
+\end{DoxyReturn}
+\hypertarget{group__group5_gae5f6a9de2dcd638d16f5054a8e0eb29f}{
+\index{Analoug to Digital Convertor (ADC)@{Analoug to Digital Convertor (ADC)}!startADCConversion@{startADCConversion}}
+\index{startADCConversion@{startADCConversion}!Analoug to Digital Convertor (ADC)@{Analoug to Digital Convertor (ADC)}}
+\subsubsection[{startADCConversion}]{\setlength{\rightskip}{0pt plus 5cm}void ADC::startADCConversion (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{dc/d9a/group__group5_gae5f6a9de2dcd638d16f5054a8e0eb29f}
+start \hyperlink{class_a_d_c}{ADC} conversion, once \hyperlink{class_a_d_c}{ADC} object created in the memory it start convertion automaticaly, this method use when conversion stoped by \char`\"{}stopADCConversion\char`\"{} other wise there is no need of useing just to save power it is efficent to stop the conversion when it is not neccessery.\par
+ {\bfseries \par
+Example:\par
+{\bfseries \par
+}}
+
+{\bfseries {\bfseries  \hyperlink{class_a_d_c}{ADC} myADC(0); \par
+ myADC.startADCConversion();\par
+ int ADCValueOfChannel0=myADC.\hyperlink{group__group5_gad8b2af8332757e9ac4e54b8aed5c874f}{getADCValue()}; \par
+ myADC.stopADCConversion(); }}\hypertarget{group__group5_ga863274d7f0e3450c4ae52eadc397bea5}{
+\index{Analoug to Digital Convertor (ADC)@{Analoug to Digital Convertor (ADC)}!stopADCConversion@{stopADCConversion}}
+\index{stopADCConversion@{stopADCConversion}!Analoug to Digital Convertor (ADC)@{Analoug to Digital Convertor (ADC)}}
+\subsubsection[{stopADCConversion}]{\setlength{\rightskip}{0pt plus 5cm}void ADC::stopADCConversion (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{dc/d9a/group__group5_ga863274d7f0e3450c4ae52eadc397bea5}
+stop \hyperlink{class_a_d_c}{ADC} conversion.\par
+ {\bfseries \par
+Example:\par
+{\bfseries \par
+}}
+
+{\bfseries {\bfseries  \hyperlink{class_a_d_c}{ADC} myADC(0); \par
+ int ADCValueOfChannel0=myADC.\hyperlink{group__group5_gad8b2af8332757e9ac4e54b8aed5c874f}{getADCValue()}; \par
+ myADC.stopADCConversion(); }}

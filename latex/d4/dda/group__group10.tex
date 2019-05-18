@@ -1,0 +1,129 @@
+\hypertarget{group__group10}{
+\section{Interrupt}
+\label{d4/dda/group__group10}\index{Interrupt@{Interrupt}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_interrupt}{Interrupt}
+\begin{DoxyCompactList}\small\item\em class \hyperlink{class_interrupt}{Interrupt}: is a class in charge of \hyperlink{class_interrupt}{Interrupt} in ARM 7 processor it handels EXTINT0, EXTINT1, EXTINT2, EXTINT3. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__group10_ga4fd8be38d92c8b0086b15b3c30ea1868}{Interrupt::Interrupt} (\hyperlink{class_port_pin}{PortPin} pin, int priority, void($\ast$function)(void))
+\item 
+void \hyperlink{group__group10_gafee631d8690407d619fe9ba2741b6c4d}{Interrupt::setFunctionToInterrupt} (void($\ast$assginedfunction)(void))
+\item 
+void \hyperlink{group__group10_ga4cd6bc79c3fa54378a156117de5f12a9}{Interrupt::setInterruptPriorityTo} (int newPriority)
+\item 
+int \hyperlink{group__group10_ga8d3124b3721e2426dc24fc8416f12e38}{Interrupt::getInterruptPriority} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_interrupt}{Interrupt} 
+
+\subsection{Function Documentation}
+\hypertarget{group__group10_ga8d3124b3721e2426dc24fc8416f12e38}{
+\index{Interrupt@{Interrupt}!getInterruptPriority@{getInterruptPriority}}
+\index{getInterruptPriority@{getInterruptPriority}!Interrupt@{Interrupt}}
+\subsubsection[{getInterruptPriority}]{\setlength{\rightskip}{0pt plus 5cm}int Interrupt::getInterruptPriority (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{d4/dda/group__group10_ga8d3124b3721e2426dc24fc8416f12e38}
+Set new priority to intrrupt which has already defined..\par
+ \begin{DoxyReturn}{Returns}
+int Priority: return the priority of interrupt.\par
+ {\bfseries \par
+Example:\par
+{\bfseries \par
+ \hyperlink{class_port_pin}{PortPin} myPin(2,10,\char`\"{}INPUT\char`\"{});\par
+ \hyperlink{class_interrupt}{Interrupt} myInterrupt(myPin,12,do1); \par
+ myInterrupt.setFunctionToInterrupt(do2);\par
+ if(myInterrupt.getInterruptPriority()==12) \par
+ \{ \par
+ myInterrupt.setInterruptPriorityTo(16);\par
+ \} \par
+ }}
+\end{DoxyReturn}
+\hypertarget{group__group10_ga4fd8be38d92c8b0086b15b3c30ea1868}{
+\index{Interrupt@{Interrupt}!Interrupt@{Interrupt}}
+\index{Interrupt@{Interrupt}!Interrupt@{Interrupt}}
+\subsubsection[{Interrupt}]{\setlength{\rightskip}{0pt plus 5cm}Interrupt::Interrupt (
+\begin{DoxyParamCaption}
+\item[{{\bf PortPin}}]{pin, }
+\item[{int}]{priority, }
+\item[{void($\ast$)(void)}]{function}
+\end{DoxyParamCaption}
+)}}
+\label{d4/dda/group__group10_ga4fd8be38d92c8b0086b15b3c30ea1868}
+Second constructor: \par
+ 
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{class_port_pin}{PortPin}} & pin: this pin have to set as an \char`\"{}INPUT\char`\"{} and it must be one of below pins: \par
+
+\begin{DoxyItemize}
+\item Port2 -\/$>$ Pin10
+\item Port2 -\/$>$ Pin11
+\item Port2 -\/$>$ Pin12
+\item Port2 -\/$>$ Pin13 
+\end{DoxyItemize}\\
+\hline
+{\em int} & priority: this value represent the priority of interrupt for that specific pin from 0 to 31.\par
+ \\
+\hline
+{\em void($\ast$function)(void),:} & function which has to execute once the interrupt has occure. \par
+ {\bfseries \par
+Example:\par
+{\bfseries \par
+ \hyperlink{class_port_pin}{PortPin} myPin(2,10,\char`\"{}INPUT\char`\"{});\par
+ \hyperlink{class_interrupt}{Interrupt} myInterrupt(myPin,12,do1); \par
+ }}\\
+\hline
+\end{DoxyParams}
+\hypertarget{group__group10_gafee631d8690407d619fe9ba2741b6c4d}{
+\index{Interrupt@{Interrupt}!setFunctionToInterrupt@{setFunctionToInterrupt}}
+\index{setFunctionToInterrupt@{setFunctionToInterrupt}!Interrupt@{Interrupt}}
+\subsubsection[{setFunctionToInterrupt}]{\setlength{\rightskip}{0pt plus 5cm}void Interrupt::setFunctionToInterrupt (
+\begin{DoxyParamCaption}
+\item[{void($\ast$)(void)}]{assginedfunction}
+\end{DoxyParamCaption}
+)}}
+\label{d4/dda/group__group10_gafee631d8690407d619fe9ba2741b6c4d}
+Set new function to intrrupt which has already define after impelementing this method the defined interrupt execute the new function once interrupt has occur.\par
+ 
+\begin{DoxyParams}{Parameters}
+{\em void($\ast$function)(void)} & : function which has to execute once the interrupt has occure. {\bfseries \par
+Example:\par
+{\bfseries \par
+ \hyperlink{class_port_pin}{PortPin} myPin(2,10,\char`\"{}INPUT\char`\"{});\par
+ \hyperlink{class_interrupt}{Interrupt} myInterrupt(myPin,12,do1); \par
+ myInterrupt.setFunctionToInterrupt(do2);\par
+ }}\\
+\hline
+\end{DoxyParams}
+\hypertarget{group__group10_ga4cd6bc79c3fa54378a156117de5f12a9}{
+\index{Interrupt@{Interrupt}!setInterruptPriorityTo@{setInterruptPriorityTo}}
+\index{setInterruptPriorityTo@{setInterruptPriorityTo}!Interrupt@{Interrupt}}
+\subsubsection[{setInterruptPriorityTo}]{\setlength{\rightskip}{0pt plus 5cm}void Interrupt::setInterruptPriorityTo (
+\begin{DoxyParamCaption}
+\item[{int}]{newPriority}
+\end{DoxyParamCaption}
+)}}
+\label{d4/dda/group__group10_ga4cd6bc79c3fa54378a156117de5f12a9}
+Set new priority to intrrupt which has already defined..\par
+ 
+\begin{DoxyParams}{Parameters}
+{\em int} & newPriority: this value represent the priority of interrupt for that specific pin from 0 to 31.\par
+ {\bfseries \par
+Example:\par
+{\bfseries \par
+ \hyperlink{class_port_pin}{PortPin} myPin(2,10,\char`\"{}INPUT\char`\"{});\par
+ \hyperlink{class_interrupt}{Interrupt} myInterrupt(myPin,12,do1); \par
+ myInterrupt.setFunctionToInterrupt(do2);\par
+ myInterrupt.setInterruptPriorityTo(16);\par
+ }}\\
+\hline
+\end{DoxyParams}

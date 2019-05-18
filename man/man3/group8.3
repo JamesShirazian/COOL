@@ -1,0 +1,249 @@
+.TH "SerialPort - (UART0, UART1)" 3 "Sun Jun 26 2011" "Version 1.100.000" "Object Oriented Library for ARM 7" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SerialPort - (UART0, UART1) \- 
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBSerialPort\fP"
+.br
+.RI "\fIclass \fBSerialPort\fP: is a class in charge of serial port which is connected to ARM 7 processor. \fP"
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSerialPort::SerialPort\fP (uint8_t serialPortNo)"
+.br
+.ti -1c
+.RI "void \fBSerialPort::open\fP (void)"
+.br
+.ti -1c
+.RI "void \fBSerialPort::close\fP (void)"
+.br
+.ti -1c
+.RI "char \fBSerialPort::readCharachter\fP (void)"
+.br
+.ti -1c
+.RI "std::string \fBSerialPort::readLine\fP (char endPoint, bool displayCharachterOnScreenWhileUserIsPressingKeys)"
+.br
+.ti -1c
+.RI "void \fBSerialPort::write\fP (charVector charValue, bool newLine)"
+.br
+.ti -1c
+.RI "void \fBSerialPort::write\fP (char *charValue, bool newLine)"
+.br
+.ti -1c
+.RI "void \fBSerialPort::write\fP (std::string stringValue, bool newLine)"
+.br
+.ti -1c
+.RI "void \fBSerialPort::write\fP (int integerValue, bool newLine)"
+.br
+.ti -1c
+.RI "void \fBSerialPort::write\fP (float floatValue, int decimalPoint, bool newLine)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBSerialPort\fP - (UART0, UART1) 
+.SH "Function Documentation"
+.PP 
+.SS "void SerialPort::close (void)"Close serial port and terminate communication.
+.br
+ 
+.br
+.PP
+\fBExample:\fP
+.br
+.PP
+\fBSerialPort\fP SP(0); 
+.br
+ SP.open(); 
+.SS "void SerialPort::open (void)"Open serial port for communication.
+.br
+ 
+.br
+.PP
+\fBExample:\fP
+.br
+.PP
+\fBSerialPort\fP SP(0); 
+.br
+ SP.open(); 
+.SS "char SerialPort::readCharachter (void)"Read data from serial port.
+.br
+ 
+.br
+.PP
+\fBExample:\fP
+.br
+.PP
+\fBSerialPort\fP SP(0); 
+.br
+ SP.open(); 
+.SS "std::string SerialPort::readLine (charendPoint, booldisplayCharachterOnScreenWhileUserIsPressingKeys)"Read line from serial port and release its data once the last charachter is equal to ebdPoint charachter.
+.br
+ 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIchar\fP endPoint: charachter which release the line of charachter from UART to ARM7 processor.
+.br
+ 
+.br
+\fIbool\fP displayCharachterOnScreenWhileUserIsPressingKeys: display charachter which user is pressing till the end point charachter preesed
+.IP "\(bu" 2
+true : display on Terminal
+.IP "\(bu" 2
+false: does not display on Terminal 
+.br
+
+.PP
+.RE
+.PP
+\fBExample:\fP
+.br
+.PP
+std::string myData; 
+.br
+ \fBSerialPort\fP SP(0); 
+.br
+ SP.open(); myData=SP.readLine('.',true); //Once '.' press myData is equalt to string of entered data 
+.br
+ 
+.SS "SerialPort::SerialPort (uint8_tnewSerialPortNo)"Second constructor: Initialize serial port by user specfication: 
+.br
+ 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIuint8_t\fP newSerialPortNo: Serial port number
+.IP "\(bu" 2
+'0' : UART0
+.IP "\(bu" 2
+'1' : UART1 
+.PP
+.RE
+.PP
+
+.SS "void SerialPort::write (char *charValue, boolnewLine)"Write array of charachter to serial port.
+.br
+ 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIchar\fP *charValue: array of charachter which send to serial port 
+.br
+\fIbool\fP newLine:
+.IP "\(bu" 2
+True : go to new line (\\n\\r)
+.IP "\(bu" 2
+False : keep the curser where it is. 
+.br
+
+.PP
+.RE
+.PP
+\fBExample:\fP
+.br
+.PP
+\fBSerialPort\fP SP(0); 
+.br
+ SP.open(); 
+.br
+ SP.write('Hi James',true);
+.br
+ 
+.SS "void SerialPort::write (std::stringstringValue, boolnewLine)"Write string to serial port.
+.br
+ 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstd::string\fP stringValue: string which send to serial port 
+.br
+\fIbool\fP newLine:
+.IP "\(bu" 2
+True : go to new line (\\n\\r)
+.IP "\(bu" 2
+False : keep the curser where it is. 
+.br
+
+.PP
+.RE
+.PP
+\fBExample:\fP
+.br
+.PP
+std::string myText='Hi Afshin!'; 
+.br
+ \fBSerialPort\fP SP(0); 
+.br
+ SP.open(); 
+.br
+ SP.write(myText,true);
+.br
+ 
+.SS "void SerialPort::write (floatfloatValue, intdecimalPoint, boolnewLine)"Write integer to serial port.
+.br
+ 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfloat\fP floatValue: float which send to serial port 
+.br
+\fIbool\fP newLine:
+.IP "\(bu" 2
+True : go to new line (\\n\\r)
+.IP "\(bu" 2
+False : keep the curser where it is. 
+.br
+
+.PP
+.RE
+.PP
+\fBExample:\fP
+.br
+.PP
+float weight=54.765; 
+.br
+ \fBSerialPort\fP SP(0); 
+.br
+ SP.open(); 
+.br
+ SP.write(weight,true);
+.br
+ 
+.SS "void SerialPort::write (intintegerValue, boolnewLine)"Write integer to serial port.
+.br
+ 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIint\fP integerValue: integer which send to serial port 
+.br
+\fIbool\fP newLine:
+.IP "\(bu" 2
+True : go to new line (\\n\\r)
+.IP "\(bu" 2
+False : keep the curser where it is. 
+.br
+
+.PP
+.RE
+.PP
+\fBExample:\fP
+.br
+.PP
+\fBSerialPort\fP SP(0); 
+.br
+ SP.open(); 
+.br
+ SP.write(25,true);
+.br
+ 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Object Oriented Library for ARM 7 from the source code.

@@ -1,0 +1,56 @@
+\hypertarget{class_fast_interrupt}{
+\section{FastInterrupt Class Reference}
+\label{class_fast_interrupt}\index{FastInterrupt@{FastInterrupt}}
+}
+
+
+class \hyperlink{class_fast_interrupt}{FastInterrupt}: is a class in charge of \hyperlink{class_fast_interrupt}{FastInterrupt} in ARM 7 processor it handels EXTINT0, EXTINT1, EXTINT2, EXTINT3.  
+
+
+
+
+{\ttfamily \#include $<$FastInterrupt.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fast_interrupt_a71047e74a5999eef5e462ac48cea7ab7}{FastInterrupt} (void)
+\item 
+\hyperlink{group__group11_ga1cd10c91ae081005e8cd4663ff33f230}{FastInterrupt} (\hyperlink{class_port_pin}{PortPin} pin, void($\ast$function)(void))
+\item 
+void \hyperlink{group__group11_gab84661ddc77f64481ee9d389aa01ea46}{setFunctionToInterrupt} (void($\ast$assginedfunction)(void))
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class \hyperlink{class_fast_interrupt}{FastInterrupt}: is a class in charge of \hyperlink{class_fast_interrupt}{FastInterrupt} in ARM 7 processor it handels EXTINT0, EXTINT1, EXTINT2, EXTINT3. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_interrupt}{Interrupt} 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_fast_interrupt_a71047e74a5999eef5e462ac48cea7ab7}{
+\index{FastInterrupt@{FastInterrupt}!FastInterrupt@{FastInterrupt}}
+\index{FastInterrupt@{FastInterrupt}!FastInterrupt@{FastInterrupt}}
+\subsubsection[{FastInterrupt}]{\setlength{\rightskip}{0pt plus 5cm}FastInterrupt::FastInterrupt (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{class_fast_interrupt_a71047e74a5999eef5e462ac48cea7ab7}
+Default constructor: activate EXTINT0 by default and set its priority to 0 which can be alter by \char`\"{}setFunctionToInterrupt\char`\"{}\par
+ {\bfseries \par
+Example:\par
+{\bfseries \par
+}}
+
+{\bfseries {\bfseries  \hyperlink{class_fast_interrupt}{FastInterrupt} myInterrupt; \par
+ myInterrupt.setFunctionToInterrupt(do1); \par
+ }}
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+FastInterrupt.h\item 
+FastInterrupt.cpp\end{DoxyCompactItemize}

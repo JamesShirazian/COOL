@@ -1,0 +1,183 @@
+.TH "LCDDisplay" 3 "Tue Jun 14 2011" "Object Oriented Library for ARM 7" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+LCDDisplay \- 
+.PP
+class \fBLCDDisplay\fP: is a class in charge of LCD which is connected to ARM 7 processor.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <LCD.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLCDDisplay\fP ()"
+.br
+.ti -1c
+.RI "\fBLCDDisplay\fP (unsigned char newCol, unsigned char newRow)"
+.br
+.ti -1c
+.RI "void \fBdisplay\fP (char *text, unsigned char row, unsigned char col)"
+.br
+.ti -1c
+.RI "void \fBdisplay\fP (std::string text, unsigned char newCol, unsigned char newRow)"
+.br
+.ti -1c
+.RI "void \fBdisplay\fP (int value, int maxNumberOfDigit, unsigned char col, unsigned char row)"
+.br
+.ti -1c
+.RI "void \fBdisplay\fP (float value, int decimalPoint, unsigned char col, unsigned char row)"
+.br
+.ti -1c
+.RI "void \fBclear\fP (void)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+class \fBLCDDisplay\fP: is a class in charge of LCD which is connected to ARM 7 processor. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "LCDDisplay::LCDDisplay ()"Default constructor
+.br
+ \fB\fBLCDDisplay()\fP constructor use to support 16 by 2 LCDs by default.\fP 
+.SS "LCDDisplay::LCDDisplay (unsigned charnewCol, unsigned charnewRow)"Second constructor
+.br
+ 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIunsigned\fP char newCol: set the number of LCD columns 
+.br
+\fIunsigned\fP char newRow: set the number of LCD rows 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void LCDDisplay::clear (void)"Clear LCD
+.br
+ \fB
+.br
+Example:
+.br
+\fB
+.br
+\fP\fP
+.PP
+\fB\fB \fBLCDDisplay\fP LCD; 
+.br
+ LCD.clear() 
+.br
+ LCD.display(234,3,0,0) 
+.br
+ \fP\fP
+.SS "void LCDDisplay::display (std::stringtext, unsigned charnewCol, unsigned charnewRow)"Display string in the LCD
+.br
+ 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstd::string,:\fP string that display on LCD 
+.br
+\fIunsigned\fP char newCol: set the text columns position 
+.br
+\fIunsigned\fP char newRow: set the text rows position \fB
+.br
+Example:
+.br
+\fB
+.br
+\fP\fP
+.RE
+.PP
+\fBLCDDisplay\fP LCD; 
+.br
+ std::string myName='Afshin James Shirazian'; 
+.br
+ LCD.display(myName,0,0) 
+.br
+ 
+.SS "void LCDDisplay::display (floatvalue, intdecimalPoint, unsigned charcol, unsigned charrow)"Display float in the LCD
+.br
+ 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIint\fP value: integer which will display on LCD 
+.br
+\fIint\fP decimalPoint: number of decimal point of 'value' , from 0 to 9 
+.br
+\fIunsigned\fP char newCol: set the text columns position 
+.br
+\fIunsigned\fP char newRow: set the text rows position \fB
+.br
+Example:
+.br
+\fB
+.br
+\fP\fP
+.RE
+.PP
+\fBLCDDisplay\fP LCD; 
+.br
+ LCD.display(23.34,2,0,0) 
+.br
+ 
+.SS "void LCDDisplay::display (intvalue, intmaxNumberOfDigit, unsigned charcol, unsigned charrow)"Display integer in the LCD
+.br
+ 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIint\fP value: integer which will display on LCD 
+.br
+\fIint\fP maxNumberOfDigit: maximum number of digit which developer expect from 'value' 
+.br
+\fIunsigned\fP char newCol: set the text columns position 
+.br
+\fIunsigned\fP char newRow: set the text rows position \fB
+.br
+Example:
+.br
+\fB
+.br
+\fP\fP
+.RE
+.PP
+\fBLCDDisplay\fP LCD; 
+.br
+ LCD.display(234,3,0,0) 
+.br
+ 
+.SS "void LCDDisplay::display (char *text, unsigned charnewCol, unsigned charnewRow)"Display array of characher in the LCD
+.br
+ 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIchar\fP *text: array of charachter which will display on LCD 
+.br
+\fIunsigned\fP char newCol: set the text columns position 
+.br
+\fIunsigned\fP char newRow: set the text rows position \fB
+.br
+Example:
+.br
+\fB
+.br
+\fP\fP
+.RE
+.PP
+\fBLCDDisplay\fP LCD; 
+.br
+ LCD.display('Hello',0,0) 
+.br
+ 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Object Oriented Library for ARM 7 from the source code.

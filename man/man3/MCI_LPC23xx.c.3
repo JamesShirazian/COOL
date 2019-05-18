@@ -1,0 +1,58 @@
+.TH "MCI_LPC23xx.c" 3 "Sun Jun 19 2011" "Object Oriented Library for ARM 7" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MCI_LPC23xx.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <File_Config.h>\fP
+.br
+\fC#include <LPC23xx.h>\fP
+.br
+\fC#include 'MCI_LPC23xx.h'\fP
+.br
+
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBWR_TOUT\fP   100000"
+.br
+.ti -1c
+.RI "#define \fBRD_STOP_TOUT\fP   100"
+.br
+.ti -1c
+.RI "#define \fBDMA_TOUT\fP   10000"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBOOL\fP \fBmci_init\fP (void)"
+.br
+.ti -1c
+.RI "\fBBOOL\fP \fBmci_read_sect\fP (U32 sect, U8 *buf, U32 cnt)"
+.br
+.ti -1c
+.RI "\fBBOOL\fP \fBmci_write_sect\fP (U32 sect, U8 *buf, U32 cnt)"
+.br
+.ti -1c
+.RI "\fBBOOL\fP \fBmci_read_config\fP (MMCFG *cfg)"
+.br
+.in -1c
+.SH "Define Documentation"
+.PP 
+.SS "#define DMA_TOUT   10000"
+.SS "#define RD_STOP_TOUT   100"
+.SS "#define WR_TOUT   100000"
+.SH "Function Documentation"
+.PP 
+.SS "\fBBOOL\fP mci_init (void)"
+.SS "\fBBOOL\fP mci_read_config (MMCFG *cfg)"
+.SS "\fBBOOL\fP mci_read_sect (U32sect, U8 *buf, U32cnt)"
+.SS "\fBBOOL\fP mci_write_sect (U32sect, U8 *buf, U32cnt)"
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Object Oriented Library for ARM 7 from the source code.

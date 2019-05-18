@@ -1,0 +1,113 @@
+.TH "LCD.h" 3 "Sun Jun 19 2011" "Object Oriented Library for ARM 7" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+LCD.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <LPC23xx.H>\fP
+.br
+\fC#include <stdint.h>\fP
+.br
+\fC#include <stdarg.h>\fP
+.br
+\fC#include <stdio.h>\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include 'math.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBLCD\fP"
+.br
+.RI "\fIclass LCDDisplay: is a class in charge of \fBLCD\fP which is connected to ARM 7 processor. \fP"
+.in -1c
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBPIN_E\fP   0x80000000"
+.br
+.ti -1c
+.RI "#define \fBPIN_RW\fP   0x20000000"
+.br
+.ti -1c
+.RI "#define \fBPIN_RS\fP   0x10000000"
+.br
+.ti -1c
+.RI "#define \fBPINS_CTRL\fP   0xB0000000"
+.br
+.ti -1c
+.RI "#define \fBPINS_DATA\fP   0x0F000000"
+.br
+.ti -1c
+.RI "#define \fBLCD_E\fP(x)   ((x) ? (IOSET1 = PIN_E)  : (IOCLR1 = PIN_E) );"
+.br
+.ti -1c
+.RI "#define \fBLCD_RW\fP(x)   ((x) ? (IOSET1 = PIN_RW) : (IOCLR1 = PIN_RW));"
+.br
+.ti -1c
+.RI "#define \fBLCD_RS\fP(x)   ((x) ? (IOSET1 = PIN_RS) : (IOCLR1 = PIN_RS));"
+.br
+.ti -1c
+.RI "#define \fBLCD_DATA_IN\fP   ((IOPIN1 >> 24) & 0xF)"
+.br
+.ti -1c
+.RI "#define \fBLCD_DATA_OUT\fP(x)   IOCLR1 = PINS_DATA; IOSET1 = (x & 0xF) << 24;"
+.br
+.ti -1c
+.RI "#define \fBLCD_ALL_DIR_OUT\fP   IODIR1  |=  PINS_CTRL | PINS_DATA;"
+.br
+.ti -1c
+.RI "#define \fBLCD_DATA_DIR_IN\fP   IODIR1 &= ~PINS_DATA;"
+.br
+.ti -1c
+.RI "#define \fBLCD_DATA_DIR_OUT\fP   IODIR1 |=  PINS_DATA;"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const unsigned char \fBUserFont\fP [8][8]"
+.br
+.in -1c
+.SH "Define Documentation"
+.PP 
+.SS "#define LCD_ALL_DIR_OUT   IODIR1  |=  PINS_CTRL | PINS_DATA;"
+.SS "#define LCD_DATA_DIR_IN   IODIR1 &= ~PINS_DATA;"
+.SS "#define LCD_DATA_DIR_OUT   IODIR1 |=  PINS_DATA;"
+.SS "#define LCD_DATA_IN   ((IOPIN1 >> 24) & 0xF)"
+.SS "#define LCD_DATA_OUT(x)   IOCLR1 = PINS_DATA; IOSET1 = (x & 0xF) << 24;"
+.SS "#define LCD_E(x)   ((x) ? (IOSET1 = PIN_E)  : (IOCLR1 = PIN_E) );"
+.SS "#define LCD_RS(x)   ((x) ? (IOSET1 = PIN_RS) : (IOCLR1 = PIN_RS));"
+.SS "#define LCD_RW(x)   ((x) ? (IOSET1 = PIN_RW) : (IOCLR1 = PIN_RW));"
+.SS "#define PIN_E   0x80000000"
+.SS "#define PIN_RS   0x10000000"
+.SS "#define PIN_RW   0x20000000"
+.SS "#define PINS_CTRL   0xB0000000"
+.SS "#define PINS_DATA   0x0F000000"
+.SH "Variable Documentation"
+.PP 
+.SS "const unsigned char \fBUserFont\fP[8][8]"\fBInitial value:\fP
+.PP
+.nf
+ {
+  { 0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00 },
+  { 0x10,0x10,0x10,0x10,0x10,0x10,0x10,0x10 },
+  { 0x18,0x18,0x18,0x18,0x18,0x18,0x18,0x18 },
+  { 0x1C,0x1C,0x1C,0x1C,0x1C,0x1C,0x1C,0x1C },
+  { 0x1E,0x1E,0x1E,0x1E,0x1E,0x1E,0x1E,0x1E },
+  { 0x1F,0x1F,0x1F,0x1F,0x1F,0x1F,0x1F,0x1F },
+  { 0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00 },
+  { 0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00 }
+}
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Object Oriented Library for ARM 7 from the source code.

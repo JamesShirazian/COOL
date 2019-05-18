@@ -1,0 +1,119 @@
+.TH "Retarget1.c" 3 "Sun Jun 19 2011" "Object Oriented Library for ARM 7" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Retarget1.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio.h>\fP
+.br
+\fC#include <string.h>\fP
+.br
+\fC#include <rt_misc.h>\fP
+.br
+\fC#include <rt_sys.h>\fP
+.br
+\fC#include <File_Config.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fB__FILE\fP"
+.br
+.in -1c
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSTDIN\fP   0x8001"
+.br
+.ti -1c
+.RI "#define \fBSTDOUT\fP   0x8002"
+.br
+.ti -1c
+.RI "#define \fBSTDERR\fP   0x8003"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fB_ttywrch\fP (int ch)"
+.br
+.ti -1c
+.RI "FILEHANDLE \fB_sys_open\fP (const char *name, int openmode)"
+.br
+.ti -1c
+.RI "int \fB_sys_close\fP (FILEHANDLE fh)"
+.br
+.ti -1c
+.RI "int \fB_sys_write\fP (FILEHANDLE fh, const U8 *buf, U32 len, int mode)"
+.br
+.ti -1c
+.RI "int \fB_sys_read\fP (FILEHANDLE fh, U8 *buf, U32 len, int mode)"
+.br
+.ti -1c
+.RI "int \fB_sys_istty\fP (FILEHANDLE fh)"
+.br
+.ti -1c
+.RI "int \fB_sys_seek\fP (FILEHANDLE fh, long pos)"
+.br
+.ti -1c
+.RI "int \fB_sys_ensure\fP (FILEHANDLE fh)"
+.br
+.ti -1c
+.RI "long \fB_sys_flen\fP (FILEHANDLE fh)"
+.br
+.ti -1c
+.RI "int \fB_sys_tmpnam\fP (char *name, int sig, unsigned maxlen)"
+.br
+.ti -1c
+.RI "char * \fB_sys_command_string\fP (char *cmd, int len)"
+.br
+.ti -1c
+.RI "void \fB_sys_exit\fP (int return_code)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const char \fB__stdin_name\fP [] = 'STDIN'"
+.br
+.ti -1c
+.RI "const char \fB__stdout_name\fP [] = 'STDOUT'"
+.br
+.ti -1c
+.RI "const char \fB__stderr_name\fP [] = 'STDERR'"
+.br
+.in -1c
+.SH "Define Documentation"
+.PP 
+.SS "#define STDERR   0x8003"
+.SS "#define STDIN   0x8001"
+.SS "#define STDOUT   0x8002"
+.SH "Function Documentation"
+.PP 
+.SS "int _sys_close (FILEHANDLEfh)"
+.SS "char* _sys_command_string (char *cmd, intlen)"
+.SS "int _sys_ensure (FILEHANDLEfh)"
+.SS "void _sys_exit (intreturn_code)"
+.SS "long _sys_flen (FILEHANDLEfh)"
+.SS "int _sys_istty (FILEHANDLEfh)"
+.SS "FILEHANDLE _sys_open (const char *name, intopenmode)"
+.SS "int _sys_read (FILEHANDLEfh, U8 *buf, U32len, intmode)"
+.SS "int _sys_seek (FILEHANDLEfh, longpos)"
+.SS "int _sys_tmpnam (char *name, intsig, unsignedmaxlen)"
+.SS "int _sys_write (FILEHANDLEfh, const U8 *buf, U32len, intmode)"
+.SS "void _ttywrch (intch)"
+.SH "Variable Documentation"
+.PP 
+.SS "const char \fB__stderr_name\fP[] = 'STDERR'"
+.SS "const char \fB__stdin_name\fP[] = 'STDIN'"
+.SS "const char \fB__stdout_name\fP[] = 'STDOUT'"
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Object Oriented Library for ARM 7 from the source code.

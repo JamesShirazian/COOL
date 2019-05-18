@@ -1,0 +1,74 @@
+\hypertarget{group__group11}{
+\section{Fast Interrupt}
+\label{group__group11}\index{Fast Interrupt@{Fast Interrupt}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_fast_interrupt}{FastInterrupt}
+\begin{DoxyCompactList}\small\item\em class \hyperlink{class_fast_interrupt}{FastInterrupt}: is a class in charge of \hyperlink{class_fast_interrupt}{FastInterrupt} in ARM 7 processor it handels EXTINT0, EXTINT1, EXTINT2, EXTINT3. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__group11_ga1cd10c91ae081005e8cd4663ff33f230}{FastInterrupt::FastInterrupt} (\hyperlink{class_port_pin}{PortPin} pin, void($\ast$function)(void))
+\item 
+void \hyperlink{group__group11_gab84661ddc77f64481ee9d389aa01ea46}{FastInterrupt::setFunctionToInterrupt} (void($\ast$assginedfunction)(void))
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Fast \hyperlink{class_interrupt}{Interrupt} 
+
+\subsection{Function Documentation}
+\hypertarget{group__group11_ga1cd10c91ae081005e8cd4663ff33f230}{
+\index{Fast Interrupt@{Fast Interrupt}!FastInterrupt@{FastInterrupt}}
+\index{FastInterrupt@{FastInterrupt}!Fast Interrupt@{Fast Interrupt}}
+\subsubsection[{FastInterrupt}]{\setlength{\rightskip}{0pt plus 5cm}FastInterrupt::FastInterrupt (
+\begin{DoxyParamCaption}
+\item[{{\bf PortPin}}]{pin, }
+\item[{void($\ast$)(void)}]{function}
+\end{DoxyParamCaption}
+)}}
+\label{group__group11_ga1cd10c91ae081005e8cd4663ff33f230}
+Second constructor: \par
+ 
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{class_port_pin}{PortPin}} & pin: this pin have to set as an \char`\"{}INPUT\char`\"{} and it must be one of below pins: \par
+
+\begin{DoxyItemize}
+\item Port2 -\/$>$ Pin10
+\item Port2 -\/$>$ Pin11
+\item Port2 -\/$>$ Pin12
+\item Port2 -\/$>$ Pin13 
+\end{DoxyItemize}\\
+\hline
+{\em void($\ast$function)(void),:} & function which has to execute once the fast interrupt has occur. \par
+ {\bfseries \par
+Example:\par
+{\bfseries \par
+ \hyperlink{class_port_pin}{PortPin} myPin(2,10,\char`\"{}INPUT\char`\"{});\par
+ \hyperlink{class_fast_interrupt}{FastInterrupt} myInterrupt(myPin,do1); \par
+ }}\\
+\hline
+\end{DoxyParams}
+\hypertarget{group__group11_gab84661ddc77f64481ee9d389aa01ea46}{
+\index{Fast Interrupt@{Fast Interrupt}!setFunctionToInterrupt@{setFunctionToInterrupt}}
+\index{setFunctionToInterrupt@{setFunctionToInterrupt}!Fast Interrupt@{Fast Interrupt}}
+\subsubsection[{setFunctionToInterrupt}]{\setlength{\rightskip}{0pt plus 5cm}void FastInterrupt::setFunctionToInterrupt (
+\begin{DoxyParamCaption}
+\item[{void($\ast$)(void)}]{assginedfunction}
+\end{DoxyParamCaption}
+)}}
+\label{group__group11_gab84661ddc77f64481ee9d389aa01ea46}
+Set new function to fast intrrupt which has already define after impelementing this method the defined interrupt execute the new function once fast interrupt has occur.\par
+ 
+\begin{DoxyParams}{Parameters}
+{\em void($\ast$function)(void)} & : function which has to execute once the interrupt has occure. {\bfseries \par
+Example:\par
+{\bfseries \par
+ \hyperlink{class_port_pin}{PortPin} myPin(2,10,\char`\"{}INPUT\char`\"{});\par
+ \hyperlink{class_fast_interrupt}{FastInterrupt} myInterrupt(myPin,do1); \par
+ myInterrupt.setFunctionToInterrupt(do2);\par
+ }}\\
+\hline
+\end{DoxyParams}

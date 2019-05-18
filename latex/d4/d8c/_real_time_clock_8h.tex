@@ -1,0 +1,71 @@
+\hypertarget{_real_time_clock_8h}{
+\section{RealTimeClock.h File Reference}
+\label{d4/d8c/_real_time_clock_8h}\index{RealTimeClock.h@{RealTimeClock.h}}
+}
+{\ttfamily \#include \char`\"{}LPC23xx.H\char`\"{}}\par
+{\ttfamily \#include \char`\"{}type.h\char`\"{}}\par
+{\ttfamily \#include $<$stdint.h$>$}\par
+{\ttfamily \#include $<$stdbool.h$>$}\par
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$string$>$}\par
+{\ttfamily \#include \char`\"{}LCD.h\char`\"{}}\par
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_real_time_clock}{RealTimeClock}
+\begin{DoxyCompactList}\small\item\em class \hyperlink{class_real_time_clock}{RealTimeClock}: is a class in charge of Real Time clock which is connected to ARM 7 processor. RTC is capabel of generating interrupt per second and execute a fucntion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_real_time_clock_8h_ab26c43e0b3e0b8531adfafd3dbb55970}{PREINT\_\-RTC}~0x000001C8
+\item 
+\#define \hyperlink{_real_time_clock_8h_ad2a9027e8f848af37889d6a79fb1e139}{PREFRAC\_\-RTC}~0x000061C0
+\item 
+\#define \hyperlink{_real_time_clock_8h_a324b2baf059a92396b6555d0cab865de}{ILR\_\-RTCCIF}~0x01
+\item 
+\#define \hyperlink{_real_time_clock_8h_a6c906de66ed26cba7426fbce1afb7fe6}{ILR\_\-RTCALF}~0x02
+\item 
+\#define \hyperlink{_real_time_clock_8h_aa53fee9cbcdc8a1187fa06f12de3602b}{CCR\_\-CLKEN}~0x01
+\item 
+\#define \hyperlink{_real_time_clock_8h_ad48ca2ddec829b5d9e4f9e0cff37abc2}{CCR\_\-CTCRST}~0x02
+\item 
+\#define \hyperlink{_real_time_clock_8h_a9f78da63c2bbb1eb4714a6eb5bbb8863}{CCR\_\-CLKSRC}~0x10
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_real_time_clock_8h_aa53fee9cbcdc8a1187fa06f12de3602b}{
+\index{RealTimeClock.h@{RealTimeClock.h}!CCR\_\-CLKEN@{CCR\_\-CLKEN}}
+\index{CCR\_\-CLKEN@{CCR\_\-CLKEN}!RealTimeClock.h@{RealTimeClock.h}}
+\subsubsection[{CCR\_\-CLKEN}]{\setlength{\rightskip}{0pt plus 5cm}\#define CCR\_\-CLKEN~0x01}}
+\label{d4/d8c/_real_time_clock_8h_aa53fee9cbcdc8a1187fa06f12de3602b}
+\hypertarget{_real_time_clock_8h_a9f78da63c2bbb1eb4714a6eb5bbb8863}{
+\index{RealTimeClock.h@{RealTimeClock.h}!CCR\_\-CLKSRC@{CCR\_\-CLKSRC}}
+\index{CCR\_\-CLKSRC@{CCR\_\-CLKSRC}!RealTimeClock.h@{RealTimeClock.h}}
+\subsubsection[{CCR\_\-CLKSRC}]{\setlength{\rightskip}{0pt plus 5cm}\#define CCR\_\-CLKSRC~0x10}}
+\label{d4/d8c/_real_time_clock_8h_a9f78da63c2bbb1eb4714a6eb5bbb8863}
+\hypertarget{_real_time_clock_8h_ad48ca2ddec829b5d9e4f9e0cff37abc2}{
+\index{RealTimeClock.h@{RealTimeClock.h}!CCR\_\-CTCRST@{CCR\_\-CTCRST}}
+\index{CCR\_\-CTCRST@{CCR\_\-CTCRST}!RealTimeClock.h@{RealTimeClock.h}}
+\subsubsection[{CCR\_\-CTCRST}]{\setlength{\rightskip}{0pt plus 5cm}\#define CCR\_\-CTCRST~0x02}}
+\label{d4/d8c/_real_time_clock_8h_ad48ca2ddec829b5d9e4f9e0cff37abc2}
+\hypertarget{_real_time_clock_8h_a6c906de66ed26cba7426fbce1afb7fe6}{
+\index{RealTimeClock.h@{RealTimeClock.h}!ILR\_\-RTCALF@{ILR\_\-RTCALF}}
+\index{ILR\_\-RTCALF@{ILR\_\-RTCALF}!RealTimeClock.h@{RealTimeClock.h}}
+\subsubsection[{ILR\_\-RTCALF}]{\setlength{\rightskip}{0pt plus 5cm}\#define ILR\_\-RTCALF~0x02}}
+\label{d4/d8c/_real_time_clock_8h_a6c906de66ed26cba7426fbce1afb7fe6}
+\hypertarget{_real_time_clock_8h_a324b2baf059a92396b6555d0cab865de}{
+\index{RealTimeClock.h@{RealTimeClock.h}!ILR\_\-RTCCIF@{ILR\_\-RTCCIF}}
+\index{ILR\_\-RTCCIF@{ILR\_\-RTCCIF}!RealTimeClock.h@{RealTimeClock.h}}
+\subsubsection[{ILR\_\-RTCCIF}]{\setlength{\rightskip}{0pt plus 5cm}\#define ILR\_\-RTCCIF~0x01}}
+\label{d4/d8c/_real_time_clock_8h_a324b2baf059a92396b6555d0cab865de}
+\hypertarget{_real_time_clock_8h_ad2a9027e8f848af37889d6a79fb1e139}{
+\index{RealTimeClock.h@{RealTimeClock.h}!PREFRAC\_\-RTC@{PREFRAC\_\-RTC}}
+\index{PREFRAC\_\-RTC@{PREFRAC\_\-RTC}!RealTimeClock.h@{RealTimeClock.h}}
+\subsubsection[{PREFRAC\_\-RTC}]{\setlength{\rightskip}{0pt plus 5cm}\#define PREFRAC\_\-RTC~0x000061C0}}
+\label{d4/d8c/_real_time_clock_8h_ad2a9027e8f848af37889d6a79fb1e139}
+\hypertarget{_real_time_clock_8h_ab26c43e0b3e0b8531adfafd3dbb55970}{
+\index{RealTimeClock.h@{RealTimeClock.h}!PREINT\_\-RTC@{PREINT\_\-RTC}}
+\index{PREINT\_\-RTC@{PREINT\_\-RTC}!RealTimeClock.h@{RealTimeClock.h}}
+\subsubsection[{PREINT\_\-RTC}]{\setlength{\rightskip}{0pt plus 5cm}\#define PREINT\_\-RTC~0x000001C8}}
+\label{d4/d8c/_real_time_clock_8h_ab26c43e0b3e0b8531adfafd3dbb55970}

@@ -1,0 +1,187 @@
+\hypertarget{group__group4}{
+\section{LCD}
+\label{group__group4}\index{LCD@{LCD}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_l_c_d}{LCD}
+\begin{DoxyCompactList}\small\item\em class LCDDisplay: is a class in charge of \hyperlink{class_l_c_d}{LCD} which is connected to ARM 7 processor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__group4_gad7b32b8bdd06c2c869e3921a0e080463}{LCD::LCD} (uint8\_\-t newCol, uint8\_\-t newRow)
+\item 
+void \hyperlink{group__group4_ga94fccf508202dc5054e8f990926b9b70}{LCD::write} (char $\ast$text, uint8\_\-t row, uint8\_\-t col)
+\item 
+void \hyperlink{group__group4_gacd10a19161e4016bb70b9556928e2200}{LCD::write} (std::string text, uint8\_\-t newCol, uint8\_\-t newRow)
+\item 
+void \hyperlink{group__group4_ga8b72d022aa4a61e46118f40b428bbd3c}{LCD::write} (int value, int maxNumberOfDigit, uint8\_\-t col, uint8\_\-t row)
+\item 
+void \hyperlink{group__group4_ga8ed890a03ddaf7c5ba3ddaa569fb83ad}{LCD::write} (float value, int decimalPoint, uint8\_\-t col, uint8\_\-t row)
+\item 
+void \hyperlink{group__group4_gaca6cd9e401283d5fa4917d53260b3ba9}{LCD::clear} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_l_c_d}{LCD} 
+
+\subsection{Function Documentation}
+\hypertarget{group__group4_gaca6cd9e401283d5fa4917d53260b3ba9}{
+\index{LCD@{LCD}!clear@{clear}}
+\index{clear@{clear}!LCD@{LCD}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void LCD::clear (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{group__group4_gaca6cd9e401283d5fa4917d53260b3ba9}
+Clear \hyperlink{class_l_c_d}{LCD}\par
+ \par
+
+
+{\bfseries Example:}\par
+
+
+\hyperlink{class_l_c_d}{LCD} \hyperlink{class_l_c_d}{LCD}; \par
+ \hyperlink{group__group4_gaca6cd9e401283d5fa4917d53260b3ba9}{LCD.clear()} \par
+ LCD.display(234,3,0,0) \par
+ \hypertarget{group__group4_gad7b32b8bdd06c2c869e3921a0e080463}{
+\index{LCD@{LCD}!LCD@{LCD}}
+\index{LCD@{LCD}!LCD@{LCD}}
+\subsubsection[{LCD}]{\setlength{\rightskip}{0pt plus 5cm}LCD::LCD (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t}]{newCol, }
+\item[{uint8\_\-t}]{newRow}
+\end{DoxyParamCaption}
+)}}
+\label{group__group4_gad7b32b8bdd06c2c869e3921a0e080463}
+Second constructor: Initialize \hyperlink{class_l_c_d}{LCD} by user specfication: \par
+ 
+\begin{DoxyParams}{Parameters}
+{\em uint8\_\-t} & newCol: set number of \hyperlink{class_l_c_d}{LCD} columns \\
+\hline
+{\em uint8\_\-t} & newRow: set number of \hyperlink{class_l_c_d}{LCD} rows \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__group4_ga94fccf508202dc5054e8f990926b9b70}{
+\index{LCD@{LCD}!write@{write}}
+\index{write@{write}!LCD@{LCD}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void LCD::write (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{text, }
+\item[{uint8\_\-t}]{newCol, }
+\item[{uint8\_\-t}]{newRow}
+\end{DoxyParamCaption}
+)}}
+\label{group__group4_ga94fccf508202dc5054e8f990926b9b70}
+Display array of characher:\par
+ 
+\begin{DoxyParams}{Parameters}
+{\em char} & $\ast$text: array of charachter which will display on \hyperlink{class_l_c_d}{LCD} \\
+\hline
+{\em uint8\_\-t} & newCol: set the text columns position \\
+\hline
+{\em uint8\_\-t} & newRow: set the text rows position \par
+ \par
+\\
+\hline
+\end{DoxyParams}
+{\bfseries Example:}\par
+
+
+\hyperlink{class_l_c_d}{LCD} \hyperlink{class_l_c_d}{LCD}; \par
+ LCD.display(\char`\"{}Hello\char`\"{},0,0) \par
+ \hypertarget{group__group4_gacd10a19161e4016bb70b9556928e2200}{
+\index{LCD@{LCD}!write@{write}}
+\index{write@{write}!LCD@{LCD}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void LCD::write (
+\begin{DoxyParamCaption}
+\item[{std::string}]{text, }
+\item[{uint8\_\-t}]{newCol, }
+\item[{uint8\_\-t}]{newRow}
+\end{DoxyParamCaption}
+)}}
+\label{group__group4_gacd10a19161e4016bb70b9556928e2200}
+Display string:\par
+ 
+\begin{DoxyParams}{Parameters}
+{\em std::string,:} & string that display on \hyperlink{class_l_c_d}{LCD} \\
+\hline
+{\em uint8\_\-t} & newCol: set the text columns position \\
+\hline
+{\em uint8\_\-t} & newRow: set the text rows position \par
+ \par
+\\
+\hline
+\end{DoxyParams}
+{\bfseries Example:}\par
+
+
+\hyperlink{class_l_c_d}{LCD} \hyperlink{class_l_c_d}{LCD}; \par
+ std::string myName=\char`\"{}Afshin James Shirazian\char`\"{}; \par
+ LCD.display(myName,0,0) \par
+ \hypertarget{group__group4_ga8ed890a03ddaf7c5ba3ddaa569fb83ad}{
+\index{LCD@{LCD}!write@{write}}
+\index{write@{write}!LCD@{LCD}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void LCD::write (
+\begin{DoxyParamCaption}
+\item[{float}]{value, }
+\item[{int}]{decimalPoint, }
+\item[{uint8\_\-t}]{col, }
+\item[{uint8\_\-t}]{row}
+\end{DoxyParamCaption}
+)}}
+\label{group__group4_ga8ed890a03ddaf7c5ba3ddaa569fb83ad}
+Display float:\par
+ 
+\begin{DoxyParams}{Parameters}
+{\em float} & value: integer which will display on \hyperlink{class_l_c_d}{LCD} \\
+\hline
+{\em int} & decimalPoint: number of decimal point of \char`\"{}value\char`\"{} , from 0 to 9 \\
+\hline
+{\em uint8\_\-t} & newCol: set the text columns position \\
+\hline
+{\em uint8\_\-t} & newRow: set the text rows position \par
+ \par
+\\
+\hline
+\end{DoxyParams}
+{\bfseries Example:}\par
+
+
+\hyperlink{class_l_c_d}{LCD} \hyperlink{class_l_c_d}{LCD}; \par
+ LCD.display(23.34,2,0,0) \par
+ \hypertarget{group__group4_ga8b72d022aa4a61e46118f40b428bbd3c}{
+\index{LCD@{LCD}!write@{write}}
+\index{write@{write}!LCD@{LCD}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void LCD::write (
+\begin{DoxyParamCaption}
+\item[{int}]{value, }
+\item[{int}]{maxNumberOfDigit, }
+\item[{uint8\_\-t}]{col, }
+\item[{uint8\_\-t}]{row}
+\end{DoxyParamCaption}
+)}}
+\label{group__group4_ga8b72d022aa4a61e46118f40b428bbd3c}
+Display integer:\par
+ 
+\begin{DoxyParams}{Parameters}
+{\em int} & value: integer which will display on \hyperlink{class_l_c_d}{LCD} \\
+\hline
+{\em int} & maxNumberOfDigit: maximum number of digit which developer expect from \char`\"{}value\char`\"{} \\
+\hline
+{\em uint8\_\-t} & newCol: set the text columns position \\
+\hline
+{\em uint8\_\-t} & newRow: set the text rows position \par
+ \par
+\\
+\hline
+\end{DoxyParams}
+{\bfseries Example:}\par
+
+
+\hyperlink{class_l_c_d}{LCD} \hyperlink{class_l_c_d}{LCD}; \par
+ LCD.display(234,3,0,0) \par
+ 

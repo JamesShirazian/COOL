@@ -1,0 +1,557 @@
+\hypertarget{irq_8h}{
+\section{irq.h File Reference}
+\label{irq_8h}\index{irq.h@{irq.h}}
+}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{irq_8h_a2d9919801969cf6c549788208e3feaa1}{I\_\-Bit}~0x80
+\item 
+\#define \hyperlink{irq_8h_ac897584708cee6c6f670b5ccae2f7861}{F\_\-Bit}~0x40
+\item 
+\#define \hyperlink{irq_8h_ac3f42d8d0f87913ee8d8f19f61a8d5b9}{SYS32Mode}~0x1F
+\item 
+\#define \hyperlink{irq_8h_a5b2f3bd2dfc73cc741e62c3928e20a4c}{IRQ32Mode}~0x12
+\item 
+\#define \hyperlink{irq_8h_aff07f0082708b0acfb271f50017e07fe}{FIQ32Mode}~0x11
+\item 
+\#define \hyperlink{irq_8h_a66646d7e30b5300ef5bbbe8c5e43d909}{FIQ}~0
+\item 
+\#define \hyperlink{irq_8h_ae1e062be899ade32ab1619452cecb23a}{HIGHEST\_\-PRIORITY}~0x01
+\item 
+\#define \hyperlink{irq_8h_a0d317d11dec1bc0eba980551fc6f5de6}{LOWEST\_\-PRIORITY}~0x0F
+\item 
+\#define \hyperlink{irq_8h_a6b503faf1b39c31115dd033defaf24f6}{WDT\_\-INT}~0
+\item 
+\#define \hyperlink{irq_8h_a4df80f045f5868c15641089b6670efb2}{SWI\_\-INT}~1
+\item 
+\#define \hyperlink{irq_8h_aa1c1f3fec25208f62928c12829efa77d}{ARM\_\-CORE0\_\-INT}~2
+\item 
+\#define \hyperlink{irq_8h_a054d9bd0535515cb1ebecdb87d235bc7}{ARM\_\-CORE1\_\-INT}~3
+\item 
+\#define \hyperlink{irq_8h_abf530d8bf3a571669a1303541672faf2}{TIMER0\_\-INT}~4
+\item 
+\#define \hyperlink{irq_8h_a8b9423f4525b671a1f01e0bc82202017}{TIMER1\_\-INT}~5
+\item 
+\#define \hyperlink{irq_8h_a0e7c03deb83897db30fe15611be5f114}{UART0\_\-INT}~6
+\item 
+\#define \hyperlink{irq_8h_a1fac2ce5b598f451cdf7e76103641c17}{UART1\_\-INT}~7
+\item 
+\#define \hyperlink{irq_8h_ab05ea3d732e6139bbfb550447c31ae00}{PWM0\_\-1\_\-INT}~8
+\item 
+\#define \hyperlink{irq_8h_aeebc7921705af14b705388272b0e6de8}{I2C0\_\-INT}~9
+\item 
+\#define \hyperlink{irq_8h_a0c160c6213a133086aebb6b3321078ae}{SPI0\_\-INT}~10
+\item 
+\#define \hyperlink{irq_8h_a0df128e14750e57b0c56f84384b243ca}{SSP0\_\-INT}~10
+\item 
+\#define \hyperlink{irq_8h_adf00e3b212a92d6dbabf87fb3bc4fc80}{SSP1\_\-INT}~11
+\item 
+\#define \hyperlink{irq_8h_a1f4a892898173ad670910589d3b38201}{PLL\_\-INT}~12
+\item 
+\#define \hyperlink{irq_8h_a7737d975d05e36325d915e83c98f1c47}{RTC\_\-INT}~13
+\item 
+\#define \hyperlink{irq_8h_abfcaacd23a1f0b4ac2ccb4a425fc407d}{EINT0\_\-INT}~14
+\item 
+\#define \hyperlink{irq_8h_aafd23eb8dbd799a35a7516b3e9be806a}{EINT1\_\-INT}~15
+\item 
+\#define \hyperlink{irq_8h_ad8126162c69ebb25972cbba28ada9d15}{EINT2\_\-INT}~16
+\item 
+\#define \hyperlink{irq_8h_af2fbe82e59691d7fedb231550504dddc}{EINT3\_\-INT}~17
+\item 
+\#define \hyperlink{irq_8h_a90fec5a2b9137df1c8cc260b0983a8e5}{ADC0\_\-INT}~18
+\item 
+\#define \hyperlink{irq_8h_aee400c500ef7d41b13244741ecfbf991}{I2C1\_\-INT}~19
+\item 
+\#define \hyperlink{irq_8h_a8589aa3db9cd1b08287bb10097654246}{BOD\_\-INT}~20
+\item 
+\#define \hyperlink{irq_8h_adac9056fdf9e1b7f5c9bad0d5b198c28}{EMAC\_\-INT}~21
+\item 
+\#define \hyperlink{irq_8h_aa401fd3d8fba0f87dc46700d0eeaed62}{USB\_\-INT}~22
+\item 
+\#define \hyperlink{irq_8h_a5e4af61c9cda09a07019a625496aad51}{CAN\_\-INT}~23
+\item 
+\#define \hyperlink{irq_8h_a2c6994cb0d62bbdd1c53fbf542b1b6b2}{MCI\_\-INT}~24
+\item 
+\#define \hyperlink{irq_8h_a09a28e60b74da10f339fc4ab3b05b4fc}{GPDMA\_\-INT}~25
+\item 
+\#define \hyperlink{irq_8h_acd0d41a1bb5a21d23c4e97a84d1133d4}{TIMER2\_\-INT}~26
+\item 
+\#define \hyperlink{irq_8h_a01dd78a5377372b04beaa50e785fea8f}{TIMER3\_\-INT}~27
+\item 
+\#define \hyperlink{irq_8h_a9d406c193d4a4138cc7a7bb563ef1a0c}{UART2\_\-INT}~28
+\item 
+\#define \hyperlink{irq_8h_a48de18bb6ea39eadda548311a0c05f64}{UART3\_\-INT}~29
+\item 
+\#define \hyperlink{irq_8h_a8d7b01adc00258d72b7d814f3da0a4b8}{I2C2\_\-INT}~30
+\item 
+\#define \hyperlink{irq_8h_a36562e83c4f86230f66b342d612b7582}{I2S\_\-INT}~31
+\item 
+\#define \hyperlink{irq_8h_a09989ad8f0df26c77aec5d9df51a7a83}{VIC\_\-SIZE}~32
+\item 
+\#define \hyperlink{irq_8h_adbc995184961d5a9fcaecdefaaabd2d5}{VECT\_\-ADDR\_\-INDEX}~0x100
+\item 
+\#define \hyperlink{irq_8h_a04c689c978988b46ac91cf8eed52035f}{VECT\_\-PRIO\_\-INDEX}~0x200
+\item 
+\#define \hyperlink{irq_8h_a87579e49e1fae67817ea7bcf47bedfa2}{IENABLE}~\_\-\_\-asm \{ MRS sysreg, SPSR; MSR CPSR\_\-c, \#SYS32Mode \}
+\item 
+\#define \hyperlink{irq_8h_a3d42089cb9363157725579cc519d22a3}{IDISABLE}~\_\-\_\-asm \{ MSR CPSR\_\-c, \#(IRQ32Mode$|$I\_\-Bit); MSR SPSR\_\-cxsf, sysreg \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{irq_8h_a3ca0b1080086bf7a50cbb8f6164c7cc6}{FIQ\_\-HandlerClock} (void) \_\-\_\-irq
+\item 
+void \hyperlink{irq_8h_a07a142546574080f3ee65a1aab1e4057}{init\_\-VIC} (void)
+\item 
+\hyperlink{type_8h_ad342ac907eb044443153a22f964bf0af}{DWORD} \hyperlink{irq_8h_a0740ee23a2c537dd14ed3d4ea2fe6584}{install\_\-irq} (\hyperlink{type_8h_ad342ac907eb044443153a22f964bf0af}{DWORD} IntNumber, void $\ast$HandlerAddr, \hyperlink{type_8h_ad342ac907eb044443153a22f964bf0af}{DWORD} Priority)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{irq_8h_a90fec5a2b9137df1c8cc260b0983a8e5}{
+\index{irq.h@{irq.h}!ADC0\_\-INT@{ADC0\_\-INT}}
+\index{ADC0\_\-INT@{ADC0\_\-INT}!irq.h@{irq.h}}
+\subsubsection[{ADC0\_\-INT}]{\setlength{\rightskip}{0pt plus 5cm}\#define ADC0\_\-INT~18}}
+\label{irq_8h_a90fec5a2b9137df1c8cc260b0983a8e5}
+
+
+Definition at line 47 of file irq.h.
+
+\hypertarget{irq_8h_aa1c1f3fec25208f62928c12829efa77d}{
+\index{irq.h@{irq.h}!ARM\_\-CORE0\_\-INT@{ARM\_\-CORE0\_\-INT}}
+\index{ARM\_\-CORE0\_\-INT@{ARM\_\-CORE0\_\-INT}!irq.h@{irq.h}}
+\subsubsection[{ARM\_\-CORE0\_\-INT}]{\setlength{\rightskip}{0pt plus 5cm}\#define ARM\_\-CORE0\_\-INT~2}}
+\label{irq_8h_aa1c1f3fec25208f62928c12829efa77d}
+
+
+Definition at line 30 of file irq.h.
+
+\hypertarget{irq_8h_a054d9bd0535515cb1ebecdb87d235bc7}{
+\index{irq.h@{irq.h}!ARM\_\-CORE1\_\-INT@{ARM\_\-CORE1\_\-INT}}
+\index{ARM\_\-CORE1\_\-INT@{ARM\_\-CORE1\_\-INT}!irq.h@{irq.h}}
+\subsubsection[{ARM\_\-CORE1\_\-INT}]{\setlength{\rightskip}{0pt plus 5cm}\#define ARM\_\-CORE1\_\-INT~3}}
+\label{irq_8h_a054d9bd0535515cb1ebecdb87d235bc7}
+
+
+Definition at line 31 of file irq.h.
+
+\hypertarget{irq_8h_a8589aa3db9cd1b08287bb10097654246}{
+\index{irq.h@{irq.h}!BOD\_\-INT@{BOD\_\-INT}}
+\index{BOD\_\-INT@{BOD\_\-INT}!irq.h@{irq.h}}
+\subsubsection[{BOD\_\-INT}]{\setlength{\rightskip}{0pt plus 5cm}\#define BOD\_\-INT~20}}
+\label{irq_8h_a8589aa3db9cd1b08287bb10097654246}
+
+
+Definition at line 49 of file irq.h.
+
+\hypertarget{irq_8h_a5e4af61c9cda09a07019a625496aad51}{
+\index{irq.h@{irq.h}!CAN\_\-INT@{CAN\_\-INT}}
+\index{CAN\_\-INT@{CAN\_\-INT}!irq.h@{irq.h}}
+\subsubsection[{CAN\_\-INT}]{\setlength{\rightskip}{0pt plus 5cm}\#define CAN\_\-INT~23}}
+\label{irq_8h_a5e4af61c9cda09a07019a625496aad51}
+
+
+Definition at line 52 of file irq.h.
+
+\hypertarget{irq_8h_abfcaacd23a1f0b4ac2ccb4a425fc407d}{
+\index{irq.h@{irq.h}!EINT0\_\-INT@{EINT0\_\-INT}}
+\index{EINT0\_\-INT@{EINT0\_\-INT}!irq.h@{irq.h}}
+\subsubsection[{EINT0\_\-INT}]{\setlength{\rightskip}{0pt plus 5cm}\#define EINT0\_\-INT~14}}
+\label{irq_8h_abfcaacd23a1f0b4ac2ccb4a425fc407d}
+
+
+Definition at line 43 of file irq.h.
+
+\hypertarget{irq_8h_aafd23eb8dbd799a35a7516b3e9be806a}{
+\index{irq.h@{irq.h}!EINT1\_\-INT@{EINT1\_\-INT}}
+\index{EINT1\_\-INT@{EINT1\_\-INT}!irq.h@{irq.h}}
+\subsubsection[{EINT1\_\-INT}]{\setlength{\rightskip}{0pt plus 5cm}\#define EINT1\_\-INT~15}}
+\label{irq_8h_aafd23eb8dbd799a35a7516b3e9be806a}
+
+
+Definition at line 44 of file irq.h.
+
+\hypertarget{irq_8h_ad8126162c69ebb25972cbba28ada9d15}{
+\index{irq.h@{irq.h}!EINT2\_\-INT@{EINT2\_\-INT}}
+\index{EINT2\_\-INT@{EINT2\_\-INT}!irq.h@{irq.h}}
+\subsubsection[{EINT2\_\-INT}]{\setlength{\rightskip}{0pt plus 5cm}\#define EINT2\_\-INT~16}}
+\label{irq_8h_ad8126162c69ebb25972cbba28ada9d15}
+
+
+Definition at line 45 of file irq.h.
+
+\hypertarget{irq_8h_af2fbe82e59691d7fedb231550504dddc}{
+\index{irq.h@{irq.h}!EINT3\_\-INT@{EINT3\_\-INT}}
+\index{EINT3\_\-INT@{EINT3\_\-INT}!irq.h@{irq.h}}
+\subsubsection[{EINT3\_\-INT}]{\setlength{\rightskip}{0pt plus 5cm}\#define EINT3\_\-INT~17}}
+\label{irq_8h_af2fbe82e59691d7fedb231550504dddc}
+
+
+Definition at line 46 of file irq.h.
+
+\hypertarget{irq_8h_adac9056fdf9e1b7f5c9bad0d5b198c28}{
+\index{irq.h@{irq.h}!EMAC\_\-INT@{EMAC\_\-INT}}
+\index{EMAC\_\-INT@{EMAC\_\-INT}!irq.h@{irq.h}}
+\subsubsection[{EMAC\_\-INT}]{\setlength{\rightskip}{0pt plus 5cm}\#define EMAC\_\-INT~21}}
+\label{irq_8h_adac9056fdf9e1b7f5c9bad0d5b198c28}
+
+
+Definition at line 50 of file irq.h.
+
+\hypertarget{irq_8h_ac897584708cee6c6f670b5ccae2f7861}{
+\index{irq.h@{irq.h}!F\_\-Bit@{F\_\-Bit}}
+\index{F\_\-Bit@{F\_\-Bit}!irq.h@{irq.h}}
+\subsubsection[{F\_\-Bit}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\_\-Bit~0x40}}
+\label{irq_8h_ac897584708cee6c6f670b5ccae2f7861}
+
+
+Definition at line 16 of file irq.h.
+
+\hypertarget{irq_8h_a66646d7e30b5300ef5bbbe8c5e43d909}{
+\index{irq.h@{irq.h}!FIQ@{FIQ}}
+\index{FIQ@{FIQ}!irq.h@{irq.h}}
+\subsubsection[{FIQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define FIQ~0}}
+\label{irq_8h_a66646d7e30b5300ef5bbbe8c5e43d909}
+
+
+Definition at line 23 of file irq.h.
+
+\hypertarget{irq_8h_aff07f0082708b0acfb271f50017e07fe}{
+\index{irq.h@{irq.h}!FIQ32Mode@{FIQ32Mode}}
+\index{FIQ32Mode@{FIQ32Mode}!irq.h@{irq.h}}
+\subsubsection[{FIQ32Mode}]{\setlength{\rightskip}{0pt plus 5cm}\#define FIQ32Mode~0x11}}
+\label{irq_8h_aff07f0082708b0acfb271f50017e07fe}
+
+
+Definition at line 20 of file irq.h.
+
+\hypertarget{irq_8h_a09a28e60b74da10f339fc4ab3b05b4fc}{
+\index{irq.h@{irq.h}!GPDMA\_\-INT@{GPDMA\_\-INT}}
+\index{GPDMA\_\-INT@{GPDMA\_\-INT}!irq.h@{irq.h}}
+\subsubsection[{GPDMA\_\-INT}]{\setlength{\rightskip}{0pt plus 5cm}\#define GPDMA\_\-INT~25}}
+\label{irq_8h_a09a28e60b74da10f339fc4ab3b05b4fc}
+
+
+Definition at line 54 of file irq.h.
+
+\hypertarget{irq_8h_ae1e062be899ade32ab1619452cecb23a}{
+\index{irq.h@{irq.h}!HIGHEST\_\-PRIORITY@{HIGHEST\_\-PRIORITY}}
+\index{HIGHEST\_\-PRIORITY@{HIGHEST\_\-PRIORITY}!irq.h@{irq.h}}
+\subsubsection[{HIGHEST\_\-PRIORITY}]{\setlength{\rightskip}{0pt plus 5cm}\#define HIGHEST\_\-PRIORITY~0x01}}
+\label{irq_8h_ae1e062be899ade32ab1619452cecb23a}
+
+
+Definition at line 25 of file irq.h.
+
+\hypertarget{irq_8h_aeebc7921705af14b705388272b0e6de8}{
+\index{irq.h@{irq.h}!I2C0\_\-INT@{I2C0\_\-INT}}
+\index{I2C0\_\-INT@{I2C0\_\-INT}!irq.h@{irq.h}}
+\subsubsection[{I2C0\_\-INT}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C0\_\-INT~9}}
+\label{irq_8h_aeebc7921705af14b705388272b0e6de8}
+
+
+Definition at line 37 of file irq.h.
+
+\hypertarget{irq_8h_aee400c500ef7d41b13244741ecfbf991}{
+\index{irq.h@{irq.h}!I2C1\_\-INT@{I2C1\_\-INT}}
+\index{I2C1\_\-INT@{I2C1\_\-INT}!irq.h@{irq.h}}
+\subsubsection[{I2C1\_\-INT}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C1\_\-INT~19}}
+\label{irq_8h_aee400c500ef7d41b13244741ecfbf991}
+
+
+Definition at line 48 of file irq.h.
+
+\hypertarget{irq_8h_a8d7b01adc00258d72b7d814f3da0a4b8}{
+\index{irq.h@{irq.h}!I2C2\_\-INT@{I2C2\_\-INT}}
+\index{I2C2\_\-INT@{I2C2\_\-INT}!irq.h@{irq.h}}
+\subsubsection[{I2C2\_\-INT}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2C2\_\-INT~30}}
+\label{irq_8h_a8d7b01adc00258d72b7d814f3da0a4b8}
+
+
+Definition at line 59 of file irq.h.
+
+\hypertarget{irq_8h_a36562e83c4f86230f66b342d612b7582}{
+\index{irq.h@{irq.h}!I2S\_\-INT@{I2S\_\-INT}}
+\index{I2S\_\-INT@{I2S\_\-INT}!irq.h@{irq.h}}
+\subsubsection[{I2S\_\-INT}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2S\_\-INT~31}}
+\label{irq_8h_a36562e83c4f86230f66b342d612b7582}
+
+
+Definition at line 60 of file irq.h.
+
+\hypertarget{irq_8h_a2d9919801969cf6c549788208e3feaa1}{
+\index{irq.h@{irq.h}!I\_\-Bit@{I\_\-Bit}}
+\index{I\_\-Bit@{I\_\-Bit}!irq.h@{irq.h}}
+\subsubsection[{I\_\-Bit}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\_\-Bit~0x80}}
+\label{irq_8h_a2d9919801969cf6c549788208e3feaa1}
+
+
+Definition at line 15 of file irq.h.
+
+\hypertarget{irq_8h_a3d42089cb9363157725579cc519d22a3}{
+\index{irq.h@{irq.h}!IDISABLE@{IDISABLE}}
+\index{IDISABLE@{IDISABLE}!irq.h@{irq.h}}
+\subsubsection[{IDISABLE}]{\setlength{\rightskip}{0pt plus 5cm}\#define IDISABLE~\_\-\_\-asm \{ MSR CPSR\_\-c, \#(IRQ32Mode$|$I\_\-Bit); MSR SPSR\_\-cxsf, sysreg \}}}
+\label{irq_8h_a3d42089cb9363157725579cc519d22a3}
+
+
+Definition at line 77 of file irq.h.
+
+\hypertarget{irq_8h_a87579e49e1fae67817ea7bcf47bedfa2}{
+\index{irq.h@{irq.h}!IENABLE@{IENABLE}}
+\index{IENABLE@{IENABLE}!irq.h@{irq.h}}
+\subsubsection[{IENABLE}]{\setlength{\rightskip}{0pt plus 5cm}\#define IENABLE~\_\-\_\-asm \{ MRS sysreg, SPSR; MSR CPSR\_\-c, \#SYS32Mode \}}}
+\label{irq_8h_a87579e49e1fae67817ea7bcf47bedfa2}
+
+
+Definition at line 76 of file irq.h.
+
+\hypertarget{irq_8h_a5b2f3bd2dfc73cc741e62c3928e20a4c}{
+\index{irq.h@{irq.h}!IRQ32Mode@{IRQ32Mode}}
+\index{IRQ32Mode@{IRQ32Mode}!irq.h@{irq.h}}
+\subsubsection[{IRQ32Mode}]{\setlength{\rightskip}{0pt plus 5cm}\#define IRQ32Mode~0x12}}
+\label{irq_8h_a5b2f3bd2dfc73cc741e62c3928e20a4c}
+
+
+Definition at line 19 of file irq.h.
+
+\hypertarget{irq_8h_a0d317d11dec1bc0eba980551fc6f5de6}{
+\index{irq.h@{irq.h}!LOWEST\_\-PRIORITY@{LOWEST\_\-PRIORITY}}
+\index{LOWEST\_\-PRIORITY@{LOWEST\_\-PRIORITY}!irq.h@{irq.h}}
+\subsubsection[{LOWEST\_\-PRIORITY}]{\setlength{\rightskip}{0pt plus 5cm}\#define LOWEST\_\-PRIORITY~0x0F}}
+\label{irq_8h_a0d317d11dec1bc0eba980551fc6f5de6}
+
+
+Definition at line 26 of file irq.h.
+
+\hypertarget{irq_8h_a2c6994cb0d62bbdd1c53fbf542b1b6b2}{
+\index{irq.h@{irq.h}!MCI\_\-INT@{MCI\_\-INT}}
+\index{MCI\_\-INT@{MCI\_\-INT}!irq.h@{irq.h}}
+\subsubsection[{MCI\_\-INT}]{\setlength{\rightskip}{0pt plus 5cm}\#define MCI\_\-INT~24}}
+\label{irq_8h_a2c6994cb0d62bbdd1c53fbf542b1b6b2}
+
+
+Definition at line 53 of file irq.h.
+
+\hypertarget{irq_8h_a1f4a892898173ad670910589d3b38201}{
+\index{irq.h@{irq.h}!PLL\_\-INT@{PLL\_\-INT}}
+\index{PLL\_\-INT@{PLL\_\-INT}!irq.h@{irq.h}}
+\subsubsection[{PLL\_\-INT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PLL\_\-INT~12}}
+\label{irq_8h_a1f4a892898173ad670910589d3b38201}
+
+
+Definition at line 41 of file irq.h.
+
+\hypertarget{irq_8h_ab05ea3d732e6139bbfb550447c31ae00}{
+\index{irq.h@{irq.h}!PWM0\_\-1\_\-INT@{PWM0\_\-1\_\-INT}}
+\index{PWM0\_\-1\_\-INT@{PWM0\_\-1\_\-INT}!irq.h@{irq.h}}
+\subsubsection[{PWM0\_\-1\_\-INT}]{\setlength{\rightskip}{0pt plus 5cm}\#define PWM0\_\-1\_\-INT~8}}
+\label{irq_8h_ab05ea3d732e6139bbfb550447c31ae00}
+
+
+Definition at line 36 of file irq.h.
+
+\hypertarget{irq_8h_a7737d975d05e36325d915e83c98f1c47}{
+\index{irq.h@{irq.h}!RTC\_\-INT@{RTC\_\-INT}}
+\index{RTC\_\-INT@{RTC\_\-INT}!irq.h@{irq.h}}
+\subsubsection[{RTC\_\-INT}]{\setlength{\rightskip}{0pt plus 5cm}\#define RTC\_\-INT~13}}
+\label{irq_8h_a7737d975d05e36325d915e83c98f1c47}
+
+
+Definition at line 42 of file irq.h.
+
+\hypertarget{irq_8h_a0c160c6213a133086aebb6b3321078ae}{
+\index{irq.h@{irq.h}!SPI0\_\-INT@{SPI0\_\-INT}}
+\index{SPI0\_\-INT@{SPI0\_\-INT}!irq.h@{irq.h}}
+\subsubsection[{SPI0\_\-INT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SPI0\_\-INT~10}}
+\label{irq_8h_a0c160c6213a133086aebb6b3321078ae}
+
+
+Definition at line 38 of file irq.h.
+
+\hypertarget{irq_8h_a0df128e14750e57b0c56f84384b243ca}{
+\index{irq.h@{irq.h}!SSP0\_\-INT@{SSP0\_\-INT}}
+\index{SSP0\_\-INT@{SSP0\_\-INT}!irq.h@{irq.h}}
+\subsubsection[{SSP0\_\-INT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SSP0\_\-INT~10}}
+\label{irq_8h_a0df128e14750e57b0c56f84384b243ca}
+
+
+Definition at line 39 of file irq.h.
+
+\hypertarget{irq_8h_adf00e3b212a92d6dbabf87fb3bc4fc80}{
+\index{irq.h@{irq.h}!SSP1\_\-INT@{SSP1\_\-INT}}
+\index{SSP1\_\-INT@{SSP1\_\-INT}!irq.h@{irq.h}}
+\subsubsection[{SSP1\_\-INT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SSP1\_\-INT~11}}
+\label{irq_8h_adf00e3b212a92d6dbabf87fb3bc4fc80}
+
+
+Definition at line 40 of file irq.h.
+
+\hypertarget{irq_8h_a4df80f045f5868c15641089b6670efb2}{
+\index{irq.h@{irq.h}!SWI\_\-INT@{SWI\_\-INT}}
+\index{SWI\_\-INT@{SWI\_\-INT}!irq.h@{irq.h}}
+\subsubsection[{SWI\_\-INT}]{\setlength{\rightskip}{0pt plus 5cm}\#define SWI\_\-INT~1}}
+\label{irq_8h_a4df80f045f5868c15641089b6670efb2}
+
+
+Definition at line 29 of file irq.h.
+
+\hypertarget{irq_8h_ac3f42d8d0f87913ee8d8f19f61a8d5b9}{
+\index{irq.h@{irq.h}!SYS32Mode@{SYS32Mode}}
+\index{SYS32Mode@{SYS32Mode}!irq.h@{irq.h}}
+\subsubsection[{SYS32Mode}]{\setlength{\rightskip}{0pt plus 5cm}\#define SYS32Mode~0x1F}}
+\label{irq_8h_ac3f42d8d0f87913ee8d8f19f61a8d5b9}
+
+
+Definition at line 18 of file irq.h.
+
+\hypertarget{irq_8h_abf530d8bf3a571669a1303541672faf2}{
+\index{irq.h@{irq.h}!TIMER0\_\-INT@{TIMER0\_\-INT}}
+\index{TIMER0\_\-INT@{TIMER0\_\-INT}!irq.h@{irq.h}}
+\subsubsection[{TIMER0\_\-INT}]{\setlength{\rightskip}{0pt plus 5cm}\#define TIMER0\_\-INT~4}}
+\label{irq_8h_abf530d8bf3a571669a1303541672faf2}
+
+
+Definition at line 32 of file irq.h.
+
+\hypertarget{irq_8h_a8b9423f4525b671a1f01e0bc82202017}{
+\index{irq.h@{irq.h}!TIMER1\_\-INT@{TIMER1\_\-INT}}
+\index{TIMER1\_\-INT@{TIMER1\_\-INT}!irq.h@{irq.h}}
+\subsubsection[{TIMER1\_\-INT}]{\setlength{\rightskip}{0pt plus 5cm}\#define TIMER1\_\-INT~5}}
+\label{irq_8h_a8b9423f4525b671a1f01e0bc82202017}
+
+
+Definition at line 33 of file irq.h.
+
+\hypertarget{irq_8h_acd0d41a1bb5a21d23c4e97a84d1133d4}{
+\index{irq.h@{irq.h}!TIMER2\_\-INT@{TIMER2\_\-INT}}
+\index{TIMER2\_\-INT@{TIMER2\_\-INT}!irq.h@{irq.h}}
+\subsubsection[{TIMER2\_\-INT}]{\setlength{\rightskip}{0pt plus 5cm}\#define TIMER2\_\-INT~26}}
+\label{irq_8h_acd0d41a1bb5a21d23c4e97a84d1133d4}
+
+
+Definition at line 55 of file irq.h.
+
+\hypertarget{irq_8h_a01dd78a5377372b04beaa50e785fea8f}{
+\index{irq.h@{irq.h}!TIMER3\_\-INT@{TIMER3\_\-INT}}
+\index{TIMER3\_\-INT@{TIMER3\_\-INT}!irq.h@{irq.h}}
+\subsubsection[{TIMER3\_\-INT}]{\setlength{\rightskip}{0pt plus 5cm}\#define TIMER3\_\-INT~27}}
+\label{irq_8h_a01dd78a5377372b04beaa50e785fea8f}
+
+
+Definition at line 56 of file irq.h.
+
+\hypertarget{irq_8h_a0e7c03deb83897db30fe15611be5f114}{
+\index{irq.h@{irq.h}!UART0\_\-INT@{UART0\_\-INT}}
+\index{UART0\_\-INT@{UART0\_\-INT}!irq.h@{irq.h}}
+\subsubsection[{UART0\_\-INT}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART0\_\-INT~6}}
+\label{irq_8h_a0e7c03deb83897db30fe15611be5f114}
+
+
+Definition at line 34 of file irq.h.
+
+\hypertarget{irq_8h_a1fac2ce5b598f451cdf7e76103641c17}{
+\index{irq.h@{irq.h}!UART1\_\-INT@{UART1\_\-INT}}
+\index{UART1\_\-INT@{UART1\_\-INT}!irq.h@{irq.h}}
+\subsubsection[{UART1\_\-INT}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART1\_\-INT~7}}
+\label{irq_8h_a1fac2ce5b598f451cdf7e76103641c17}
+
+
+Definition at line 35 of file irq.h.
+
+\hypertarget{irq_8h_a9d406c193d4a4138cc7a7bb563ef1a0c}{
+\index{irq.h@{irq.h}!UART2\_\-INT@{UART2\_\-INT}}
+\index{UART2\_\-INT@{UART2\_\-INT}!irq.h@{irq.h}}
+\subsubsection[{UART2\_\-INT}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART2\_\-INT~28}}
+\label{irq_8h_a9d406c193d4a4138cc7a7bb563ef1a0c}
+
+
+Definition at line 57 of file irq.h.
+
+\hypertarget{irq_8h_a48de18bb6ea39eadda548311a0c05f64}{
+\index{irq.h@{irq.h}!UART3\_\-INT@{UART3\_\-INT}}
+\index{UART3\_\-INT@{UART3\_\-INT}!irq.h@{irq.h}}
+\subsubsection[{UART3\_\-INT}]{\setlength{\rightskip}{0pt plus 5cm}\#define UART3\_\-INT~29}}
+\label{irq_8h_a48de18bb6ea39eadda548311a0c05f64}
+
+
+Definition at line 58 of file irq.h.
+
+\hypertarget{irq_8h_aa401fd3d8fba0f87dc46700d0eeaed62}{
+\index{irq.h@{irq.h}!USB\_\-INT@{USB\_\-INT}}
+\index{USB\_\-INT@{USB\_\-INT}!irq.h@{irq.h}}
+\subsubsection[{USB\_\-INT}]{\setlength{\rightskip}{0pt plus 5cm}\#define USB\_\-INT~22}}
+\label{irq_8h_aa401fd3d8fba0f87dc46700d0eeaed62}
+
+
+Definition at line 51 of file irq.h.
+
+\hypertarget{irq_8h_adbc995184961d5a9fcaecdefaaabd2d5}{
+\index{irq.h@{irq.h}!VECT\_\-ADDR\_\-INDEX@{VECT\_\-ADDR\_\-INDEX}}
+\index{VECT\_\-ADDR\_\-INDEX@{VECT\_\-ADDR\_\-INDEX}!irq.h@{irq.h}}
+\subsubsection[{VECT\_\-ADDR\_\-INDEX}]{\setlength{\rightskip}{0pt plus 5cm}\#define VECT\_\-ADDR\_\-INDEX~0x100}}
+\label{irq_8h_adbc995184961d5a9fcaecdefaaabd2d5}
+
+
+Definition at line 64 of file irq.h.
+
+\hypertarget{irq_8h_a04c689c978988b46ac91cf8eed52035f}{
+\index{irq.h@{irq.h}!VECT\_\-PRIO\_\-INDEX@{VECT\_\-PRIO\_\-INDEX}}
+\index{VECT\_\-PRIO\_\-INDEX@{VECT\_\-PRIO\_\-INDEX}!irq.h@{irq.h}}
+\subsubsection[{VECT\_\-PRIO\_\-INDEX}]{\setlength{\rightskip}{0pt plus 5cm}\#define VECT\_\-PRIO\_\-INDEX~0x200}}
+\label{irq_8h_a04c689c978988b46ac91cf8eed52035f}
+
+
+Definition at line 65 of file irq.h.
+
+\hypertarget{irq_8h_a09989ad8f0df26c77aec5d9df51a7a83}{
+\index{irq.h@{irq.h}!VIC\_\-SIZE@{VIC\_\-SIZE}}
+\index{VIC\_\-SIZE@{VIC\_\-SIZE}!irq.h@{irq.h}}
+\subsubsection[{VIC\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define VIC\_\-SIZE~32}}
+\label{irq_8h_a09989ad8f0df26c77aec5d9df51a7a83}
+
+
+Definition at line 62 of file irq.h.
+
+\hypertarget{irq_8h_a6b503faf1b39c31115dd033defaf24f6}{
+\index{irq.h@{irq.h}!WDT\_\-INT@{WDT\_\-INT}}
+\index{WDT\_\-INT@{WDT\_\-INT}!irq.h@{irq.h}}
+\subsubsection[{WDT\_\-INT}]{\setlength{\rightskip}{0pt plus 5cm}\#define WDT\_\-INT~0}}
+\label{irq_8h_a6b503faf1b39c31115dd033defaf24f6}
+
+
+Definition at line 28 of file irq.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{irq_8h_a3ca0b1080086bf7a50cbb8f6164c7cc6}{
+\index{irq.h@{irq.h}!FIQ\_\-HandlerClock@{FIQ\_\-HandlerClock}}
+\index{FIQ\_\-HandlerClock@{FIQ\_\-HandlerClock}!irq.h@{irq.h}}
+\subsubsection[{FIQ\_\-HandlerClock}]{\setlength{\rightskip}{0pt plus 5cm}void FIQ\_\-HandlerClock (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{irq_8h_a3ca0b1080086bf7a50cbb8f6164c7cc6}
+\hypertarget{irq_8h_a07a142546574080f3ee65a1aab1e4057}{
+\index{irq.h@{irq.h}!init\_\-VIC@{init\_\-VIC}}
+\index{init\_\-VIC@{init\_\-VIC}!irq.h@{irq.h}}
+\subsubsection[{init\_\-VIC}]{\setlength{\rightskip}{0pt plus 5cm}void init\_\-VIC (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{irq_8h_a07a142546574080f3ee65a1aab1e4057}
+\hypertarget{irq_8h_a0740ee23a2c537dd14ed3d4ea2fe6584}{
+\index{irq.h@{irq.h}!install\_\-irq@{install\_\-irq}}
+\index{install\_\-irq@{install\_\-irq}!irq.h@{irq.h}}
+\subsubsection[{install\_\-irq}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DWORD} install\_\-irq (
+\begin{DoxyParamCaption}
+\item[{{\bf DWORD}}]{IntNumber, }
+\item[{void $\ast$}]{HandlerAddr, }
+\item[{{\bf DWORD}}]{Priority}
+\end{DoxyParamCaption}
+)}}
+\label{irq_8h_a0740ee23a2c537dd14ed3d4ea2fe6584}

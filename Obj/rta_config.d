@@ -1,0 +1,10 @@
+.\Obj\rta_config.o: RTA_Config.c
+.\Obj\rta_config.o: C:\Keil\ARM\RV31\INC\RT_Agent.c
+.\Obj\rta_config.o: C:\Keil\ARM\RV31\INC\RT_Agent.H
+.\Obj\rta_config.o: C:\Keil\ARM\INC\Philips\LPC23xx.H
+.\Obj\rta_config.o: C:\Keil\ARM\RV31\INC\stdio.h
+.\Obj\rta_config.o: C:\Keil\ARM\RV31\INC\string.h
+.\Obj\rta_config.o: C:\Keil\ARM\RV31\INC\rt_misc.h
+.\Obj\rta_config.o: C:\Keil\ARM\RV31\INC\rt_sys.h
+.\Obj\rta_config.o: C:\Keil\ARM\RV31\INC\file_config.h
+.\Obj\rta_config.o: C:\Keil\ARM\RV31\INC\RTL.h

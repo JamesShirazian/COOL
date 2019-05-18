@@ -1,0 +1,172 @@
+.TH "LCD" 3 "Sun Jun 26 2011" "Version 1.100.000" "Object Oriented Library for ARM 7" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+LCD \- 
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBLCD\fP"
+.br
+.RI "\fIclass LCDDisplay: is a class in charge of \fBLCD\fP which is connected to ARM 7 processor. \fP"
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLCD::LCD\fP (uint8_t newCol, uint8_t newRow)"
+.br
+.ti -1c
+.RI "void \fBLCD::write\fP (char *text, uint8_t row, uint8_t col)"
+.br
+.ti -1c
+.RI "void \fBLCD::write\fP (std::string text, uint8_t newCol, uint8_t newRow)"
+.br
+.ti -1c
+.RI "void \fBLCD::write\fP (int value, int maxNumberOfDigit, uint8_t col, uint8_t row)"
+.br
+.ti -1c
+.RI "void \fBLCD::write\fP (float value, int decimalPoint, uint8_t col, uint8_t row)"
+.br
+.ti -1c
+.RI "void \fBLCD::clear\fP (void)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBLCD\fP 
+.SH "Function Documentation"
+.PP 
+.SS "void LCD::clear (void)"Clear \fBLCD\fP
+.br
+ 
+.br
+.PP
+\fBExample:\fP
+.br
+.PP
+\fBLCD\fP \fBLCD\fP; 
+.br
+ \fBLCD.clear()\fP 
+.br
+ LCD.display(234,3,0,0) 
+.br
+ 
+.SS "LCD::LCD (uint8_tnewCol, uint8_tnewRow)"Second constructor: Initialize \fBLCD\fP by user specfication: 
+.br
+ 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIuint8_t\fP newCol: set number of \fBLCD\fP columns 
+.br
+\fIuint8_t\fP newRow: set number of \fBLCD\fP rows 
+.RE
+.PP
+
+.SS "void LCD::write (char *text, uint8_tnewCol, uint8_tnewRow)"Display array of characher:
+.br
+ 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIchar\fP *text: array of charachter which will display on \fBLCD\fP 
+.br
+\fIuint8_t\fP newCol: set the text columns position 
+.br
+\fIuint8_t\fP newRow: set the text rows position 
+.br
+ 
+.br
+.RE
+.PP
+\fBExample:\fP
+.br
+.PP
+\fBLCD\fP \fBLCD\fP; 
+.br
+ LCD.display('Hello',0,0) 
+.br
+ 
+.SS "void LCD::write (std::stringtext, uint8_tnewCol, uint8_tnewRow)"Display string:
+.br
+ 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstd::string,:\fP string that display on \fBLCD\fP 
+.br
+\fIuint8_t\fP newCol: set the text columns position 
+.br
+\fIuint8_t\fP newRow: set the text rows position 
+.br
+ 
+.br
+.RE
+.PP
+\fBExample:\fP
+.br
+.PP
+\fBLCD\fP \fBLCD\fP; 
+.br
+ std::string myName='Afshin James Shirazian'; 
+.br
+ LCD.display(myName,0,0) 
+.br
+ 
+.SS "void LCD::write (floatvalue, intdecimalPoint, uint8_tcol, uint8_trow)"Display float:
+.br
+ 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfloat\fP value: integer which will display on \fBLCD\fP 
+.br
+\fIint\fP decimalPoint: number of decimal point of 'value' , from 0 to 9 
+.br
+\fIuint8_t\fP newCol: set the text columns position 
+.br
+\fIuint8_t\fP newRow: set the text rows position 
+.br
+ 
+.br
+.RE
+.PP
+\fBExample:\fP
+.br
+.PP
+\fBLCD\fP \fBLCD\fP; 
+.br
+ LCD.display(23.34,2,0,0) 
+.br
+ 
+.SS "void LCD::write (intvalue, intmaxNumberOfDigit, uint8_tcol, uint8_trow)"Display integer:
+.br
+ 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIint\fP value: integer which will display on \fBLCD\fP 
+.br
+\fIint\fP maxNumberOfDigit: maximum number of digit which developer expect from 'value' 
+.br
+\fIuint8_t\fP newCol: set the text columns position 
+.br
+\fIuint8_t\fP newRow: set the text rows position 
+.br
+ 
+.br
+.RE
+.PP
+\fBExample:\fP
+.br
+.PP
+\fBLCD\fP \fBLCD\fP; 
+.br
+ LCD.display(234,3,0,0) 
+.br
+ 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Object Oriented Library for ARM 7 from the source code.

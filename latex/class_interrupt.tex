@@ -1,0 +1,72 @@
+\hypertarget{class_interrupt}{
+\section{Interrupt Class Reference}
+\label{class_interrupt}\index{Interrupt@{Interrupt}}
+}
+
+
+class \hyperlink{class_interrupt}{Interrupt}: is a class in charge of \hyperlink{class_interrupt}{Interrupt} in ARM 7 processor, this class provide interrupt for EXTINT0, EXTINT1, EXTINT2, EXTINT3 , Real Time Clock.  
+
+
+
+
+{\ttfamily \#include $<$Interrupt.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_interrupt_a2af932cad2bb12d21bcf6d3c65a7424b}{Interrupt} (void)
+\item 
+\hyperlink{group__group10_ga4fd8be38d92c8b0086b15b3c30ea1868}{Interrupt} (\hyperlink{class_port_pin}{PortPin} pin, int priority, void($\ast$function)(void))
+\item 
+\hyperlink{group__group10_gaa75f0f80c17bbc01b8fba32ab942dfbd}{Interrupt} (\hyperlink{class_real_time_clock}{RealTimeClock} rtc, void($\ast$function)(void))
+\item 
+\hypertarget{group__group10_ga97db0b3a65b1bf59a97d8a0b7867c69c}{
+{\bfseries Interrupt} (\hyperlink{class_a_d_c}{ADC} adcClass, int interruptPriority, void($\ast$function)(void))}
+\label{group__group10_ga97db0b3a65b1bf59a97d8a0b7867c69c}
+
+\item 
+\hypertarget{group__group10_ga60f69c94b5cf138e70712d17e9d5ebe4}{
+void {\bfseries kill} (void)}
+\label{group__group10_ga60f69c94b5cf138e70712d17e9d5ebe4}
+
+\item 
+void \hyperlink{group__group10_gac34af4078409af8f5b612477caa107df}{setInterruptFunctionTo} (void($\ast$newFunction)(void))
+\item 
+void \hyperlink{group__group10_ga4cd6bc79c3fa54378a156117de5f12a9}{setInterruptPriorityTo} (int newPriority)
+\item 
+int \hyperlink{group__group10_ga8d3124b3721e2426dc24fc8416f12e38}{getInterruptPriority} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class \hyperlink{class_interrupt}{Interrupt}: is a class in charge of \hyperlink{class_interrupt}{Interrupt} in ARM 7 processor, this class provide interrupt for EXTINT0, EXTINT1, EXTINT2, EXTINT3 , Real Time Clock. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_fast_interrupt}{FastInterrupt} 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_interrupt_a2af932cad2bb12d21bcf6d3c65a7424b}{
+\index{Interrupt@{Interrupt}!Interrupt@{Interrupt}}
+\index{Interrupt@{Interrupt}!Interrupt@{Interrupt}}
+\subsubsection[{Interrupt}]{\setlength{\rightskip}{0pt plus 5cm}Interrupt::Interrupt (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{class_interrupt_a2af932cad2bb12d21bcf6d3c65a7424b}
+Default constructor: activate EXTINT0 by default and set its priority to 0 \par
+ \par
+
+
+{\bfseries Example:}\par
+
+
+\hyperlink{class_interrupt}{Interrupt} myInterrupt; \par
+ 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+Interrupt.h\item 
+Interrupt.cpp\end{DoxyCompactItemize}

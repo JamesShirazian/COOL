@@ -1,0 +1,204 @@
+.TH "Interrupt" 3 "Sun Jun 26 2011" "Version 1.100.000" "Object Oriented Library for ARM 7" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Interrupt \- 
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBInterrupt\fP"
+.br
+.RI "\fIclass \fBInterrupt\fP: is a class in charge of \fBInterrupt\fP in ARM 7 processor, this class provide interrupt for EXTINT0, EXTINT1, EXTINT2, EXTINT3 , Real Time Clock. \fP"
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBInterrupt::Interrupt\fP (\fBPortPin\fP pin, int priority, void(*function)(void))"
+.br
+.ti -1c
+.RI "\fBInterrupt::Interrupt\fP (\fBRealTimeClock\fP rtc, void(*function)(void))"
+.br
+.ti -1c
+.RI "\fBInterrupt::Interrupt\fP (\fBADC\fP adcClass, int interruptPriority, void(*function)(void))"
+.br
+.ti -1c
+.RI "void \fBInterrupt::kill\fP (void)"
+.br
+.ti -1c
+.RI "void \fBInterrupt::setInterruptFunctionTo\fP (void(*newFunction)(void))"
+.br
+.ti -1c
+.RI "void \fBInterrupt::setInterruptPriorityTo\fP (int newPriority)"
+.br
+.ti -1c
+.RI "int \fBInterrupt::getInterruptPriority\fP (void)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBInterrupt\fP 
+.SH "Function Documentation"
+.PP 
+.SS "int Interrupt::getInterruptPriority (void)"Set new priority to intrrupt which has already defined..
+.br
+ 
+.PP
+\fBReturns:\fP
+.RS 4
+int Priority: return the priority of interrupt.
+.br
+ 
+.br
+.RE
+.PP
+\fBExample:\fP
+.br
+ \fBPortPin\fP myPin(2,10,'INPUT');
+.br
+ \fBInterrupt\fP myInterrupt(myPin,12,do1); 
+.br
+ myInterrupt.setFunctionToInterrupt(do2);
+.br
+ if(myInterrupt.getInterruptPriority()==12) 
+.br
+ { 
+.br
+ myInterrupt.setInterruptPriorityTo(16);
+.br
+ } 
+.br
+ 
+.SS "Interrupt::Interrupt (\fBRealTimeClock\fPrtcClass, void(*)(void)function)"Third constructor: 
+.br
+ 
+.PP
+\fBParameters:\fP
+.RS 4
+\fI\fBRealTimeClock\fP\fP rtc: \fBRealTimeClock\fP object interrupt apply to. 
+.br
+\fIvoid(*function)(void),:\fP function which has to execute once the interrupt has occure. 
+.br
+ 
+.br
+.RE
+.PP
+\fBExample:\fP
+.br
+.PP
+\fBRealTimeClock\fP myRTC(2011,1,12,23,12,34,true);
+.br
+ \fBInterrupt\fP myInterrupt(myRTC,do1); 
+.br
+ 
+.SS "Interrupt::Interrupt (\fBPortPin\fPpinClass, intpriority, void(*)(void)function)"Second constructor: 
+.br
+ 
+.PP
+\fBParameters:\fP
+.RS 4
+\fI\fBPortPin\fP\fP pin: this pin have to set as an 'INPUT' and it must be one of below pins, since ARM7 handel interrupt for below pins: 
+.br
+.IP "\(bu" 2
+Port2 -> Pin10
+.IP "\(bu" 2
+Port2 -> Pin11
+.IP "\(bu" 2
+Port2 -> Pin12
+.IP "\(bu" 2
+Port2 -> Pin13 
+.PP
+.br
+\fIint\fP priority: this value represent the priority of interrupt for that specific pin from 0 to 31.
+.br
+ 
+.br
+\fIvoid(*function)(void),:\fP function which has to execute once the interrupt has occure. 
+.br
+ 
+.br
+.RE
+.PP
+\fBExample:\fP
+.br
+ \fBPortPin\fP myPin(2,10,'INPUT');
+.br
+ \fBInterrupt\fP myInterrupt(myPin,12,do1); 
+.br
+ 
+.SS "void Interrupt::setInterruptFunctionTo (void(*)(void)newFunction)"Set new function to interrupt case
+.br
+ 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvoid(*newFunction)(void),:\fP function which execute once interrupt occure for:
+.br
+.IP "\(bu" 2
+EXTINT0(Port 2 -> Pin ->10)
+.IP "\(bu" 2
+EXTINT0(Port 2 -> Pin ->11)
+.IP "\(bu" 2
+EXTINT0(Port 2 -> Pin ->12)
+.IP "\(bu" 2
+EXTINT0(Port 2 -> Pin ->13)
+.IP "\(bu" 2
+\fBRealTimeClock\fP
+.PP
+.RE
+.PP
+
+.br
+.PP
+\fBExample 1:\fP
+.br
+
+.br
+.PP
+\fBPortPin\fP pin10(2,10,'INPUT'); 
+.br
+ \fBInterrupt\fP myInt(pin10,4,do1); 
+.br
+ myRTC.setInterruptFunctionTo(do2);
+.br
+.PP
+
+.br
+.PP
+\fBExample 2:\fP
+.br
+
+.br
+.PP
+\fBRealTimeClock\fP myRTC(true,do1)
+.br
+ myRTC.setInterruptFunctionTo(do1);
+.br
+ 
+.SS "void Interrupt::setInterruptPriorityTo (intnewPriority)"Set new priority to intrrupt which has already defined..
+.br
+ 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIint\fP newPriority: this value represent the priority of interrupt for that specific pin from 0 to 31.
+.br
+ 
+.br
+.RE
+.PP
+\fBExample:\fP
+.br
+ \fBPortPin\fP myPin(2,10,'INPUT');
+.br
+ \fBInterrupt\fP myInterrupt(myPin,12,do1); 
+.br
+ myInterrupt.setFunctionToInterrupt(do2);
+.br
+ myInterrupt.setInterruptPriorityTo(16);
+.br
+ 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Object Oriented Library for ARM 7 from the source code.

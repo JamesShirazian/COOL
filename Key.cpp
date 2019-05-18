@@ -1,0 +1,33 @@
+#include "Key.h"
+
+
+Key::Key(): ENTER(0x0D),
+		    DELETE(0x7F),	
+			BACKSPACE(0x08),
+			SPACE(0x20),
+			ESCAPE(0x1B),
+			F1(0x3B),
+			F2(0x3C),
+			F3(0x3D),
+			F4(0x3E),
+			F5(0x3F),
+			F6(0x40),
+			F7(0x41),
+			F8(0x42),
+			F9(0x43),
+			F10(0x44),
+			F11(0x85),
+			F12(0x86)
+{
+
+
+
+
+
+
+
+
+
+
+}
+

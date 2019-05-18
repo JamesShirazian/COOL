@@ -1,0 +1,206 @@
+\hypertarget{class_timer_event1}{
+\section{TimerEvent1 Class Reference}
+\label{d8/d74/class_timer_event1}\index{TimerEvent1@{TimerEvent1}}
+}
+
+
+{\ttfamily \#include $<$TimerEvent1.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_timer_event1_a4a3f27d691e0ae3f9367f1d26d0085c7}{TimerEvent1} ()
+\item 
+\hyperlink{class_timer_event1_aa7938b8d73d92e4396462424c9d34070}{TimerEvent1} (float newInterval, int newNumberOfEventOccurrence, bool autoStart, void($\ast$function)(void))
+\item 
+\hyperlink{class_timer_event1_adfe467329a573f4327dbe958f00cb725}{TimerEvent1} (float newInterval, int newNumberOfEventOccurrence, int newPriority, bool autoStart, void($\ast$function)(void))
+\item 
+void \hyperlink{class_timer_event1_abe79255ea3853f0dc834a9590020f78b}{start} (void)
+\item 
+void \hyperlink{class_timer_event1_aed7772681d46c2cf3599d87ba4b3bac2}{stop} (void)
+\item 
+void \hyperlink{class_timer_event1_ae0feef0a092431705c50365f102370ff}{setTimerIntervalTo} (float newInterval)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_timer_event1_a4a3f27d691e0ae3f9367f1d26d0085c7}{
+\index{TimerEvent1@{TimerEvent1}!TimerEvent1@{TimerEvent1}}
+\index{TimerEvent1@{TimerEvent1}!TimerEvent1@{TimerEvent1}}
+\subsubsection[{TimerEvent1}]{\setlength{\rightskip}{0pt plus 5cm}TimerEvent1::TimerEvent1 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{d8/d74/class_timer_event1_a4a3f27d691e0ae3f9367f1d26d0085c7}
+\hypertarget{class_timer_event1_aa7938b8d73d92e4396462424c9d34070}{
+\index{TimerEvent1@{TimerEvent1}!TimerEvent1@{TimerEvent1}}
+\index{TimerEvent1@{TimerEvent1}!TimerEvent1@{TimerEvent1}}
+\subsubsection[{TimerEvent1}]{\setlength{\rightskip}{0pt plus 5cm}TimerEvent1::TimerEvent1 (
+\begin{DoxyParamCaption}
+\item[{float}]{newInterval, }
+\item[{int}]{newNumberOfEventOccurrence, }
+\item[{bool}]{autoStart, }
+\item[{void($\ast$)(void)}]{function}
+\end{DoxyParamCaption}
+)}}
+\label{d8/d74/class_timer_event1_aa7938b8d73d92e4396462424c9d34070}
+\par
+This constructor initlize timer 1 of ARM 7 to create inttrupt and execute the given task.\par
+ 
+\begin{DoxyParams}{Parameters}
+{\em float} & newInterval: Timer interval \par
+ \\
+\hline
+{\em int} & newNumberOfEventOccurrence: number of occurance of this event\par
+
+\begin{DoxyItemize}
+\item If its values set to \char`\"{}0\char`\"{}, that event execute as long as program is running. 
+\end{DoxyItemize}\\
+\hline
+{\em bool} & autoStart: start the timer automatically if it is true and vice versa. \par
+ \\
+\hline
+{\em void($\ast$function)(void),:} & this reprecent the function which this timer has to execute preidicualy. \par
+ \par
+Example:\par
+\par
+ int a=0; \par
+ \hyperlink{class_timer_event1}{TimerEvent1} TE1(1,0,true,do1);\par
+ void \hyperlink{main_8cpp_a6f6b769350d62a237ee918e52d844b28}{do1(void)}\par
+ \{ \par
+ a++; \par
+ LCD.display(a,2,0,0);\par
+ \}\par
+ \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_timer_event1_adfe467329a573f4327dbe958f00cb725}{
+\index{TimerEvent1@{TimerEvent1}!TimerEvent1@{TimerEvent1}}
+\index{TimerEvent1@{TimerEvent1}!TimerEvent1@{TimerEvent1}}
+\subsubsection[{TimerEvent1}]{\setlength{\rightskip}{0pt plus 5cm}TimerEvent1::TimerEvent1 (
+\begin{DoxyParamCaption}
+\item[{float}]{newInterval, }
+\item[{int}]{newNumberOfEventOccurrence, }
+\item[{int}]{newPriority, }
+\item[{bool}]{autoStart, }
+\item[{void($\ast$)(void)}]{function}
+\end{DoxyParamCaption}
+)}}
+\label{d8/d74/class_timer_event1_adfe467329a573f4327dbe958f00cb725}
+\par
+This constructor initlize timer 0 of ARM 7 to create inttrupt and execute the given task.\par
+ 
+\begin{DoxyParams}{Parameters}
+{\em float} & newInterval: Timer interval \par
+ \\
+\hline
+{\em int} & newNumberOfEventOccurrence: number of occurance of this event\par
+
+\begin{DoxyItemize}
+\item If its values set to \char`\"{}0\char`\"{}, that event execute as long as program is running. 
+\end{DoxyItemize}\\
+\hline
+{\em int} & newPriority: set the priority of this event.\par
+ \\
+\hline
+{\em bool} & autoStart: start the timer automatically if it is true and vice versa. \par
+ \\
+\hline
+{\em void($\ast$function)(void),:} & this reprecent the function which this timer has to execute preidicualy. \par
+ \par
+Example:\par
+\par
+ int a=0; \par
+ \hyperlink{class_timer_event1}{TimerEvent1} TE1(1,0,6,true,do1);\par
+ void \hyperlink{main_8cpp_a6f6b769350d62a237ee918e52d844b28}{do1(void)}\par
+ \{ \par
+ a++; \par
+ LCD.display(a,2,0,0);\par
+ \}\par
+ \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_timer_event1_ae0feef0a092431705c50365f102370ff}{
+\index{TimerEvent1@{TimerEvent1}!setTimerIntervalTo@{setTimerIntervalTo}}
+\index{setTimerIntervalTo@{setTimerIntervalTo}!TimerEvent1@{TimerEvent1}}
+\subsubsection[{setTimerIntervalTo}]{\setlength{\rightskip}{0pt plus 5cm}void TimerEvent1::setTimerIntervalTo (
+\begin{DoxyParamCaption}
+\item[{float}]{newInterval}
+\end{DoxyParamCaption}
+)}}
+\label{d8/d74/class_timer_event1_ae0feef0a092431705c50365f102370ff}
+\par
+Adjust \hyperlink{class_timer_event1}{TimerEvent1} interval if needed. it keeps the \hyperlink{class_timer_event0}{TimerEvent0} status if it was on start mode it will be on start mode, same rule apply to stop mode.\par
+ 
+\begin{DoxyParams}{Parameters}
+{\em float} & newInterval: new interval of \hyperlink{class_timer_event1}{TimerEvent1} \par
+Example:\par
+\par
+ int a=0; \par
+ \hyperlink{class_timer_event1}{TimerEvent1} TE1(1,0,true,do1);\par
+ .... \par
+ void \hyperlink{main_8cpp_a6f6b769350d62a237ee918e52d844b28}{do1(void)}\par
+ \{ \par
+ a++; \par
+ LCD.display(a,2,0,0);\par
+ TE1.setTimerIntervalTo(10); \par
+ \}\par
+ \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_timer_event1_abe79255ea3853f0dc834a9590020f78b}{
+\index{TimerEvent1@{TimerEvent1}!start@{start}}
+\index{start@{start}!TimerEvent1@{TimerEvent1}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}void TimerEvent1::start (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{d8/d74/class_timer_event1_abe79255ea3853f0dc834a9590020f78b}
+\par
+Start \hyperlink{class_timer_event1}{TimerEvent1}.\par
+ \par
+Example:\par
+\par
+ int a=0; \par
+ \hyperlink{class_timer_event1}{TimerEvent1} TE1(1,0,false,do1);\par
+ TE0.start(); \par
+ .... \par
+ void \hyperlink{main_8cpp_a6f6b769350d62a237ee918e52d844b28}{do1(void)}\par
+ \{ \par
+ a++; \par
+ LCD.display(a,2,0,0);\par
+ \}\par
+ \hypertarget{class_timer_event1_aed7772681d46c2cf3599d87ba4b3bac2}{
+\index{TimerEvent1@{TimerEvent1}!stop@{stop}}
+\index{stop@{stop}!TimerEvent1@{TimerEvent1}}
+\subsubsection[{stop}]{\setlength{\rightskip}{0pt plus 5cm}void TimerEvent1::stop (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{d8/d74/class_timer_event1_aed7772681d46c2cf3599d87ba4b3bac2}
+\par
+Stop \hyperlink{class_timer_event1}{TimerEvent1}.\par
+ \par
+Example:\par
+\par
+ int a=0; \par
+ \hyperlink{class_timer_event1}{TimerEvent1} TE1(1,0,true,do1);\par
+ .... \par
+ void \hyperlink{main_8cpp_a6f6b769350d62a237ee918e52d844b28}{do1(void)}\par
+ \{ \par
+ a++; \par
+ LCD.display(a,2,0,0);\par
+ TE1.stop(); \par
+ \}\par
+ 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_timer_event1_8h}{TimerEvent1.h}\item 
+\hyperlink{_timer_event1_8cpp}{TimerEvent1.cpp}\end{DoxyCompactItemize}

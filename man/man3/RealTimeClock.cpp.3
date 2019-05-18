@@ -1,0 +1,50 @@
+.TH "RealTimeClock.cpp" 3 "Sun Jun 19 2011" "Object Oriented Library for ARM 7" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RealTimeClock.cpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'RealTimeClock.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBRTCisr\fP (void) __irq"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "char \fBcurrentTime\fP [8]"
+.br
+.ti -1c
+.RI "char \fBcurrentDate\fP [10]"
+.br
+.ti -1c
+.RI "void(* \fBrtcFunction\fP )(void)"
+.br
+.ti -1c
+.RI "\fBLCD\fP \fBfo\fP"
+.br
+.ti -1c
+.RI "int \fBgh\fP = 0"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void RTCisr (void)"
+.SH "Variable Documentation"
+.PP 
+.SS "char \fBcurrentDate\fP[10]"
+.SS "char \fBcurrentTime\fP[8]"
+.SS "\fBLCD\fP \fBfo\fP"
+.SS "int \fBgh\fP = 0"
+.SS "void(* \fBrtcFunction\fP)(void)"
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Object Oriented Library for ARM 7 from the source code.

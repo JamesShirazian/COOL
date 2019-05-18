@@ -1,0 +1,193 @@
+.TH "Timer0" 3 "Wed Jun 15 2011" "Object Oriented Library for ARM 7" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Timer0 \- 
+.PP
+class \fBTimer0\fP: is a class in charge of timer0 of ARM 7 processor  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Timer0.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTimer0\fP ()"
+.br
+.ti -1c
+.RI "\fBTimer0\fP (float newInterval, bool autoStart, void(*function)(void))"
+.br
+.ti -1c
+.RI "void \fBstart\fP (void)"
+.br
+.ti -1c
+.RI "void \fBstop\fP (void)"
+.br
+.ti -1c
+.RI "void \fBrun\fP (void)"
+.br
+.ti -1c
+.RI "void \fBwait\fP (float newInterval)"
+.br
+.ti -1c
+.RI "void \fBsetTimerIntervalTo\fP (float newInterval)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+class \fBTimer0\fP: is a class in charge of timer0 of ARM 7 processor 
+
+\fBSee also:\fP
+.RS 4
+Timer1 
+.PP
+Timer2 
+.PP
+Timer3 
+.RE
+.PP
+
+.PP
+Definition at line 15 of file Timer0.h.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Timer0::Timer0 ()"Default constructor
+.br
+ \fB\fBTimer0()\fP constructor use to generate delay.\fP 
+.PP
+Definition at line 9 of file Timer0.cpp.
+.SS "Timer0::Timer0 (floatnewInterval, boolautoStart, void(*)(void)function)"Second constructor
+.br
+ 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfloat\fP newInterval: set the timer interval from 0.0 to infinity 
+.br
+\fIbool\fP autoStart:
+.IP "\(bu" 2
+True: activate the timer and start it at same time
+.IP "\(bu" 2
+False: activate the timer 
+.PP
+.br
+\fIvoid\fP *fucntion(void): function which run on base of timer interval 
+.RE
+.PP
+
+.PP
+Definition at line 21 of file Timer0.cpp.
+.SH "Member Function Documentation"
+.PP 
+.SS "void Timer0::run (void)"This function must be use with second constructor. 
+.br
+
+.br
+ \fB 'Timer0::Timer0(float newInterval,bool autoStart,void(*function)(void))' \fP 
+.br
+ 
+.br
+ this fucntion excute the function on base of assgined interval if this method use in 'while(1)' it do the same but it will repeat its functionalty every interval second. 
+.PP
+Definition at line 73 of file Timer0.cpp.
+.SS "void Timer0::setTimerIntervalTo (floatnewInterval)"This method set the timer0 interval value, if needed 
+.br
+ 
+.PP
+\fBParameters:\fP
+.RS 4
+\fI\fP float interval: set timer0 interval to create delay for interval second, from 0.0 to infinity
+.RE
+.PP
+\fB
+.br
+Example:
+.br
+\fB
+.br
+\fP\fP
+.PP
+\fB\fB \fBTimer0\fP TM0(2,true,do);
+.br
+ TM0.run(); 
+.br
+ \fBLCD.display\fP('Hi after 2.54 second',0,0);
+.br
+ TM0.setTimerIntervalTo(5);
+.br
+ \fBLCD.display\fP('Hi after 5 second',0,0);
+.br
+ \fP\fP
+.PP
+Definition at line 126 of file Timer0.cpp.
+.SS "void Timer0::start (void)"Start timer0 
+.br
+ \fB
+.br
+Example:
+.br
+\fB
+.br
+\fP\fP
+.PP
+\fB\fB \fBTimer0\fP TM0(2,false,runMe); \fBTimer0\fP circuit turn on but it is on stop mode 
+.br
+ TM0.start(;) start Timer 0 
+.br
+ \fBLCD.display\fP('Hi after 2.54 second',0,0);
+.br
+ \fP\fP
+.PP
+Definition at line 46 of file Timer0.cpp.
+.SS "void Timer0::stop (void)"Stop timer0 
+.br
+ \fB
+.br
+Example:
+.br
+\fB
+.br
+\fP\fP
+.PP
+\fB\fB \fBTimer0\fP TM0(2,true,runMe); \fBTimer0\fP is on auto start mode
+.br
+ \fBLCD.display\fP('Hi after 2.54 second',0,0);
+.br
+ TM0.stop(); Stop the timer
+.br
+ \fP\fP
+.PP
+Definition at line 60 of file Timer0.cpp.
+.SS "void Timer0::wait (floatnewInterval)"This method create delay and it use with default constructor: 
+.br
+ 
+.PP
+\fBParameters:\fP
+.RS 4
+\fI\fP float interval: set timer0 interval to create delay for interval second, from 0.0 to infinity
+.RE
+.PP
+\fB
+.br
+Example:
+.br
+\fB
+.br
+\fP\fP
+.PP
+\fB\fB \fBTimer0\fP TM0;
+.br
+ TM0.wait(2.54);  wait for 2.54 and then go to the next line 
+.br
+ \fBLCD.display\fP('Hi after 2.54 second',0,0);
+.br
+ \fP\fP
+.PP
+Definition at line 95 of file Timer0.cpp.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Object Oriented Library for ARM 7 from the source code.

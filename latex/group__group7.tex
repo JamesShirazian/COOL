@@ -1,0 +1,147 @@
+\hypertarget{group__group7}{
+\section{Port(GPIO) -\/ Individual pin of ports}
+\label{group__group7}\index{Port(GPIO) -\/ Individual pin of ports@{Port(GPIO) -\/ Individual pin of ports}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_port_pin}{PortPin}
+\begin{DoxyCompactList}\small\item\em class \hyperlink{class_real_time_clock}{RealTimeClock}: is a class in charge of GPIO (Port 0,1,2,3,4) which is connected to ARM 7 processor.
+
+/sa \hyperlink{class_interrupt}{Interrupt} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__group7_gae4b6c1ca5935d5e3d68253490cae00a8}{PortPin::PortPin} (uint8\_\-t newPortID, int newPinID, std::string IO, std::string initState)
+\item 
+void \hyperlink{group__group7_ga7dfeaef858c6fadac016106aac028278}{PortPin::on} (void)
+\item 
+void \hyperlink{group__group7_ga779ca8e89b76bff26659244a4e4888a7}{PortPin::off} (void)
+\item 
+bool \hyperlink{group__group7_gabc0f706193ead5769118388757374e85}{PortPin::getPinValue} (void)
+\item 
+\hypertarget{group__group7_ga965a0cef4266fee8909e7b5998b1bae8}{
+int {\bfseries PortPin::getPinNumber} (void)}
+\label{group__group7_ga965a0cef4266fee8909e7b5998b1bae8}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Port(GPIO) -\/ Individual pin of ports 
+
+\subsection{Function Documentation}
+\hypertarget{group__group7_gabc0f706193ead5769118388757374e85}{
+\index{Port(GPIO) -\/ Individual pin of ports@{Port(GPIO) -\/ Individual pin of ports}!getPinValue@{getPinValue}}
+\index{getPinValue@{getPinValue}!Port(GPIO) - Individual pin of ports@{Port(GPIO) -\/ Individual pin of ports}}
+\subsubsection[{getPinValue}]{\setlength{\rightskip}{0pt plus 5cm}bool PortPin::getPinValue (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{group__group7_gabc0f706193ead5769118388757374e85}
+return the value of pin.\par
+ 
+\begin{DoxyParams}{Parameters}
+{\em bool} & bitStatus:
+\begin{DoxyItemize}
+\item True: bit value is '1'
+\item False: bit value is '0' \par
+
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+{\bfseries Example:}\par
+
+
+\hyperlink{class_port_pin}{PortPin} pin10(2,10,\char`\"{}INPUT\char`\"{}); \par
+ \hyperlink{class_port_pin}{PortPin} pin0(2,0,\char`\"{}OUTPUT\char`\"{},\char`\"{}ON\char`\"{}); \par
+ \hyperlink{class_port_pin}{PortPin} pin1(2,1,\char`\"{}OUTPUT\char`\"{},\char`\"{}OFF\char`\"{}); \par
+ if(pin10.getPinValue() )\par
+ \{ \par
+ pin1.on(); \par
+ \} \par
+ \hypertarget{group__group7_ga779ca8e89b76bff26659244a4e4888a7}{
+\index{Port(GPIO) -\/ Individual pin of ports@{Port(GPIO) -\/ Individual pin of ports}!off@{off}}
+\index{off@{off}!Port(GPIO) - Individual pin of ports@{Port(GPIO) -\/ Individual pin of ports}}
+\subsubsection[{off}]{\setlength{\rightskip}{0pt plus 5cm}void PortPin::off (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{group__group7_ga779ca8e89b76bff26659244a4e4888a7}
+Set the pin value to 0.\par
+ \par
+
+
+{\bfseries Example:}\par
+
+
+\hyperlink{class_port_pin}{PortPin} pin10(2,10,\char`\"{}INPUT\char`\"{}); \par
+ \hyperlink{class_port_pin}{PortPin} pin0(2,0,\char`\"{}OUTPUT\char`\"{},\char`\"{}ON\char`\"{}); \par
+ \hyperlink{class_port_pin}{PortPin} pin1(2,1,\char`\"{}OUTPUT\char`\"{},\char`\"{}OFF\char`\"{}); \par
+ pino.off(); \par
+ \hypertarget{group__group7_ga7dfeaef858c6fadac016106aac028278}{
+\index{Port(GPIO) -\/ Individual pin of ports@{Port(GPIO) -\/ Individual pin of ports}!on@{on}}
+\index{on@{on}!Port(GPIO) - Individual pin of ports@{Port(GPIO) -\/ Individual pin of ports}}
+\subsubsection[{on}]{\setlength{\rightskip}{0pt plus 5cm}void PortPin::on (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{group__group7_ga7dfeaef858c6fadac016106aac028278}
+Set the pin value to 1.\par
+ \par
+
+
+{\bfseries Example:}\par
+
+
+\hyperlink{class_port_pin}{PortPin} pin10(2,10,\char`\"{}INPUT\char`\"{}); \par
+ \hyperlink{class_port_pin}{PortPin} pin0(2,0,\char`\"{}OUTPUT\char`\"{},\char`\"{}ON\char`\"{}); \par
+ \hyperlink{class_port_pin}{PortPin} pin1(2,1,\char`\"{}OUTPUT\char`\"{},\char`\"{}OFF\char`\"{}); \par
+ pin1.on(); \par
+ \hypertarget{group__group7_gae4b6c1ca5935d5e3d68253490cae00a8}{
+\index{Port(GPIO) -\/ Individual pin of ports@{Port(GPIO) -\/ Individual pin of ports}!PortPin@{PortPin}}
+\index{PortPin@{PortPin}!Port(GPIO) - Individual pin of ports@{Port(GPIO) -\/ Individual pin of ports}}
+\subsubsection[{PortPin}]{\setlength{\rightskip}{0pt plus 5cm}PortPin::PortPin (
+\begin{DoxyParamCaption}
+\item[{uint8\_\-t}]{newPortID, }
+\item[{int}]{newPinID, }
+\item[{std::string}]{IO, }
+\item[{std::string}]{initState}
+\end{DoxyParamCaption}
+)}}
+\label{group__group7_gae4b6c1ca5935d5e3d68253490cae00a8}
+Second constructor: Initialize a PIN of any five availabel Port.\par
+ 
+\begin{DoxyParams}{Parameters}
+{\em uint8\_\-t} & newPortID: Port number \par
+ \\
+\hline
+{\em int} & newPinID: Pin number \par
+ \\
+\hline
+{\em std::string} & IO: set the IO status of pin \par
+
+\begin{DoxyItemize}
+\item INPUT : set the pin as an input
+\item OUTPUT : set the pin as an output 
+\end{DoxyItemize}\\
+\hline
+{\em std::string} & initState: set the initialize value of pin \par
+
+\begin{DoxyItemize}
+\item ON : set pin to '1'
+\item OFF: set pin to '0' \par
+
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+{\bfseries Example:}\par
+
+
+\hyperlink{class_port_pin}{PortPin} pin10(2,10,\char`\"{}INPUT\char`\"{}); \par
+ \hyperlink{class_port_pin}{PortPin} pin0(2,0,\char`\"{}OUTPUT\char`\"{},\char`\"{}ON\char`\"{}); \par
+ \hyperlink{class_port_pin}{PortPin} pin1(2,1,\char`\"{}OUTPUT\char`\"{},\char`\"{}OFF\char`\"{}); \par
+ 

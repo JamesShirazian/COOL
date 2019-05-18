@@ -1,0 +1,1 @@
+--cpp  --thumb -c --cpu ARM7TDMI -D__RTX -g -O2 --apcs=interwork -I..\Library -I "C:\Keil\ARM\INC" -I "C:\Keil\ARM\INC\Philips" -o ".\Obj\timerevent0.o" --omf_browse ".\Obj\timerevent0.crf" --depend ".\Obj\timerevent0.d" "TimerEvent0.cpp"

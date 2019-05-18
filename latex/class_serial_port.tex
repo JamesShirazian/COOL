@@ -1,0 +1,69 @@
+\hypertarget{class_serial_port}{
+\section{SerialPort Class Reference}
+\label{class_serial_port}\index{SerialPort@{SerialPort}}
+}
+
+
+class \hyperlink{class_serial_port}{SerialPort}: is a class in charge of serial port which is connected to ARM 7 processor.  
+
+
+
+
+{\ttfamily \#include $<$SerialPort.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_serial_port_ada293366f077e225baa5290634c60d88}{SerialPort} (void)
+\item 
+\hyperlink{group__group8_ga519a9b40483d14c104f71ca4880cc1a1}{SerialPort} (uint8\_\-t serialPortNo)
+\item 
+void \hyperlink{group__group8_ga6d80380bb3415a1ee4355ffcec98773c}{open} (void)
+\item 
+void \hyperlink{group__group8_gaabba6d6f25800b197cee28ed8e605f2a}{close} (void)
+\item 
+char \hyperlink{group__group8_gaec0ee477ce1fbd16ce862abd9116e2ad}{readCharachter} (void)
+\item 
+std::string \hyperlink{group__group8_ga46bc7a8f70d57e8f59729432b0c81d3e}{readLine} (char endPoint, bool displayCharachterOnScreenWhileUserIsPressingKeys)
+\item 
+\hypertarget{group__group8_gafed1850129619b1d56beb8ea008599de}{
+void {\bfseries write} (charVector charValue, bool newLine)}
+\label{group__group8_gafed1850129619b1d56beb8ea008599de}
+
+\item 
+void \hyperlink{group__group8_gae48d12719fd7e1e2b0e35f127a5006bf}{write} (char $\ast$charValue, bool newLine)
+\item 
+void \hyperlink{group__group8_ga93f70c8ee96c97eee2d31df578bdf51e}{write} (std::string stringValue, bool newLine)
+\item 
+void \hyperlink{group__group8_gad981db5bddd0681367480c272c87fb38}{write} (int integerValue, bool newLine)
+\item 
+void \hyperlink{group__group8_gab50edcebab73bfe52b729f677dd61636}{write} (float floatValue, int decimalPoint, bool newLine)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class \hyperlink{class_serial_port}{SerialPort}: is a class in charge of serial port which is connected to ARM 7 processor. 
+
+
+\begin{DoxyItemize}
+\item UART 0
+\item UART 1 
+\end{DoxyItemize}
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_serial_port_ada293366f077e225baa5290634c60d88}{
+\index{SerialPort@{SerialPort}!SerialPort@{SerialPort}}
+\index{SerialPort@{SerialPort}!SerialPort@{SerialPort}}
+\subsubsection[{SerialPort}]{\setlength{\rightskip}{0pt plus 5cm}SerialPort::SerialPort (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{class_serial_port_ada293366f077e225baa5290634c60d88}
+Default constructor: Initialize serial port (UART0 by default).\par
+ 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+SerialPort.h\item 
+SerialPort.cpp\end{DoxyCompactItemize}

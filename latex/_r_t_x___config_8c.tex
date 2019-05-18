@@ -1,0 +1,280 @@
+\hypertarget{_r_t_x___config_8c}{
+\section{RTX\_\-Config.c File Reference}
+\label{_r_t_x___config_8c}\index{RTX\_\-Config.c@{RTX\_\-Config.c}}
+}
+{\ttfamily \#include $<$RTL.h$>$}\par
+{\ttfamily \#include $<$LPC23xx.H$>$}\par
+{\ttfamily \#include $<$RTX\_\-lib.c$>$}\par
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_r_t_x___config_8c_a309353d912327b7f4a2300711ee1b349}{OS\_\-TASKCNT}~6
+\item 
+\#define \hyperlink{_r_t_x___config_8c_a7cfcbf2c4f9d0a63424a2a48592955b1}{OS\_\-PRIVCNT}~0
+\item 
+\#define \hyperlink{_r_t_x___config_8c_a16495c133349f3e7c27ac933857c1a8c}{OS\_\-STKSIZE}~200
+\item 
+\#define \hyperlink{_r_t_x___config_8c_a6ef9e00396f881f0fa9ac877150e5962}{OS\_\-STKCHECK}~1
+\item 
+\#define \hyperlink{_r_t_x___config_8c_a07dff7104a9c96d8badd254e294fe566}{OS\_\-TIMERCNT}~0
+\item 
+\#define \hyperlink{_r_t_x___config_8c_a91d395639a45fe25a8b3d5f4cbe4bb32}{OS\_\-TIMER}~0
+\item 
+\#define \hyperlink{_r_t_x___config_8c_adff23afdf544a322a38314870f8848b9}{OS\_\-CLOCK}~12000000
+\item 
+\#define \hyperlink{_r_t_x___config_8c_ab6b10bd6d60e95ab28c775757f6bfbcc}{OS\_\-TICK}~10000
+\item 
+\#define \hyperlink{_r_t_x___config_8c_ae34f3058383d9fa9280bbf595618ab0a}{OS\_\-ROBIN}~1
+\item 
+\#define \hyperlink{_r_t_x___config_8c_ad89fdd7232cfba74d400080b6bcc0012}{OS\_\-ROBINTOUT}~1000
+\item 
+\#define \hyperlink{_r_t_x___config_8c_ad11cf133eea28b601f9a63cd9af9b786}{OS\_\-MUTEXCNT}~8
+\item 
+\#define \hyperlink{_r_t_x___config_8c_a9fb2928b8e0ffa5826c9ffab932f06a3}{OS\_\-TID\_\-}~4
+\item 
+\#define \hyperlink{_r_t_x___config_8c_a358e37fc6189341e23ed4c50287457bf}{PCON\_\-VAL}~1
+\item 
+\#define \hyperlink{_r_t_x___config_8c_ae47f784cbfa54dfaab6691d412301382}{TIMx}(reg)~T0\#\#reg
+\item 
+\#define \hyperlink{_r_t_x___config_8c_afd2b25b9eb72bf7a6fb6523fa0057693}{VICVectAddrX}~VICVectAddr4
+\item 
+\#define \hyperlink{_r_t_x___config_8c_af9bb32a5c2d30a42fb5263dc7430846e}{OS\_\-TIM\_\-}~(1 $<$$<$ OS\_\-TID\_\-)
+\item 
+\#define \hyperlink{_r_t_x___config_8c_a9d55a070ddb219165bd4287f08318d51}{OS\_\-TRV}~((U32)(((double)OS\_\-CLOCK$\ast$(double)OS\_\-TICK)/1E6)-\/1)
+\item 
+\#define \hyperlink{_r_t_x___config_8c_a0d1b04442e20c0058c954657bfec44aa}{OS\_\-TVAL}~TIMx(TC)
+\item 
+\#define \hyperlink{_r_t_x___config_8c_a4e4770394926847ddd9706b47aa64524}{OS\_\-TOVF}~(TIMx(IR) \& 1)
+\item 
+\#define \hyperlink{_r_t_x___config_8c_ae4c73b0dae571d805f3f46cd1678b0e3}{OS\_\-TFIRQ}()~VICSoftInt    = OS\_\-TIM\_\-;
+\item 
+\#define \hyperlink{_r_t_x___config_8c_a8fd3ef6e319280c5b74c38ac572dbb80}{OS\_\-TIACK}()
+\item 
+\#define \hyperlink{_r_t_x___config_8c_aafd68d8265da6e9873e93c15aab3fa3f}{OS\_\-TINIT}()
+\item 
+\#define \hyperlink{_r_t_x___config_8c_ab947cea53d042d0650678cff962a0749}{OS\_\-IACK}()~VICVectAddr   = 0;
+\item 
+\#define \hyperlink{_r_t_x___config_8c_a12b3b3b9c6d7042cdf2deb8e55a17467}{OS\_\-LOCK}()~VICIntEnClr   = OS\_\-TIM\_\-;
+\item 
+\#define \hyperlink{_r_t_x___config_8c_a5ecbba8ab5099a82f769488601b5bc36}{OS\_\-UNLOCK}()~VICIntEnable  = OS\_\-TIM\_\-;
+\item 
+\#define \hyperlink{_r_t_x___config_8c_ad6081296c580f48dfe477cef2953f630}{\_\-idle\_\-}()~PCON $|$= 1;
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\_\-\_\-task void \hyperlink{_r_t_x___config_8c_a0a232c38a5928c972907c1260c7e43b8}{os\_\-idle\_\-demon} (void)
+\item 
+void \hyperlink{_r_t_x___config_8c_a59a26ad5f510b1de51e0ce88f2ed8ebd}{os\_\-tmr\_\-call} (U16 info)
+\item 
+void \hyperlink{_r_t_x___config_8c_a0b039b4e980cb2b243bd736c72380368}{os\_\-stk\_\-overflow} (OS\_\-TID task\_\-id)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_r_t_x___config_8c_ad6081296c580f48dfe477cef2953f630}{
+\index{RTX\_\-Config.c@{RTX\_\-Config.c}!\_\-idle\_\-@{\_\-idle\_\-}}
+\index{\_\-idle\_\-@{\_\-idle\_\-}!RTX_Config.c@{RTX\_\-Config.c}}
+\subsubsection[{\_\-idle\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-idle\_\-(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~PCON $|$= 1;}}
+\label{_r_t_x___config_8c_ad6081296c580f48dfe477cef2953f630}
+\hypertarget{_r_t_x___config_8c_adff23afdf544a322a38314870f8848b9}{
+\index{RTX\_\-Config.c@{RTX\_\-Config.c}!OS\_\-CLOCK@{OS\_\-CLOCK}}
+\index{OS\_\-CLOCK@{OS\_\-CLOCK}!RTX_Config.c@{RTX\_\-Config.c}}
+\subsubsection[{OS\_\-CLOCK}]{\setlength{\rightskip}{0pt plus 5cm}\#define OS\_\-CLOCK~12000000}}
+\label{_r_t_x___config_8c_adff23afdf544a322a38314870f8848b9}
+\hypertarget{_r_t_x___config_8c_ab947cea53d042d0650678cff962a0749}{
+\index{RTX\_\-Config.c@{RTX\_\-Config.c}!OS\_\-IACK@{OS\_\-IACK}}
+\index{OS\_\-IACK@{OS\_\-IACK}!RTX_Config.c@{RTX\_\-Config.c}}
+\subsubsection[{OS\_\-IACK}]{\setlength{\rightskip}{0pt plus 5cm}\#define OS\_\-IACK(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~VICVectAddr   = 0;}}
+\label{_r_t_x___config_8c_ab947cea53d042d0650678cff962a0749}
+\hypertarget{_r_t_x___config_8c_a12b3b3b9c6d7042cdf2deb8e55a17467}{
+\index{RTX\_\-Config.c@{RTX\_\-Config.c}!OS\_\-LOCK@{OS\_\-LOCK}}
+\index{OS\_\-LOCK@{OS\_\-LOCK}!RTX_Config.c@{RTX\_\-Config.c}}
+\subsubsection[{OS\_\-LOCK}]{\setlength{\rightskip}{0pt plus 5cm}\#define OS\_\-LOCK(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~VICIntEnClr   = OS\_\-TIM\_\-;}}
+\label{_r_t_x___config_8c_a12b3b3b9c6d7042cdf2deb8e55a17467}
+\hypertarget{_r_t_x___config_8c_ad11cf133eea28b601f9a63cd9af9b786}{
+\index{RTX\_\-Config.c@{RTX\_\-Config.c}!OS\_\-MUTEXCNT@{OS\_\-MUTEXCNT}}
+\index{OS\_\-MUTEXCNT@{OS\_\-MUTEXCNT}!RTX_Config.c@{RTX\_\-Config.c}}
+\subsubsection[{OS\_\-MUTEXCNT}]{\setlength{\rightskip}{0pt plus 5cm}\#define OS\_\-MUTEXCNT~8}}
+\label{_r_t_x___config_8c_ad11cf133eea28b601f9a63cd9af9b786}
+\hypertarget{_r_t_x___config_8c_a7cfcbf2c4f9d0a63424a2a48592955b1}{
+\index{RTX\_\-Config.c@{RTX\_\-Config.c}!OS\_\-PRIVCNT@{OS\_\-PRIVCNT}}
+\index{OS\_\-PRIVCNT@{OS\_\-PRIVCNT}!RTX_Config.c@{RTX\_\-Config.c}}
+\subsubsection[{OS\_\-PRIVCNT}]{\setlength{\rightskip}{0pt plus 5cm}\#define OS\_\-PRIVCNT~0}}
+\label{_r_t_x___config_8c_a7cfcbf2c4f9d0a63424a2a48592955b1}
+\hypertarget{_r_t_x___config_8c_ae34f3058383d9fa9280bbf595618ab0a}{
+\index{RTX\_\-Config.c@{RTX\_\-Config.c}!OS\_\-ROBIN@{OS\_\-ROBIN}}
+\index{OS\_\-ROBIN@{OS\_\-ROBIN}!RTX_Config.c@{RTX\_\-Config.c}}
+\subsubsection[{OS\_\-ROBIN}]{\setlength{\rightskip}{0pt plus 5cm}\#define OS\_\-ROBIN~1}}
+\label{_r_t_x___config_8c_ae34f3058383d9fa9280bbf595618ab0a}
+\hypertarget{_r_t_x___config_8c_ad89fdd7232cfba74d400080b6bcc0012}{
+\index{RTX\_\-Config.c@{RTX\_\-Config.c}!OS\_\-ROBINTOUT@{OS\_\-ROBINTOUT}}
+\index{OS\_\-ROBINTOUT@{OS\_\-ROBINTOUT}!RTX_Config.c@{RTX\_\-Config.c}}
+\subsubsection[{OS\_\-ROBINTOUT}]{\setlength{\rightskip}{0pt plus 5cm}\#define OS\_\-ROBINTOUT~1000}}
+\label{_r_t_x___config_8c_ad89fdd7232cfba74d400080b6bcc0012}
+\hypertarget{_r_t_x___config_8c_a6ef9e00396f881f0fa9ac877150e5962}{
+\index{RTX\_\-Config.c@{RTX\_\-Config.c}!OS\_\-STKCHECK@{OS\_\-STKCHECK}}
+\index{OS\_\-STKCHECK@{OS\_\-STKCHECK}!RTX_Config.c@{RTX\_\-Config.c}}
+\subsubsection[{OS\_\-STKCHECK}]{\setlength{\rightskip}{0pt plus 5cm}\#define OS\_\-STKCHECK~1}}
+\label{_r_t_x___config_8c_a6ef9e00396f881f0fa9ac877150e5962}
+\hypertarget{_r_t_x___config_8c_a16495c133349f3e7c27ac933857c1a8c}{
+\index{RTX\_\-Config.c@{RTX\_\-Config.c}!OS\_\-STKSIZE@{OS\_\-STKSIZE}}
+\index{OS\_\-STKSIZE@{OS\_\-STKSIZE}!RTX_Config.c@{RTX\_\-Config.c}}
+\subsubsection[{OS\_\-STKSIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define OS\_\-STKSIZE~200}}
+\label{_r_t_x___config_8c_a16495c133349f3e7c27ac933857c1a8c}
+\hypertarget{_r_t_x___config_8c_a309353d912327b7f4a2300711ee1b349}{
+\index{RTX\_\-Config.c@{RTX\_\-Config.c}!OS\_\-TASKCNT@{OS\_\-TASKCNT}}
+\index{OS\_\-TASKCNT@{OS\_\-TASKCNT}!RTX_Config.c@{RTX\_\-Config.c}}
+\subsubsection[{OS\_\-TASKCNT}]{\setlength{\rightskip}{0pt plus 5cm}\#define OS\_\-TASKCNT~6}}
+\label{_r_t_x___config_8c_a309353d912327b7f4a2300711ee1b349}
+\hypertarget{_r_t_x___config_8c_ae4c73b0dae571d805f3f46cd1678b0e3}{
+\index{RTX\_\-Config.c@{RTX\_\-Config.c}!OS\_\-TFIRQ@{OS\_\-TFIRQ}}
+\index{OS\_\-TFIRQ@{OS\_\-TFIRQ}!RTX_Config.c@{RTX\_\-Config.c}}
+\subsubsection[{OS\_\-TFIRQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define OS\_\-TFIRQ(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~VICSoftInt    = OS\_\-TIM\_\-;}}
+\label{_r_t_x___config_8c_ae4c73b0dae571d805f3f46cd1678b0e3}
+\hypertarget{_r_t_x___config_8c_a8fd3ef6e319280c5b74c38ac572dbb80}{
+\index{RTX\_\-Config.c@{RTX\_\-Config.c}!OS\_\-TIACK@{OS\_\-TIACK}}
+\index{OS\_\-TIACK@{OS\_\-TIACK}!RTX_Config.c@{RTX\_\-Config.c}}
+\subsubsection[{OS\_\-TIACK}]{\setlength{\rightskip}{0pt plus 5cm}\#define OS\_\-TIACK(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{_r_t_x___config_8c_a8fd3ef6e319280c5b74c38ac572dbb80}
+{\bfseries Value:}
+\begin{DoxyCode}
+TIMx(IR) = 1;                   /*  Interrupt Ack   */ \
+                        VICSoftIntClr = OS_TIM_;                               \
+                        VICVectAddr   = 0;
+\end{DoxyCode}
+\hypertarget{_r_t_x___config_8c_ab6b10bd6d60e95ab28c775757f6bfbcc}{
+\index{RTX\_\-Config.c@{RTX\_\-Config.c}!OS\_\-TICK@{OS\_\-TICK}}
+\index{OS\_\-TICK@{OS\_\-TICK}!RTX_Config.c@{RTX\_\-Config.c}}
+\subsubsection[{OS\_\-TICK}]{\setlength{\rightskip}{0pt plus 5cm}\#define OS\_\-TICK~10000}}
+\label{_r_t_x___config_8c_ab6b10bd6d60e95ab28c775757f6bfbcc}
+\hypertarget{_r_t_x___config_8c_a9fb2928b8e0ffa5826c9ffab932f06a3}{
+\index{RTX\_\-Config.c@{RTX\_\-Config.c}!OS\_\-TID\_\-@{OS\_\-TID\_\-}}
+\index{OS\_\-TID\_\-@{OS\_\-TID\_\-}!RTX_Config.c@{RTX\_\-Config.c}}
+\subsubsection[{OS\_\-TID\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define OS\_\-TID\_\-~4}}
+\label{_r_t_x___config_8c_a9fb2928b8e0ffa5826c9ffab932f06a3}
+\hypertarget{_r_t_x___config_8c_af9bb32a5c2d30a42fb5263dc7430846e}{
+\index{RTX\_\-Config.c@{RTX\_\-Config.c}!OS\_\-TIM\_\-@{OS\_\-TIM\_\-}}
+\index{OS\_\-TIM\_\-@{OS\_\-TIM\_\-}!RTX_Config.c@{RTX\_\-Config.c}}
+\subsubsection[{OS\_\-TIM\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define OS\_\-TIM\_\-~(1 $<$$<$ OS\_\-TID\_\-)}}
+\label{_r_t_x___config_8c_af9bb32a5c2d30a42fb5263dc7430846e}
+\hypertarget{_r_t_x___config_8c_a91d395639a45fe25a8b3d5f4cbe4bb32}{
+\index{RTX\_\-Config.c@{RTX\_\-Config.c}!OS\_\-TIMER@{OS\_\-TIMER}}
+\index{OS\_\-TIMER@{OS\_\-TIMER}!RTX_Config.c@{RTX\_\-Config.c}}
+\subsubsection[{OS\_\-TIMER}]{\setlength{\rightskip}{0pt plus 5cm}\#define OS\_\-TIMER~0}}
+\label{_r_t_x___config_8c_a91d395639a45fe25a8b3d5f4cbe4bb32}
+\hypertarget{_r_t_x___config_8c_a07dff7104a9c96d8badd254e294fe566}{
+\index{RTX\_\-Config.c@{RTX\_\-Config.c}!OS\_\-TIMERCNT@{OS\_\-TIMERCNT}}
+\index{OS\_\-TIMERCNT@{OS\_\-TIMERCNT}!RTX_Config.c@{RTX\_\-Config.c}}
+\subsubsection[{OS\_\-TIMERCNT}]{\setlength{\rightskip}{0pt plus 5cm}\#define OS\_\-TIMERCNT~0}}
+\label{_r_t_x___config_8c_a07dff7104a9c96d8badd254e294fe566}
+\hypertarget{_r_t_x___config_8c_aafd68d8265da6e9873e93c15aab3fa3f}{
+\index{RTX\_\-Config.c@{RTX\_\-Config.c}!OS\_\-TINIT@{OS\_\-TINIT}}
+\index{OS\_\-TINIT@{OS\_\-TINIT}!RTX_Config.c@{RTX\_\-Config.c}}
+\subsubsection[{OS\_\-TINIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define OS\_\-TINIT(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{_r_t_x___config_8c_aafd68d8265da6e9873e93c15aab3fa3f}
+{\bfseries Value:}
+\begin{DoxyCode}
+PCONP |= (1<<PCON_VAL);         /*  Initialization  */ \
+                        TIMx(MR0) = OS_TRV;                                    \
+                        TIMx(MCR) = 3;                                         \
+                        TIMx(TCR) = 1;                                         \
+                        VICVectAddrX = (U32)os_clock_interrupt;
+\end{DoxyCode}
+\hypertarget{_r_t_x___config_8c_a4e4770394926847ddd9706b47aa64524}{
+\index{RTX\_\-Config.c@{RTX\_\-Config.c}!OS\_\-TOVF@{OS\_\-TOVF}}
+\index{OS\_\-TOVF@{OS\_\-TOVF}!RTX_Config.c@{RTX\_\-Config.c}}
+\subsubsection[{OS\_\-TOVF}]{\setlength{\rightskip}{0pt plus 5cm}\#define OS\_\-TOVF~(TIMx(IR) \& 1)}}
+\label{_r_t_x___config_8c_a4e4770394926847ddd9706b47aa64524}
+\hypertarget{_r_t_x___config_8c_a9d55a070ddb219165bd4287f08318d51}{
+\index{RTX\_\-Config.c@{RTX\_\-Config.c}!OS\_\-TRV@{OS\_\-TRV}}
+\index{OS\_\-TRV@{OS\_\-TRV}!RTX_Config.c@{RTX\_\-Config.c}}
+\subsubsection[{OS\_\-TRV}]{\setlength{\rightskip}{0pt plus 5cm}\#define OS\_\-TRV~((U32)(((double)OS\_\-CLOCK$\ast$(double)OS\_\-TICK)/1E6)-\/1)}}
+\label{_r_t_x___config_8c_a9d55a070ddb219165bd4287f08318d51}
+\hypertarget{_r_t_x___config_8c_a0d1b04442e20c0058c954657bfec44aa}{
+\index{RTX\_\-Config.c@{RTX\_\-Config.c}!OS\_\-TVAL@{OS\_\-TVAL}}
+\index{OS\_\-TVAL@{OS\_\-TVAL}!RTX_Config.c@{RTX\_\-Config.c}}
+\subsubsection[{OS\_\-TVAL}]{\setlength{\rightskip}{0pt plus 5cm}\#define OS\_\-TVAL~TIMx(TC)}}
+\label{_r_t_x___config_8c_a0d1b04442e20c0058c954657bfec44aa}
+\hypertarget{_r_t_x___config_8c_a5ecbba8ab5099a82f769488601b5bc36}{
+\index{RTX\_\-Config.c@{RTX\_\-Config.c}!OS\_\-UNLOCK@{OS\_\-UNLOCK}}
+\index{OS\_\-UNLOCK@{OS\_\-UNLOCK}!RTX_Config.c@{RTX\_\-Config.c}}
+\subsubsection[{OS\_\-UNLOCK}]{\setlength{\rightskip}{0pt plus 5cm}\#define OS\_\-UNLOCK(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~VICIntEnable  = OS\_\-TIM\_\-;}}
+\label{_r_t_x___config_8c_a5ecbba8ab5099a82f769488601b5bc36}
+\hypertarget{_r_t_x___config_8c_a358e37fc6189341e23ed4c50287457bf}{
+\index{RTX\_\-Config.c@{RTX\_\-Config.c}!PCON\_\-VAL@{PCON\_\-VAL}}
+\index{PCON\_\-VAL@{PCON\_\-VAL}!RTX_Config.c@{RTX\_\-Config.c}}
+\subsubsection[{PCON\_\-VAL}]{\setlength{\rightskip}{0pt plus 5cm}\#define PCON\_\-VAL~1}}
+\label{_r_t_x___config_8c_a358e37fc6189341e23ed4c50287457bf}
+\hypertarget{_r_t_x___config_8c_ae47f784cbfa54dfaab6691d412301382}{
+\index{RTX\_\-Config.c@{RTX\_\-Config.c}!TIMx@{TIMx}}
+\index{TIMx@{TIMx}!RTX_Config.c@{RTX\_\-Config.c}}
+\subsubsection[{TIMx}]{\setlength{\rightskip}{0pt plus 5cm}\#define TIMx(
+\begin{DoxyParamCaption}
+\item[{}]{reg}
+\end{DoxyParamCaption}
+)~T0\#\#reg}}
+\label{_r_t_x___config_8c_ae47f784cbfa54dfaab6691d412301382}
+\hypertarget{_r_t_x___config_8c_afd2b25b9eb72bf7a6fb6523fa0057693}{
+\index{RTX\_\-Config.c@{RTX\_\-Config.c}!VICVectAddrX@{VICVectAddrX}}
+\index{VICVectAddrX@{VICVectAddrX}!RTX_Config.c@{RTX\_\-Config.c}}
+\subsubsection[{VICVectAddrX}]{\setlength{\rightskip}{0pt plus 5cm}\#define VICVectAddrX~VICVectAddr4}}
+\label{_r_t_x___config_8c_afd2b25b9eb72bf7a6fb6523fa0057693}
+
+
+\subsection{Function Documentation}
+\hypertarget{_r_t_x___config_8c_a0a232c38a5928c972907c1260c7e43b8}{
+\index{RTX\_\-Config.c@{RTX\_\-Config.c}!os\_\-idle\_\-demon@{os\_\-idle\_\-demon}}
+\index{os\_\-idle\_\-demon@{os\_\-idle\_\-demon}!RTX_Config.c@{RTX\_\-Config.c}}
+\subsubsection[{os\_\-idle\_\-demon}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-task void os\_\-idle\_\-demon (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{_r_t_x___config_8c_a0a232c38a5928c972907c1260c7e43b8}
+\hypertarget{_r_t_x___config_8c_a0b039b4e980cb2b243bd736c72380368}{
+\index{RTX\_\-Config.c@{RTX\_\-Config.c}!os\_\-stk\_\-overflow@{os\_\-stk\_\-overflow}}
+\index{os\_\-stk\_\-overflow@{os\_\-stk\_\-overflow}!RTX_Config.c@{RTX\_\-Config.c}}
+\subsubsection[{os\_\-stk\_\-overflow}]{\setlength{\rightskip}{0pt plus 5cm}void os\_\-stk\_\-overflow (
+\begin{DoxyParamCaption}
+\item[{OS\_\-TID}]{task\_\-id}
+\end{DoxyParamCaption}
+)}}
+\label{_r_t_x___config_8c_a0b039b4e980cb2b243bd736c72380368}
+\hypertarget{_r_t_x___config_8c_a59a26ad5f510b1de51e0ce88f2ed8ebd}{
+\index{RTX\_\-Config.c@{RTX\_\-Config.c}!os\_\-tmr\_\-call@{os\_\-tmr\_\-call}}
+\index{os\_\-tmr\_\-call@{os\_\-tmr\_\-call}!RTX_Config.c@{RTX\_\-Config.c}}
+\subsubsection[{os\_\-tmr\_\-call}]{\setlength{\rightskip}{0pt plus 5cm}void os\_\-tmr\_\-call (
+\begin{DoxyParamCaption}
+\item[{U16}]{info}
+\end{DoxyParamCaption}
+)}}
+\label{_r_t_x___config_8c_a59a26ad5f510b1de51e0ce88f2ed8ebd}

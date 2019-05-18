@@ -1,0 +1,82 @@
+\hypertarget{_a_d_c_8h}{
+\section{ADC.h File Reference}
+\label{d0/d48/_a_d_c_8h}\index{ADC.h@{ADC.h}}
+}
+{\ttfamily \#include $<$LPC23xx.H$>$}\par
+{\ttfamily \#include $<$stdint.h$>$}\par
+{\ttfamily \#include $<$stdarg.h$>$}\par
+{\ttfamily \#include $<$stdio.h$>$}\par
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_a_d_c}{ADC}
+\begin{DoxyCompactList}\small\item\em class \hyperlink{class_a_d_c}{ADC}: is a class in charge of \hyperlink{class_a_d_c}{ADC} channels from 0 to 7 of ARM 7 processor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_a_d_c_8h_a827907ee6183e98bb8a50727540d4bb1}{ADC\_\-OFFSET}~0x10
+\item 
+\#define \hyperlink{_a_d_c_8h_a1078be574c87c85ded20c65c0162be06}{ADC\_\-INDEX}~4
+\item 
+\#define \hyperlink{_a_d_c_8h_af8f52b2b28d6053c0ee7bfa8bcb975b0}{ADC\_\-DONE}~0x80000000
+\item 
+\#define \hyperlink{_a_d_c_8h_a07e54d7e6531c9f31e46666f3e4a414a}{ADC\_\-OVERRUN}~0x40000000
+\item 
+\#define \hyperlink{_a_d_c_8h_a15119259ccaa9ca245dadc074e5562ab}{ADC\_\-ADINT}~0x00010000
+\item 
+\#define \hyperlink{_a_d_c_8h_a449255704cece03b7bbbf247359b6bbd}{ADC\_\-NUM}~8
+\item 
+\#define \hyperlink{_a_d_c_8h_a44d38ab4d4e88e679184bbbffdac00dd}{ADC\_\-CLK}~1000000
+\item 
+\#define \hyperlink{_a_d_c_8h_a2dfa997b5d9c757ba0f8015b9e29a34b}{Fpclk}~12000000
+\item 
+\#define \hyperlink{_a_d_c_8h_a37b3612cc333ad15061e195f42b029d6}{ADC\_\-Clk}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_a_d_c_8h_a15119259ccaa9ca245dadc074e5562ab}{
+\index{ADC.h@{ADC.h}!ADC\_\-ADINT@{ADC\_\-ADINT}}
+\index{ADC\_\-ADINT@{ADC\_\-ADINT}!ADC.h@{ADC.h}}
+\subsubsection[{ADC\_\-ADINT}]{\setlength{\rightskip}{0pt plus 5cm}\#define ADC\_\-ADINT~0x00010000}}
+\label{d0/d48/_a_d_c_8h_a15119259ccaa9ca245dadc074e5562ab}
+\hypertarget{_a_d_c_8h_a37b3612cc333ad15061e195f42b029d6}{
+\index{ADC.h@{ADC.h}!ADC\_\-Clk@{ADC\_\-Clk}}
+\index{ADC\_\-Clk@{ADC\_\-Clk}!ADC.h@{ADC.h}}
+\subsubsection[{ADC\_\-Clk}]{\setlength{\rightskip}{0pt plus 5cm}\#define ADC\_\-Clk}}
+\label{d0/d48/_a_d_c_8h_a37b3612cc333ad15061e195f42b029d6}
+\hypertarget{_a_d_c_8h_a44d38ab4d4e88e679184bbbffdac00dd}{
+\index{ADC.h@{ADC.h}!ADC\_\-CLK@{ADC\_\-CLK}}
+\index{ADC\_\-CLK@{ADC\_\-CLK}!ADC.h@{ADC.h}}
+\subsubsection[{ADC\_\-CLK}]{\setlength{\rightskip}{0pt plus 5cm}\#define ADC\_\-CLK~1000000}}
+\label{d0/d48/_a_d_c_8h_a44d38ab4d4e88e679184bbbffdac00dd}
+\hypertarget{_a_d_c_8h_af8f52b2b28d6053c0ee7bfa8bcb975b0}{
+\index{ADC.h@{ADC.h}!ADC\_\-DONE@{ADC\_\-DONE}}
+\index{ADC\_\-DONE@{ADC\_\-DONE}!ADC.h@{ADC.h}}
+\subsubsection[{ADC\_\-DONE}]{\setlength{\rightskip}{0pt plus 5cm}\#define ADC\_\-DONE~0x80000000}}
+\label{d0/d48/_a_d_c_8h_af8f52b2b28d6053c0ee7bfa8bcb975b0}
+\hypertarget{_a_d_c_8h_a1078be574c87c85ded20c65c0162be06}{
+\index{ADC.h@{ADC.h}!ADC\_\-INDEX@{ADC\_\-INDEX}}
+\index{ADC\_\-INDEX@{ADC\_\-INDEX}!ADC.h@{ADC.h}}
+\subsubsection[{ADC\_\-INDEX}]{\setlength{\rightskip}{0pt plus 5cm}\#define ADC\_\-INDEX~4}}
+\label{d0/d48/_a_d_c_8h_a1078be574c87c85ded20c65c0162be06}
+\hypertarget{_a_d_c_8h_a449255704cece03b7bbbf247359b6bbd}{
+\index{ADC.h@{ADC.h}!ADC\_\-NUM@{ADC\_\-NUM}}
+\index{ADC\_\-NUM@{ADC\_\-NUM}!ADC.h@{ADC.h}}
+\subsubsection[{ADC\_\-NUM}]{\setlength{\rightskip}{0pt plus 5cm}\#define ADC\_\-NUM~8}}
+\label{d0/d48/_a_d_c_8h_a449255704cece03b7bbbf247359b6bbd}
+\hypertarget{_a_d_c_8h_a827907ee6183e98bb8a50727540d4bb1}{
+\index{ADC.h@{ADC.h}!ADC\_\-OFFSET@{ADC\_\-OFFSET}}
+\index{ADC\_\-OFFSET@{ADC\_\-OFFSET}!ADC.h@{ADC.h}}
+\subsubsection[{ADC\_\-OFFSET}]{\setlength{\rightskip}{0pt plus 5cm}\#define ADC\_\-OFFSET~0x10}}
+\label{d0/d48/_a_d_c_8h_a827907ee6183e98bb8a50727540d4bb1}
+\hypertarget{_a_d_c_8h_a07e54d7e6531c9f31e46666f3e4a414a}{
+\index{ADC.h@{ADC.h}!ADC\_\-OVERRUN@{ADC\_\-OVERRUN}}
+\index{ADC\_\-OVERRUN@{ADC\_\-OVERRUN}!ADC.h@{ADC.h}}
+\subsubsection[{ADC\_\-OVERRUN}]{\setlength{\rightskip}{0pt plus 5cm}\#define ADC\_\-OVERRUN~0x40000000}}
+\label{d0/d48/_a_d_c_8h_a07e54d7e6531c9f31e46666f3e4a414a}
+\hypertarget{_a_d_c_8h_a2dfa997b5d9c757ba0f8015b9e29a34b}{
+\index{ADC.h@{ADC.h}!Fpclk@{Fpclk}}
+\index{Fpclk@{Fpclk}!ADC.h@{ADC.h}}
+\subsubsection[{Fpclk}]{\setlength{\rightskip}{0pt plus 5cm}\#define Fpclk~12000000}}
+\label{d0/d48/_a_d_c_8h_a2dfa997b5d9c757ba0f8015b9e29a34b}
